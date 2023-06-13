@@ -96,7 +96,7 @@ if {$DOPML == "YES"} {
     set dxPML 1.0;
     set dyPML $dy;
     set dzPML $dz;
-    set lxPML 5.0;
+    set lxPML 2.0;
     set lyPML $ly;
     set lzPML $lz;
     set nxPML [expr $lxPML/$dxPML ]
@@ -177,8 +177,13 @@ pattern Plain 1 1 {
 }
 
 
+
+
 # recorders
-eval "recorder Node -file node_disp2.out -time -node $Doflist -dof 1 disp"
+eval "recorder Node -file NodeDispHead.out -time -node $Loadinglist  -dof 1 disp"
+eval "recorder Node -file NodeDispEnd.out  -time -node $Doflist      -dof 1 disp"
+
+
 
 print "PML3D_1DExample2.info" 
 
@@ -188,7 +193,7 @@ numberer      RCM
 integrator    Newmark 0.5 0.25
 system        BandGEN
 test          NormDispIncr 1.0e-6 10 1
-algorithm     Linear
+algorithm     Linear -factorOnce
 analysis      Transient
 
 
