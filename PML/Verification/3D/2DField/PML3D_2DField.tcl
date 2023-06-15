@@ -1,6 +1,18 @@
-# PML test 2D field example
-# Written: Amin Pakzad, 2023
-
+# ===================================================================== #
+# 3D test model for the pml element modeling the plane strain field     #
+# University of Washington, Department of Civil and Environmental Eng   #
+# Geotechnical Eng Group, A. Pakzad, P. Arduino - Jun 2023              #
+# Basic units are m, Ton(metric), s										#
+# ===================================================================== #
+# erase the boundary.tcl file if it exists
+if {[file exists boundary.tcl]} {file delete boundary.tcl}
+if {[file exists elements.tcl]} {file delete elements.tcl}
+if {[file exists nodes.tcl]} {file delete nodes.tcl}
+if {[file exists pmlelements.tcl]} {file delete pmlelements.tcl}
+if {[file exists pmlnodes.tcl]} {file delete pmlnodes.tcl}
+if {[file exists fixity.tcl.tcl]} {file delete fixity.tcl.tcl}
+if {[file exists pmlfixity.tcl]} {file delete pmlfixity.tcl}
+if {[file exists load.tcl]} {file delete load.tcl}
 
 # get DOPML from command line
 if {$argc > 0} {
@@ -9,155 +21,133 @@ if {$argc > 0} {
     set DOPML "NO"
 }
 
-# building nodes and elements
+# ============================================================================
+# define geometry and meshing parameters
+# ============================================================================
 wipe 
-model BasicBuilder -ndm 3 -ndf 3
-
-set lx      10.0;
-set ly      1.0;
-set lz      5.0;
-set dy      1.0;
-set dx      1.0;
-set dz      1.0;
-set nx      [expr $lx/$dx ]
-set ny      [expr $ly/$dy ]
-set nz      [expr $lz/$dz ]
-
-
-set xlist       {}
-set ylist       {}
-set zlist       {}
-set Doflist     {}
-set Loadinglist {}
+set lx           10.0;
+set ly           1.0;
+set lz           10.0;
+set dy           1.0;
+set dx           1.0;
+set dz           1.0;
+set nx           [expr $lx/$dx ]
+set ny           [expr $ly/$dy ]
+set nz           [expr $lz/$dz ]
+set pmlthickness 1.0
 
 
-for {set i 0} { $i <= $nx } { incr i} {lappend xlist [expr $dx*$i];}
-for {set i 0} { $i <= $ny } { incr i} {lappend ylist [expr $dy*$i];}
-for {set i 0} { $i <= $nz } { incr i} {lappend zlist [expr $dz*$i];}
-
-
-
-set nodeTag    1;
-set elementTag 1;
-
-
-
-
-# creating nodes
-set count 1;
-foreach x $xlist {
-    foreach y $ylist {
-        foreach z $zlist {
-            node  $nodeTag $x $y $z;
-            fix $nodeTag 0 1 1
-            # puts "node $nodeTag $x $y $z;"
-            if {$count == 1} {lappend Loadinglist [expr $nodeTag];}
-            if {$count == [expr $nx+1]} {lappend Doflist [expr $nodeTag];}
-            incr nodeTag;
-        } 
-    } 
-    incr count;
+# ============================================================================
+#  run the mesh generator
+# ============================================================================
+# find that if python is exisiting in the system
+set pythonexec "python3"
+if { [catch {exec python3 -V} python3_version] } {
+    if { [catch {exec python -V} python_version] } {
+        puts "Python is not installed in the system"
+        exit
+    } else {
+        set pythonexec "python"
+    }
 }
+puts "pythonexec: $pythonexec"
 
 
+# run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
+# passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
+catch {exec $pythonexec 3D_2DfieldMESH.py $lx $ly $lz $dx $dy $dz $pmlthickness} result 
+puts "result: $result"
+
+
+#run 
+# ============================================================================
+# bulding regular elements
+# ============================================================================
+model BasicBuilder -ndm 3 -ndf 3
 
 # create material
 set materialTag 1;
 nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
+source nodes.tcl
+source fixity.tcl
+source elements.tcl
 
 
-
-# Create a plane strain model
-for {set x 0} {$x < $nx} {incr x 1} {
-    for {set y 0} {$y < $ny} {incr y 1} {
-        for {set z 0} {$z < $nz} {incr z 1} {
-            set node1 [expr int($x    *($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1)];
-            set node2 [expr int(($x+1)*($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1)];
-            set node3 [expr int(($x+1)*($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1)];
-            set node4 [expr int($x    *($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1)];
-            set node5 [expr $node1 + 1];
-            set node6 [expr $node2 + 1];
-            set node7 [expr $node3 + 1];
-            set node8 [expr $node4 + 1];
-            # puts "element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;"
-
-            element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;
-            incr elementTag;
-        }
-    }
-}
-
-
-
-
+# ============================================================================
+# bulding PML layer
+# ============================================================================
 #create PML nodes and elements
 if {$DOPML == "YES"} {
     model BasicBuilder -ndm 3 -ndf 18;
-    
-    set ThicknessPML 1.0;
-    set dxPML $dx;
-    set dyPML $dy;
-    set dzPML $dz;
+    # create PML material
+    set E               2.08e+08              ;# --- Young's modulus
+    set nu              0.3                   ;# --- Poisson's Ratio
+    set rho             2000.0                ;# --- Density
+    set EleType         6                     ;# --- Element type, See line
+    set PML_L           $pmlthickness         ;# --- Thickness of the PML
+    set afp             2.0                   ;# --- Coefficient m, typically m = 2
+    set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
+    set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
+    set RD_half_width_y [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
+    set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
+    set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
+    set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
+    set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    puts "PMLMaterial: $PMLMaterial"
+    # 2.08e+08 0.3 2000.0  6. 5.0 2.0 1.0e-8 25.0 25.0 25.0 0.0 0.0;"
 
+    source pmlnodes.tcl
+    source pmlfixity.tcl
+    source pmlelements.tcl
 
-
-    # creating thickness of PML 
-    set nxPML  [expr $ThicknessPML/$dxPML ]
-    set nyPML  [expr $ThicknessPML/$dyPML ]
-    set nzPML  [expr $lz/$dzPML ]
-    set xstart [expr -$ThicknessPML]
-    set ystart 0.
-    set zstart 0.
-    set PMLxlist {}
-    set PMLylist {}
-    set PMLzlist {}
-
-    for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i + $xstart];}
-    for {set i 0} {$i<=$nyPML} {incr i} {lappend PMLylist [expr $dyPML*$i + $ystart];}
-    for {set i 0} {$i<=$nzPML} {incr i} {lappend PMLzlist [expr $dzPML*$i + $zstart];}
-
-
-    # set count 1;
-    foreach x $PMLxlist {
-        foreach y $PMLylist {
-            foreach z $PMLzlist {
-                node  $nodeTag $x $y $z;
-                # if {$count == 1} {lappend PMLDoflist [expr $nodeTag];}
-                puts "node $nodeTag $x $y $z;"
-                incr nodeTag;
-            } 
-        } 
-        incr count;
-    }
-
-    # set PMLDoflist {}
-
-
-    # creating elements
-    for {set x 0} { $x < $nxPML } { incr x 1 } {
-        for {set y 0} { $y < $nyPML } { incr y 1 } {
-            for {set z 0} { $z < $nzPML } { incr z 1 } {
-                set node1 [expr int($x    *($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1))];
-                set node2 [expr int(($x+1)*($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1))];
-                set node3 [expr int(($x+1)*($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1))];
-                set node4 [expr int($x    *($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1))];
-                set node5 [expr $node1 + 1];
-                set node6 [expr $node2 + 1];
-                set node7 [expr $node3 + 1];
-                set node8 [expr $node4 + 1];
-                element PML $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 2.08e+08 0.3 2000.0  6. 5.0 2.0 1.0e-8 25.0 25.0 25.0 0.0 0.0;
-                puts "element PML $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 2.08e+08 0.3 2000.0  6. 5.0 2.0 1.0e-8 25.0 25.0 25.0 0.0 0.0;"
-                incr elementTag;
-            }
-        }
-    }
-
-
-    # tie PML nodes to the main nodes
-    for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
-        equalDOF [lindex $Doflist $i] [lindex $PMLDoflist $i] 1;
-        puts "equalDOF [lindex $Doflist $i] [lindex $PMLDoflist $i] 1;"
-    }
+    # tie pml nodes to the regular nodes
+    model BasicBuilder -ndm 3 -ndf 3;
+    source boundary.tcl
 }
 
-stop 
+
+# ============================================================================
+# creating fixities
+# ============================================================================
+if {$DOPML == "YES"} {
+    fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+    fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+    fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
+} else {
+    fixX [expr -$lx/2.] 1 0 1;
+    fixX [expr  $lx/2.] 1 0 1;
+    fixZ [expr  $lz/1.] 0 0 1;
+}
+
+# ============================================================================
+# loading 
+# ============================================================================
+set dT 0.001
+timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
+pattern Plain 1 1 {
+    source load.tcl
+}
+
+
+# ============================================================================
+# recorders
+# ============================================================================
+eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
+
+# ============================================================================
+# Analysis 
+# ============================================================================
+print "PML3D_2DField.info" 
+constraints   Plain
+numberer      RCM
+integrator    Newmark 0.5 0.25
+system        BandGEN
+test          NormDispIncr 1.0e-6 10 1
+algorithm     Linear -factorOnce
+analysis      Transient
+
+
+for {set i 0} { $i < 1000 } { incr i 1 } {
+    puts "Time step: $i"
+    analyze 1 $dT
+}
