@@ -259,14 +259,19 @@ if {$DOPML == "YES"} {
     constraints      Plain
     numberer         ParallelRCM
     system           Mumps -ICNTL14 200
-    test             NormDispIncr 1e-3 20 1
-    algorithm        Linear -factorOnce
+    test             NormDispIncr 1e-3 3 0
+    algorithm        Linear -factorOnce 
+    # algorithm        ModifiedNewton -factoronce 
     integrator       Newmark 0.5 0.25
     analysis         Transient
+    set startTime [clock milliseconds]
     for {set i 0} { $i < 1000 } { incr i 1 } {
-        if {$pid ==0 } {puts "Time step: $i"}
+        if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }
+    set endTime [clock milliseconds]
+    set elapsedTime [expr {$endTime - $startTime}]
+    puts "Elapsed time: $elapsedTime milliseconds in $pid"
 } else {
     if {$pid ==0 } {
         numberer         RCM
@@ -276,6 +281,7 @@ if {$DOPML == "YES"} {
         algorithm        Linear -factorOnce
         integrator       Newmark 0.5 0.25
         analysis         Transient
+    
         for {set i 0} { $i < 1000 } { incr i 1 } {
             puts "Time step: $i"
             analyze 1 $dT

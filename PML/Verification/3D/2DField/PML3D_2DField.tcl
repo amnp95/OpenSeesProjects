@@ -34,7 +34,7 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 1.0
+set pmlthickness 2.0
 
 
 # ============================================================================
@@ -55,7 +55,7 @@ puts "pythonexec: $pythonexec"
 
 # run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
 # passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
-catch {exec $pythonexec 3D_2DfieldMESH.py $lx $ly $lz $dx $dy $dz $pmlthickness} result 
+catch {eval "exec $pythonexec 3D_2DfieldMESh.py $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
 puts "result: $result"
 
 
@@ -88,8 +88,8 @@ if {$DOPML == "YES"} {
     set afp             2.0                   ;# --- Coefficient m, typically m = 2
     set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
     set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-    set RD_half_width_y [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-    set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
+    set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
+    set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
     set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
