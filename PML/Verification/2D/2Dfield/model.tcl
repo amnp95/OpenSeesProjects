@@ -464,8 +464,12 @@ integrator Newmark 0.5 0.25
 system UmfPack
 test NormDispIncr 1.0e-6 10 1
 algorithm ModifiedNewton -factoronce
+# algorithm Linear -factorOnce
 analysis Transient
 
-set ok [analyze 2000 0.001]
+for {set i 0} {$i < 2000} {incr i 1} {
+    puts "Analysis $i"
+    analyze 1 0.001
+}
 wipe
 
