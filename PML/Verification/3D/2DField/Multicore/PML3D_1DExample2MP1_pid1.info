@@ -1,0 +1,4368 @@
+Current Domain Information
+	Current Time: 0
+	Committed Time: 0
+NODE DATA: NumNodes: 352
+
+numComponents: 352
+
+ Node: 1
+	Coordinates  : -10 -0.5 -10 
+
+
+ Node: 2
+	Coordinates  : -10 -0.5 -9 
+
+
+ Node: 3
+	Coordinates  : -10 -0.5 -8 
+
+
+ Node: 4
+	Coordinates  : -10 -0.5 -7 
+
+
+ Node: 5
+	Coordinates  : -10 -0.5 -6 
+
+
+ Node: 6
+	Coordinates  : -10 -0.5 -5 
+
+
+ Node: 7
+	Coordinates  : -10 -0.5 -4 
+
+
+ Node: 8
+	Coordinates  : -10 -0.5 -3 
+
+
+ Node: 9
+	Coordinates  : -10 -0.5 -2 
+
+
+ Node: 10
+	Coordinates  : -10 -0.5 -1 
+
+
+ Node: 11
+	Coordinates  : -10 -0.5 0 
+
+
+ Node: 12
+	Coordinates  : -10 0.5 -10 
+
+
+ Node: 13
+	Coordinates  : -10 0.5 -9 
+
+
+ Node: 14
+	Coordinates  : -10 0.5 -8 
+
+
+ Node: 15
+	Coordinates  : -10 0.5 -7 
+
+
+ Node: 16
+	Coordinates  : -10 0.5 -6 
+
+
+ Node: 17
+	Coordinates  : -10 0.5 -5 
+
+
+ Node: 18
+	Coordinates  : -10 0.5 -4 
+
+
+ Node: 19
+	Coordinates  : -10 0.5 -3 
+
+
+ Node: 20
+	Coordinates  : -10 0.5 -2 
+
+
+ Node: 21
+	Coordinates  : -10 0.5 -1 
+
+
+ Node: 22
+	Coordinates  : -10 0.5 0 
+
+
+ Node: 23
+	Coordinates  : -9 -0.5 -10 
+
+
+ Node: 34
+	Coordinates  : -9 0.5 -10 
+
+
+ Node: 45
+	Coordinates  : -8 -0.5 -10 
+
+
+ Node: 56
+	Coordinates  : -8 0.5 -10 
+
+
+ Node: 67
+	Coordinates  : -7 -0.5 -10 
+
+
+ Node: 78
+	Coordinates  : -7 0.5 -10 
+
+
+ Node: 89
+	Coordinates  : -6 -0.5 -10 
+
+
+ Node: 100
+	Coordinates  : -6 0.5 -10 
+
+
+ Node: 111
+	Coordinates  : -5 -0.5 -10 
+
+
+ Node: 122
+	Coordinates  : -5 0.5 -10 
+
+
+ Node: 133
+	Coordinates  : -4 -0.5 -10 
+
+
+ Node: 144
+	Coordinates  : -4 0.5 -10 
+
+
+ Node: 155
+	Coordinates  : -3 -0.5 -10 
+
+
+ Node: 166
+	Coordinates  : -3 0.5 -10 
+
+
+ Node: 177
+	Coordinates  : -2 -0.5 -10 
+
+
+ Node: 188
+	Coordinates  : -2 0.5 -10 
+
+
+ Node: 199
+	Coordinates  : -1 -0.5 -10 
+
+
+ Node: 210
+	Coordinates  : -1 0.5 -10 
+
+
+ Node: 221
+	Coordinates  : 0 -0.5 -10 
+
+
+ Node: 232
+	Coordinates  : 0 0.5 -10 
+
+
+ Node: 243
+	Coordinates  : 1 -0.5 -10 
+
+
+ Node: 254
+	Coordinates  : 1 0.5 -10 
+
+
+ Node: 265
+	Coordinates  : 2 -0.5 -10 
+
+
+ Node: 276
+	Coordinates  : 2 0.5 -10 
+
+
+ Node: 287
+	Coordinates  : 3 -0.5 -10 
+
+
+ Node: 298
+	Coordinates  : 3 0.5 -10 
+
+
+ Node: 309
+	Coordinates  : 4 -0.5 -10 
+
+
+ Node: 320
+	Coordinates  : 4 0.5 -10 
+
+
+ Node: 331
+	Coordinates  : 5 -0.5 -10 
+
+
+ Node: 342
+	Coordinates  : 5 0.5 -10 
+
+
+ Node: 353
+	Coordinates  : 6 -0.5 -10 
+
+
+ Node: 364
+	Coordinates  : 6 0.5 -10 
+
+
+ Node: 375
+	Coordinates  : 7 -0.5 -10 
+
+
+ Node: 386
+	Coordinates  : 7 0.5 -10 
+
+
+ Node: 397
+	Coordinates  : 8 -0.5 -10 
+
+
+ Node: 408
+	Coordinates  : 8 0.5 -10 
+
+
+ Node: 419
+	Coordinates  : 9 -0.5 -10 
+
+
+ Node: 430
+	Coordinates  : 9 0.5 -10 
+
+
+ Node: 441
+	Coordinates  : 10 -0.5 -10 
+
+
+ Node: 442
+	Coordinates  : 10 -0.5 -9 
+
+
+ Node: 443
+	Coordinates  : 10 -0.5 -8 
+
+
+ Node: 444
+	Coordinates  : 10 -0.5 -7 
+
+
+ Node: 445
+	Coordinates  : 10 -0.5 -6 
+
+
+ Node: 446
+	Coordinates  : 10 -0.5 -5 
+
+
+ Node: 447
+	Coordinates  : 10 -0.5 -4 
+
+
+ Node: 448
+	Coordinates  : 10 -0.5 -3 
+
+
+ Node: 449
+	Coordinates  : 10 -0.5 -2 
+
+
+ Node: 450
+	Coordinates  : 10 -0.5 -1 
+
+
+ Node: 451
+	Coordinates  : 10 -0.5 0 
+
+
+ Node: 452
+	Coordinates  : 10 0.5 -10 
+
+
+ Node: 453
+	Coordinates  : 10 0.5 -9 
+
+
+ Node: 454
+	Coordinates  : 10 0.5 -8 
+
+
+ Node: 455
+	Coordinates  : 10 0.5 -7 
+
+
+ Node: 456
+	Coordinates  : 10 0.5 -6 
+
+
+ Node: 457
+	Coordinates  : 10 0.5 -5 
+
+
+ Node: 458
+	Coordinates  : 10 0.5 -4 
+
+
+ Node: 459
+	Coordinates  : 10 0.5 -3 
+
+
+ Node: 460
+	Coordinates  : 10 0.5 -2 
+
+
+ Node: 461
+	Coordinates  : 10 0.5 -1 
+
+
+ Node: 462
+	Coordinates  : 10 0.5 0 
+
+
+ Node: 463
+	Coordinates  : -12 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 464
+	Coordinates  : -12 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 465
+	Coordinates  : -12 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 466
+	Coordinates  : -12 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 467
+	Coordinates  : -12 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 468
+	Coordinates  : -12 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 469
+	Coordinates  : -12 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 470
+	Coordinates  : -12 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 471
+	Coordinates  : -12 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 472
+	Coordinates  : -12 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 473
+	Coordinates  : -12 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 474
+	Coordinates  : -12 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 475
+	Coordinates  : -12 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 476
+	Coordinates  : -12 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 477
+	Coordinates  : -12 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 478
+	Coordinates  : -12 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 479
+	Coordinates  : -12 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 480
+	Coordinates  : -12 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 481
+	Coordinates  : -12 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 482
+	Coordinates  : -12 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 483
+	Coordinates  : -12 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 484
+	Coordinates  : -12 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 485
+	Coordinates  : -12 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 486
+	Coordinates  : -12 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 487
+	Coordinates  : -12 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 488
+	Coordinates  : -12 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 489
+	Coordinates  : -11 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 490
+	Coordinates  : -11 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 491
+	Coordinates  : -11 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 492
+	Coordinates  : -11 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 493
+	Coordinates  : -11 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 494
+	Coordinates  : -11 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 495
+	Coordinates  : -11 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 496
+	Coordinates  : -11 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 497
+	Coordinates  : -11 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 498
+	Coordinates  : -11 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 499
+	Coordinates  : -11 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 500
+	Coordinates  : -11 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 501
+	Coordinates  : -11 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 502
+	Coordinates  : -11 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 503
+	Coordinates  : -11 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 504
+	Coordinates  : -11 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 505
+	Coordinates  : -11 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 506
+	Coordinates  : -11 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 507
+	Coordinates  : -11 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 508
+	Coordinates  : -11 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 509
+	Coordinates  : -11 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 510
+	Coordinates  : -11 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 511
+	Coordinates  : -11 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 512
+	Coordinates  : -11 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 513
+	Coordinates  : -11 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 514
+	Coordinates  : -11 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 515
+	Coordinates  : -10 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 516
+	Coordinates  : -10 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 517
+	Coordinates  : -10 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 518
+	Coordinates  : -10 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 519
+	Coordinates  : -10 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 520
+	Coordinates  : -10 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 521
+	Coordinates  : -10 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 522
+	Coordinates  : -10 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 523
+	Coordinates  : -10 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 524
+	Coordinates  : -10 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 525
+	Coordinates  : -10 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 526
+	Coordinates  : -10 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 527
+	Coordinates  : -10 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 528
+	Coordinates  : -10 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 529
+	Coordinates  : -10 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 530
+	Coordinates  : -10 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 531
+	Coordinates  : -10 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 532
+	Coordinates  : -10 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 533
+	Coordinates  : -10 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 534
+	Coordinates  : -10 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 535
+	Coordinates  : -10 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 536
+	Coordinates  : -10 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 537
+	Coordinates  : -10 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 538
+	Coordinates  : -10 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 539
+	Coordinates  : -10 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 540
+	Coordinates  : -10 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 541
+	Coordinates  : -9 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 542
+	Coordinates  : -9 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 543
+	Coordinates  : -9 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 544
+	Coordinates  : -9 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 545
+	Coordinates  : -9 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 546
+	Coordinates  : -9 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 547
+	Coordinates  : -8 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 548
+	Coordinates  : -8 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 549
+	Coordinates  : -8 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 550
+	Coordinates  : -8 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 551
+	Coordinates  : -8 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 552
+	Coordinates  : -8 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 553
+	Coordinates  : -7 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 554
+	Coordinates  : -7 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 555
+	Coordinates  : -7 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 556
+	Coordinates  : -7 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 557
+	Coordinates  : -7 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 558
+	Coordinates  : -7 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 559
+	Coordinates  : -6 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 560
+	Coordinates  : -6 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 561
+	Coordinates  : -6 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 562
+	Coordinates  : -6 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 563
+	Coordinates  : -6 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 564
+	Coordinates  : -6 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 565
+	Coordinates  : -5 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 566
+	Coordinates  : -5 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 567
+	Coordinates  : -5 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 568
+	Coordinates  : -5 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 569
+	Coordinates  : -5 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 570
+	Coordinates  : -5 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 571
+	Coordinates  : -4 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 572
+	Coordinates  : -4 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 573
+	Coordinates  : -4 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 574
+	Coordinates  : -4 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 575
+	Coordinates  : -4 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 576
+	Coordinates  : -4 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 577
+	Coordinates  : -3 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 578
+	Coordinates  : -3 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 579
+	Coordinates  : -3 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 580
+	Coordinates  : -3 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 581
+	Coordinates  : -3 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 582
+	Coordinates  : -3 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 583
+	Coordinates  : -2 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 584
+	Coordinates  : -2 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 585
+	Coordinates  : -2 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 586
+	Coordinates  : -2 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 587
+	Coordinates  : -2 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 588
+	Coordinates  : -2 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 589
+	Coordinates  : -1 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 590
+	Coordinates  : -1 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 591
+	Coordinates  : -1 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 592
+	Coordinates  : -1 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 593
+	Coordinates  : -1 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 594
+	Coordinates  : -1 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 595
+	Coordinates  : 0 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 596
+	Coordinates  : 0 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 597
+	Coordinates  : 0 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 598
+	Coordinates  : 0 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 599
+	Coordinates  : 0 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 600
+	Coordinates  : 0 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 601
+	Coordinates  : 1 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 602
+	Coordinates  : 1 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 603
+	Coordinates  : 1 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 604
+	Coordinates  : 1 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 605
+	Coordinates  : 1 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 606
+	Coordinates  : 1 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 607
+	Coordinates  : 2 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 608
+	Coordinates  : 2 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 609
+	Coordinates  : 2 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 610
+	Coordinates  : 2 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 611
+	Coordinates  : 2 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 612
+	Coordinates  : 2 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 613
+	Coordinates  : 3 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 614
+	Coordinates  : 3 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 615
+	Coordinates  : 3 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 616
+	Coordinates  : 3 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 617
+	Coordinates  : 3 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 618
+	Coordinates  : 3 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 619
+	Coordinates  : 4 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 620
+	Coordinates  : 4 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 621
+	Coordinates  : 4 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 622
+	Coordinates  : 4 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 623
+	Coordinates  : 4 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 624
+	Coordinates  : 4 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 625
+	Coordinates  : 5 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 626
+	Coordinates  : 5 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 627
+	Coordinates  : 5 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 628
+	Coordinates  : 5 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 629
+	Coordinates  : 5 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 630
+	Coordinates  : 5 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 631
+	Coordinates  : 6 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 632
+	Coordinates  : 6 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 633
+	Coordinates  : 6 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 634
+	Coordinates  : 6 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 635
+	Coordinates  : 6 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 636
+	Coordinates  : 6 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 637
+	Coordinates  : 7 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 638
+	Coordinates  : 7 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 639
+	Coordinates  : 7 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 640
+	Coordinates  : 7 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 641
+	Coordinates  : 7 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 642
+	Coordinates  : 7 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 643
+	Coordinates  : 8 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 644
+	Coordinates  : 8 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 645
+	Coordinates  : 8 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 646
+	Coordinates  : 8 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 647
+	Coordinates  : 8 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 648
+	Coordinates  : 8 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 649
+	Coordinates  : 9 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 650
+	Coordinates  : 9 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 651
+	Coordinates  : 9 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 652
+	Coordinates  : 9 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 653
+	Coordinates  : 9 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 654
+	Coordinates  : 9 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 655
+	Coordinates  : 10 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 656
+	Coordinates  : 10 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 657
+	Coordinates  : 10 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 658
+	Coordinates  : 10 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 659
+	Coordinates  : 10 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 660
+	Coordinates  : 10 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 661
+	Coordinates  : 10 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 662
+	Coordinates  : 10 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 663
+	Coordinates  : 10 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 664
+	Coordinates  : 10 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 665
+	Coordinates  : 10 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 666
+	Coordinates  : 10 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 667
+	Coordinates  : 10 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 668
+	Coordinates  : 10 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 669
+	Coordinates  : 10 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 670
+	Coordinates  : 10 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 671
+	Coordinates  : 10 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 672
+	Coordinates  : 10 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 673
+	Coordinates  : 10 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 674
+	Coordinates  : 10 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 675
+	Coordinates  : 10 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 676
+	Coordinates  : 10 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 677
+	Coordinates  : 10 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 678
+	Coordinates  : 10 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 679
+	Coordinates  : 10 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 680
+	Coordinates  : 10 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 681
+	Coordinates  : 11 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 682
+	Coordinates  : 11 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 683
+	Coordinates  : 11 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 684
+	Coordinates  : 11 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 685
+	Coordinates  : 11 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 686
+	Coordinates  : 11 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 687
+	Coordinates  : 11 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 688
+	Coordinates  : 11 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 689
+	Coordinates  : 11 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 690
+	Coordinates  : 11 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 691
+	Coordinates  : 11 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 692
+	Coordinates  : 11 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 693
+	Coordinates  : 11 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 694
+	Coordinates  : 11 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 695
+	Coordinates  : 11 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 696
+	Coordinates  : 11 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 697
+	Coordinates  : 11 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 698
+	Coordinates  : 11 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 699
+	Coordinates  : 11 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 700
+	Coordinates  : 11 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 701
+	Coordinates  : 11 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 702
+	Coordinates  : 11 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 703
+	Coordinates  : 11 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 704
+	Coordinates  : 11 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 705
+	Coordinates  : 11 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 706
+	Coordinates  : 11 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 707
+	Coordinates  : 12 -0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 708
+	Coordinates  : 12 -0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 709
+	Coordinates  : 12 -0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 710
+	Coordinates  : 12 -0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 711
+	Coordinates  : 12 -0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 712
+	Coordinates  : 12 -0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 713
+	Coordinates  : 12 -0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 714
+	Coordinates  : 12 -0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 715
+	Coordinates  : 12 -0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 716
+	Coordinates  : 12 -0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 717
+	Coordinates  : 12 -0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 718
+	Coordinates  : 12 -0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 719
+	Coordinates  : 12 -0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 720
+	Coordinates  : 12 0.5 -12 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 721
+	Coordinates  : 12 0.5 -11 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 722
+	Coordinates  : 12 0.5 -10 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 723
+	Coordinates  : 12 0.5 -9 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 724
+	Coordinates  : 12 0.5 -8 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 725
+	Coordinates  : 12 0.5 -7 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 726
+	Coordinates  : 12 0.5 -6 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 727
+	Coordinates  : 12 0.5 -5 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 728
+	Coordinates  : 12 0.5 -4 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 729
+	Coordinates  : 12 0.5 -3 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 730
+	Coordinates  : 12 0.5 -2 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 731
+	Coordinates  : 12 0.5 -1 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+
+ Node: 732
+	Coordinates  : 12 0.5 0 
+	Disps: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	Velocities   : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	commitAccels: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+ELEMENT DATA: NumEle: 88
+
+numComponents: 88
+Standard Eight Node PML3D 
+Element Number: 201
+Nodes: 463 489 502 476 464 490 503 477 
+
+201 463 489 502 476 464 490 503 477
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 202
+Nodes: 464 490 503 477 465 491 504 478 
+
+202 464 490 503 477 465 491 504 478
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 203
+Nodes: 465 491 504 478 466 492 505 479 
+
+203 465 491 504 478 466 492 505 479
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 204
+Nodes: 466 492 505 479 467 493 506 480 
+
+204 466 492 505 479 467 493 506 480
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 205
+Nodes: 467 493 506 480 468 494 507 481 
+
+205 467 493 506 480 468 494 507 481
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 206
+Nodes: 468 494 507 481 469 495 508 482 
+
+206 468 494 507 481 469 495 508 482
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 207
+Nodes: 469 495 508 482 470 496 509 483 
+
+207 469 495 508 482 470 496 509 483
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 208
+Nodes: 470 496 509 483 471 497 510 484 
+
+208 470 496 509 483 471 497 510 484
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 209
+Nodes: 471 497 510 484 472 498 511 485 
+
+209 471 497 510 484 472 498 511 485
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 210
+Nodes: 472 498 511 485 473 499 512 486 
+
+210 472 498 511 485 473 499 512 486
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 211
+Nodes: 473 499 512 486 474 500 513 487 
+
+211 473 499 512 486 474 500 513 487
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 212
+Nodes: 474 500 513 487 475 501 514 488 
+
+212 474 500 513 487 475 501 514 488
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 213
+Nodes: 489 515 528 502 490 516 529 503 
+
+213 489 515 528 502 490 516 529 503
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 214
+Nodes: 490 516 529 503 491 517 530 504 
+
+214 490 516 529 503 491 517 530 504
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 215
+Nodes: 491 517 530 504 492 518 531 505 
+
+215 491 517 530 504 492 518 531 505
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 216
+Nodes: 492 518 531 505 493 519 532 506 
+
+216 492 518 531 505 493 519 532 506
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 217
+Nodes: 493 519 532 506 494 520 533 507 
+
+217 493 519 532 506 494 520 533 507
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 218
+Nodes: 494 520 533 507 495 521 534 508 
+
+218 494 520 533 507 495 521 534 508
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 219
+Nodes: 495 521 534 508 496 522 535 509 
+
+219 495 521 534 508 496 522 535 509
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 220
+Nodes: 496 522 535 509 497 523 536 510 
+
+220 496 522 535 509 497 523 536 510
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 221
+Nodes: 497 523 536 510 498 524 537 511 
+
+221 497 523 536 510 498 524 537 511
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 222
+Nodes: 498 524 537 511 499 525 538 512 
+
+222 498 524 537 511 499 525 538 512
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 223
+Nodes: 499 525 538 512 500 526 539 513 
+
+223 499 525 538 512 500 526 539 513
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 224
+Nodes: 500 526 539 513 501 527 540 514 
+
+224 500 526 539 513 501 527 540 514
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 225
+Nodes: 515 541 544 528 516 542 545 529 
+
+225 515 541 544 528 516 542 545 529
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 226
+Nodes: 516 542 545 529 517 543 546 530 
+
+226 516 542 545 529 517 543 546 530
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 227
+Nodes: 541 547 550 544 542 548 551 545 
+
+227 541 547 550 544 542 548 551 545
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 228
+Nodes: 542 548 551 545 543 549 552 546 
+
+228 542 548 551 545 543 549 552 546
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 229
+Nodes: 547 553 556 550 548 554 557 551 
+
+229 547 553 556 550 548 554 557 551
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 230
+Nodes: 548 554 557 551 549 555 558 552 
+
+230 548 554 557 551 549 555 558 552
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 231
+Nodes: 553 559 562 556 554 560 563 557 
+
+231 553 559 562 556 554 560 563 557
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 232
+Nodes: 554 560 563 557 555 561 564 558 
+
+232 554 560 563 557 555 561 564 558
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 233
+Nodes: 559 565 568 562 560 566 569 563 
+
+233 559 565 568 562 560 566 569 563
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 234
+Nodes: 560 566 569 563 561 567 570 564 
+
+234 560 566 569 563 561 567 570 564
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 235
+Nodes: 565 571 574 568 566 572 575 569 
+
+235 565 571 574 568 566 572 575 569
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 236
+Nodes: 566 572 575 569 567 573 576 570 
+
+236 566 572 575 569 567 573 576 570
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 237
+Nodes: 571 577 580 574 572 578 581 575 
+
+237 571 577 580 574 572 578 581 575
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 238
+Nodes: 572 578 581 575 573 579 582 576 
+
+238 572 578 581 575 573 579 582 576
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 239
+Nodes: 577 583 586 580 578 584 587 581 
+
+239 577 583 586 580 578 584 587 581
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 240
+Nodes: 578 584 587 581 579 585 588 582 
+
+240 578 584 587 581 579 585 588 582
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 241
+Nodes: 583 589 592 586 584 590 593 587 
+
+241 583 589 592 586 584 590 593 587
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 242
+Nodes: 584 590 593 587 585 591 594 588 
+
+242 584 590 593 587 585 591 594 588
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 243
+Nodes: 589 595 598 592 590 596 599 593 
+
+243 589 595 598 592 590 596 599 593
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 244
+Nodes: 590 596 599 593 591 597 600 594 
+
+244 590 596 599 593 591 597 600 594
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 245
+Nodes: 595 601 604 598 596 602 605 599 
+
+245 595 601 604 598 596 602 605 599
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 246
+Nodes: 596 602 605 599 597 603 606 600 
+
+246 596 602 605 599 597 603 606 600
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 247
+Nodes: 601 607 610 604 602 608 611 605 
+
+247 601 607 610 604 602 608 611 605
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 248
+Nodes: 602 608 611 605 603 609 612 606 
+
+248 602 608 611 605 603 609 612 606
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 249
+Nodes: 607 613 616 610 608 614 617 611 
+
+249 607 613 616 610 608 614 617 611
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 250
+Nodes: 608 614 617 611 609 615 618 612 
+
+250 608 614 617 611 609 615 618 612
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 251
+Nodes: 613 619 622 616 614 620 623 617 
+
+251 613 619 622 616 614 620 623 617
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 252
+Nodes: 614 620 623 617 615 621 624 618 
+
+252 614 620 623 617 615 621 624 618
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 253
+Nodes: 619 625 628 622 620 626 629 623 
+
+253 619 625 628 622 620 626 629 623
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 254
+Nodes: 620 626 629 623 621 627 630 624 
+
+254 620 626 629 623 621 627 630 624
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 255
+Nodes: 625 631 634 628 626 632 635 629 
+
+255 625 631 634 628 626 632 635 629
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 256
+Nodes: 626 632 635 629 627 633 636 630 
+
+256 626 632 635 629 627 633 636 630
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 257
+Nodes: 631 637 640 634 632 638 641 635 
+
+257 631 637 640 634 632 638 641 635
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 258
+Nodes: 632 638 641 635 633 639 642 636 
+
+258 632 638 641 635 633 639 642 636
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 259
+Nodes: 637 643 646 640 638 644 647 641 
+
+259 637 643 646 640 638 644 647 641
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 260
+Nodes: 638 644 647 641 639 645 648 642 
+
+260 638 644 647 641 639 645 648 642
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 261
+Nodes: 643 649 652 646 644 650 653 647 
+
+261 643 649 652 646 644 650 653 647
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 262
+Nodes: 644 650 653 647 645 651 654 648 
+
+262 644 650 653 647 645 651 654 648
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 263
+Nodes: 649 655 668 652 650 656 669 653 
+
+263 649 655 668 652 650 656 669 653
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 264
+Nodes: 650 656 669 653 651 657 670 654 
+
+264 650 656 669 653 651 657 670 654
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 265
+Nodes: 655 681 694 668 656 682 695 669 
+
+265 655 681 694 668 656 682 695 669
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 266
+Nodes: 656 682 695 669 657 683 696 670 
+
+266 656 682 695 669 657 683 696 670
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 267
+Nodes: 657 683 696 670 658 684 697 671 
+
+267 657 683 696 670 658 684 697 671
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 268
+Nodes: 658 684 697 671 659 685 698 672 
+
+268 658 684 697 671 659 685 698 672
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 269
+Nodes: 659 685 698 672 660 686 699 673 
+
+269 659 685 698 672 660 686 699 673
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 270
+Nodes: 660 686 699 673 661 687 700 674 
+
+270 660 686 699 673 661 687 700 674
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 271
+Nodes: 661 687 700 674 662 688 701 675 
+
+271 661 687 700 674 662 688 701 675
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 272
+Nodes: 662 688 701 675 663 689 702 676 
+
+272 662 688 701 675 663 689 702 676
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 273
+Nodes: 663 689 702 676 664 690 703 677 
+
+273 663 689 702 676 664 690 703 677
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 274
+Nodes: 664 690 703 677 665 691 704 678 
+
+274 664 690 703 677 665 691 704 678
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 275
+Nodes: 665 691 704 678 666 692 705 679 
+
+275 665 691 704 678 666 692 705 679
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 276
+Nodes: 666 692 705 679 667 693 706 680 
+
+276 666 692 705 679 667 693 706 680
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 277
+Nodes: 681 707 720 694 682 708 721 695 
+
+277 681 707 720 694 682 708 721 695
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 278
+Nodes: 682 708 721 695 683 709 722 696 
+
+278 682 708 721 695 683 709 722 696
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 279
+Nodes: 683 709 722 696 684 710 723 697 
+
+279 683 709 722 696 684 710 723 697
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 280
+Nodes: 684 710 723 697 685 711 724 698 
+
+280 684 710 723 697 685 711 724 698
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 281
+Nodes: 685 711 724 698 686 712 725 699 
+
+281 685 711 724 698 686 712 725 699
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 282
+Nodes: 686 712 725 699 687 713 726 700 
+
+282 686 712 725 699 687 713 726 700
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 283
+Nodes: 687 713 726 700 688 714 727 701 
+
+283 687 713 726 700 688 714 727 701
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 284
+Nodes: 688 714 727 701 689 715 728 702 
+
+284 688 714 727 701 689 715 728 702
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 285
+Nodes: 689 715 728 702 690 716 729 703 
+
+285 689 715 728 702 690 716 729 703
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 286
+Nodes: 690 716 729 703 691 717 730 704 
+
+286 690 716 729 703 691 717 730 704
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 287
+Nodes: 691 717 730 704 692 718 731 705 
+
+287 691 717 730 704 692 718 731 705
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Standard Eight Node PML3D 
+Element Number: 288
+Nodes: 692 718 731 705 693 719 732 706 
+
+288 692 718 731 705 693 719 732 706
+Resisting Force (no inertia): 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+SP_Constraints: numConstraints: 840
+
+numComponents: 840
+SP_Constraint: 0	 Node: 463 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 1	 Node: 463 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 2	 Node: 464 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 3	 Node: 464 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 4	 Node: 465 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 5	 Node: 465 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 6	 Node: 466 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 7	 Node: 466 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 8	 Node: 467 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 9	 Node: 467 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 10	 Node: 468 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 11	 Node: 468 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 12	 Node: 469 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 13	 Node: 469 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 14	 Node: 470 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 15	 Node: 470 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 16	 Node: 471 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 17	 Node: 471 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 18	 Node: 472 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 19	 Node: 472 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 20	 Node: 473 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 21	 Node: 473 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 22	 Node: 474 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 23	 Node: 474 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 24	 Node: 475 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 25	 Node: 475 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 26	 Node: 476 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 27	 Node: 476 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 28	 Node: 477 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 29	 Node: 477 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 30	 Node: 478 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 31	 Node: 478 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 32	 Node: 479 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 33	 Node: 479 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 34	 Node: 480 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 35	 Node: 480 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 36	 Node: 481 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 37	 Node: 481 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 38	 Node: 482 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 39	 Node: 482 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 40	 Node: 483 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 41	 Node: 483 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 42	 Node: 484 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 43	 Node: 484 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 44	 Node: 485 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 45	 Node: 485 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 46	 Node: 486 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 47	 Node: 486 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 48	 Node: 487 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 49	 Node: 487 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 50	 Node: 488 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 51	 Node: 488 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 52	 Node: 489 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 53	 Node: 489 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 54	 Node: 490 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 55	 Node: 490 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 56	 Node: 491 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 57	 Node: 491 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 58	 Node: 492 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 59	 Node: 492 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 60	 Node: 493 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 61	 Node: 493 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 62	 Node: 494 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 63	 Node: 494 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 64	 Node: 495 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 65	 Node: 495 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 66	 Node: 496 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 67	 Node: 496 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 68	 Node: 497 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 69	 Node: 497 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 70	 Node: 498 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 71	 Node: 498 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 72	 Node: 499 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 73	 Node: 499 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 74	 Node: 500 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 75	 Node: 500 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 76	 Node: 501 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 77	 Node: 501 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 78	 Node: 502 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 79	 Node: 502 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 80	 Node: 503 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 81	 Node: 503 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 82	 Node: 504 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 83	 Node: 504 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 84	 Node: 505 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 85	 Node: 505 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 86	 Node: 506 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 87	 Node: 506 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 88	 Node: 507 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 89	 Node: 507 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 90	 Node: 508 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 91	 Node: 508 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 92	 Node: 509 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 93	 Node: 509 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 94	 Node: 510 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 95	 Node: 510 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 96	 Node: 511 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 97	 Node: 511 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 98	 Node: 512 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 99	 Node: 512 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 100	 Node: 513 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 101	 Node: 513 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 102	 Node: 514 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 103	 Node: 514 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 104	 Node: 515 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 105	 Node: 515 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 106	 Node: 516 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 107	 Node: 516 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 108	 Node: 517 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 109	 Node: 517 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 110	 Node: 518 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 111	 Node: 518 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 112	 Node: 519 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 113	 Node: 519 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 114	 Node: 520 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 115	 Node: 520 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 116	 Node: 521 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 117	 Node: 521 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 118	 Node: 522 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 119	 Node: 522 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 120	 Node: 523 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 121	 Node: 523 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 122	 Node: 524 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 123	 Node: 524 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 124	 Node: 525 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 125	 Node: 525 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 126	 Node: 526 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 127	 Node: 526 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 128	 Node: 527 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 129	 Node: 527 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 130	 Node: 528 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 131	 Node: 528 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 132	 Node: 529 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 133	 Node: 529 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 134	 Node: 530 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 135	 Node: 530 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 136	 Node: 531 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 137	 Node: 531 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 138	 Node: 532 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 139	 Node: 532 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 140	 Node: 533 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 141	 Node: 533 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 142	 Node: 534 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 143	 Node: 534 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 144	 Node: 535 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 145	 Node: 535 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 146	 Node: 536 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 147	 Node: 536 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 148	 Node: 537 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 149	 Node: 537 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 150	 Node: 538 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 151	 Node: 538 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 152	 Node: 539 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 153	 Node: 539 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 154	 Node: 540 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 155	 Node: 540 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 156	 Node: 541 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 157	 Node: 541 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 158	 Node: 542 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 159	 Node: 542 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 160	 Node: 543 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 161	 Node: 543 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 162	 Node: 544 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 163	 Node: 544 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 164	 Node: 545 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 165	 Node: 545 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 166	 Node: 546 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 167	 Node: 546 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 168	 Node: 547 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 169	 Node: 547 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 170	 Node: 548 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 171	 Node: 548 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 172	 Node: 549 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 173	 Node: 549 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 174	 Node: 550 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 175	 Node: 550 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 176	 Node: 551 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 177	 Node: 551 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 178	 Node: 552 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 179	 Node: 552 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 180	 Node: 553 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 181	 Node: 553 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 182	 Node: 554 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 183	 Node: 554 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 184	 Node: 555 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 185	 Node: 555 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 186	 Node: 556 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 187	 Node: 556 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 188	 Node: 557 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 189	 Node: 557 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 190	 Node: 558 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 191	 Node: 558 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 192	 Node: 559 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 193	 Node: 559 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 194	 Node: 560 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 195	 Node: 560 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 196	 Node: 561 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 197	 Node: 561 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 198	 Node: 562 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 199	 Node: 562 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 200	 Node: 563 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 201	 Node: 563 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 202	 Node: 564 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 203	 Node: 564 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 204	 Node: 565 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 205	 Node: 565 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 206	 Node: 566 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 207	 Node: 566 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 208	 Node: 567 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 209	 Node: 567 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 210	 Node: 568 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 211	 Node: 568 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 212	 Node: 569 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 213	 Node: 569 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 214	 Node: 570 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 215	 Node: 570 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 216	 Node: 571 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 217	 Node: 571 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 218	 Node: 572 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 219	 Node: 572 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 220	 Node: 573 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 221	 Node: 573 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 222	 Node: 574 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 223	 Node: 574 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 224	 Node: 575 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 225	 Node: 575 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 226	 Node: 576 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 227	 Node: 576 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 228	 Node: 577 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 229	 Node: 577 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 230	 Node: 578 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 231	 Node: 578 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 232	 Node: 579 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 233	 Node: 579 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 234	 Node: 580 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 235	 Node: 580 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 236	 Node: 581 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 237	 Node: 581 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 238	 Node: 582 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 239	 Node: 582 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 240	 Node: 583 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 241	 Node: 583 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 242	 Node: 584 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 243	 Node: 584 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 244	 Node: 585 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 245	 Node: 585 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 246	 Node: 586 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 247	 Node: 586 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 248	 Node: 587 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 249	 Node: 587 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 250	 Node: 588 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 251	 Node: 588 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 252	 Node: 589 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 253	 Node: 589 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 254	 Node: 590 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 255	 Node: 590 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 256	 Node: 591 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 257	 Node: 591 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 258	 Node: 592 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 259	 Node: 592 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 260	 Node: 593 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 261	 Node: 593 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 262	 Node: 594 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 263	 Node: 594 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 264	 Node: 595 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 265	 Node: 595 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 266	 Node: 596 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 267	 Node: 596 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 268	 Node: 597 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 269	 Node: 597 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 270	 Node: 598 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 271	 Node: 598 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 272	 Node: 599 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 273	 Node: 599 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 274	 Node: 600 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 275	 Node: 600 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 276	 Node: 601 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 277	 Node: 601 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 278	 Node: 602 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 279	 Node: 602 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 280	 Node: 603 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 281	 Node: 603 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 282	 Node: 604 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 283	 Node: 604 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 284	 Node: 605 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 285	 Node: 605 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 286	 Node: 606 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 287	 Node: 606 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 288	 Node: 607 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 289	 Node: 607 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 290	 Node: 608 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 291	 Node: 608 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 292	 Node: 609 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 293	 Node: 609 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 294	 Node: 610 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 295	 Node: 610 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 296	 Node: 611 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 297	 Node: 611 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 298	 Node: 612 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 299	 Node: 612 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 300	 Node: 613 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 301	 Node: 613 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 302	 Node: 614 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 303	 Node: 614 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 304	 Node: 615 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 305	 Node: 615 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 306	 Node: 616 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 307	 Node: 616 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 308	 Node: 617 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 309	 Node: 617 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 310	 Node: 618 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 311	 Node: 618 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 312	 Node: 619 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 313	 Node: 619 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 314	 Node: 620 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 315	 Node: 620 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 316	 Node: 621 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 317	 Node: 621 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 318	 Node: 622 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 319	 Node: 622 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 320	 Node: 623 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 321	 Node: 623 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 322	 Node: 624 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 323	 Node: 624 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 324	 Node: 625 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 325	 Node: 625 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 326	 Node: 626 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 327	 Node: 626 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 328	 Node: 627 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 329	 Node: 627 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 330	 Node: 628 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 331	 Node: 628 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 332	 Node: 629 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 333	 Node: 629 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 334	 Node: 630 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 335	 Node: 630 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 336	 Node: 631 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 337	 Node: 631 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 338	 Node: 632 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 339	 Node: 632 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 340	 Node: 633 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 341	 Node: 633 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 342	 Node: 634 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 343	 Node: 634 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 344	 Node: 635 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 345	 Node: 635 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 346	 Node: 636 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 347	 Node: 636 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 348	 Node: 637 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 349	 Node: 637 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 350	 Node: 638 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 351	 Node: 638 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 352	 Node: 639 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 353	 Node: 639 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 354	 Node: 640 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 355	 Node: 640 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 356	 Node: 641 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 357	 Node: 641 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 358	 Node: 642 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 359	 Node: 642 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 360	 Node: 643 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 361	 Node: 643 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 362	 Node: 644 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 363	 Node: 644 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 364	 Node: 645 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 365	 Node: 645 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 366	 Node: 646 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 367	 Node: 646 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 368	 Node: 647 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 369	 Node: 647 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 370	 Node: 648 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 371	 Node: 648 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 372	 Node: 649 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 373	 Node: 649 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 374	 Node: 650 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 375	 Node: 650 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 376	 Node: 651 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 377	 Node: 651 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 378	 Node: 652 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 379	 Node: 652 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 380	 Node: 653 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 381	 Node: 653 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 382	 Node: 654 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 383	 Node: 654 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 384	 Node: 655 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 385	 Node: 655 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 386	 Node: 656 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 387	 Node: 656 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 388	 Node: 657 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 389	 Node: 657 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 390	 Node: 658 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 391	 Node: 658 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 392	 Node: 659 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 393	 Node: 659 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 394	 Node: 660 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 395	 Node: 660 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 396	 Node: 661 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 397	 Node: 661 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 398	 Node: 662 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 399	 Node: 662 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 400	 Node: 663 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 401	 Node: 663 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 402	 Node: 664 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 403	 Node: 664 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 404	 Node: 665 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 405	 Node: 665 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 406	 Node: 666 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 407	 Node: 666 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 408	 Node: 667 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 409	 Node: 667 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 410	 Node: 668 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 411	 Node: 668 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 412	 Node: 669 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 413	 Node: 669 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 414	 Node: 670 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 415	 Node: 670 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 416	 Node: 671 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 417	 Node: 671 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 418	 Node: 672 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 419	 Node: 672 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 420	 Node: 673 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 421	 Node: 673 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 422	 Node: 674 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 423	 Node: 674 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 424	 Node: 675 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 425	 Node: 675 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 426	 Node: 676 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 427	 Node: 676 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 428	 Node: 677 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 429	 Node: 677 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 430	 Node: 678 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 431	 Node: 678 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 432	 Node: 679 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 433	 Node: 679 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 434	 Node: 680 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 435	 Node: 680 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 436	 Node: 681 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 437	 Node: 681 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 438	 Node: 682 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 439	 Node: 682 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 440	 Node: 683 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 441	 Node: 683 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 442	 Node: 684 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 443	 Node: 684 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 444	 Node: 685 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 445	 Node: 685 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 446	 Node: 686 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 447	 Node: 686 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 448	 Node: 687 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 449	 Node: 687 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 450	 Node: 688 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 451	 Node: 688 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 452	 Node: 689 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 453	 Node: 689 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 454	 Node: 690 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 455	 Node: 690 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 456	 Node: 691 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 457	 Node: 691 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 458	 Node: 692 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 459	 Node: 692 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 460	 Node: 693 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 461	 Node: 693 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 462	 Node: 694 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 463	 Node: 694 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 464	 Node: 695 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 465	 Node: 695 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 466	 Node: 696 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 467	 Node: 696 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 468	 Node: 697 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 469	 Node: 697 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 470	 Node: 698 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 471	 Node: 698 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 472	 Node: 699 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 473	 Node: 699 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 474	 Node: 700 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 475	 Node: 700 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 476	 Node: 701 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 477	 Node: 701 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 478	 Node: 702 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 479	 Node: 702 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 480	 Node: 703 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 481	 Node: 703 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 482	 Node: 704 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 483	 Node: 704 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 484	 Node: 705 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 485	 Node: 705 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 486	 Node: 706 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 487	 Node: 706 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 488	 Node: 707 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 489	 Node: 707 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 490	 Node: 708 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 491	 Node: 708 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 492	 Node: 709 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 493	 Node: 709 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 494	 Node: 710 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 495	 Node: 710 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 496	 Node: 711 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 497	 Node: 711 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 498	 Node: 712 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 499	 Node: 712 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 500	 Node: 713 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 501	 Node: 713 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 502	 Node: 714 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 503	 Node: 714 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 504	 Node: 715 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 505	 Node: 715 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 506	 Node: 716 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 507	 Node: 716 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 508	 Node: 717 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 509	 Node: 717 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 510	 Node: 718 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 511	 Node: 718 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 512	 Node: 719 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 513	 Node: 719 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 514	 Node: 720 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 515	 Node: 720 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 516	 Node: 721 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 517	 Node: 721 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 518	 Node: 722 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 519	 Node: 722 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 520	 Node: 723 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 521	 Node: 723 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 522	 Node: 724 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 523	 Node: 724 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 524	 Node: 725 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 525	 Node: 725 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 526	 Node: 726 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 527	 Node: 726 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 528	 Node: 727 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 529	 Node: 727 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 530	 Node: 728 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 531	 Node: 728 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 532	 Node: 729 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 533	 Node: 729 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 534	 Node: 730 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 535	 Node: 730 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 536	 Node: 731 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 537	 Node: 731 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 538	 Node: 732 DOF: 2 ref value: 0 current value: 0
+SP_Constraint: 539	 Node: 732 DOF: 11 ref value: 0 current value: 0
+SP_Constraint: 540	 Node: 463 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 541	 Node: 463 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 542	 Node: 463 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 543	 Node: 463 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 544	 Node: 464 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 545	 Node: 464 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 546	 Node: 464 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 547	 Node: 464 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 548	 Node: 465 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 549	 Node: 465 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 550	 Node: 465 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 551	 Node: 465 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 552	 Node: 466 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 553	 Node: 466 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 554	 Node: 466 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 555	 Node: 466 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 556	 Node: 467 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 557	 Node: 467 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 558	 Node: 467 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 559	 Node: 467 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 560	 Node: 468 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 561	 Node: 468 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 562	 Node: 468 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 563	 Node: 468 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 564	 Node: 469 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 565	 Node: 469 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 566	 Node: 469 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 567	 Node: 469 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 568	 Node: 470 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 569	 Node: 470 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 570	 Node: 470 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 571	 Node: 470 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 572	 Node: 471 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 573	 Node: 471 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 574	 Node: 471 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 575	 Node: 471 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 576	 Node: 472 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 577	 Node: 472 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 578	 Node: 472 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 579	 Node: 472 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 580	 Node: 473 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 581	 Node: 473 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 582	 Node: 473 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 583	 Node: 473 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 584	 Node: 474 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 585	 Node: 474 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 586	 Node: 474 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 587	 Node: 474 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 588	 Node: 475 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 589	 Node: 475 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 590	 Node: 475 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 591	 Node: 475 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 592	 Node: 476 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 593	 Node: 476 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 594	 Node: 476 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 595	 Node: 476 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 596	 Node: 477 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 597	 Node: 477 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 598	 Node: 477 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 599	 Node: 477 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 600	 Node: 478 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 601	 Node: 478 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 602	 Node: 478 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 603	 Node: 478 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 604	 Node: 479 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 605	 Node: 479 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 606	 Node: 479 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 607	 Node: 479 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 608	 Node: 480 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 609	 Node: 480 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 610	 Node: 480 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 611	 Node: 480 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 612	 Node: 481 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 613	 Node: 481 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 614	 Node: 481 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 615	 Node: 481 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 616	 Node: 482 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 617	 Node: 482 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 618	 Node: 482 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 619	 Node: 482 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 620	 Node: 483 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 621	 Node: 483 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 622	 Node: 483 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 623	 Node: 483 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 624	 Node: 484 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 625	 Node: 484 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 626	 Node: 484 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 627	 Node: 484 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 628	 Node: 485 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 629	 Node: 485 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 630	 Node: 485 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 631	 Node: 485 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 632	 Node: 486 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 633	 Node: 486 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 634	 Node: 486 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 635	 Node: 486 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 636	 Node: 487 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 637	 Node: 487 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 638	 Node: 487 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 639	 Node: 487 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 640	 Node: 488 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 641	 Node: 488 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 642	 Node: 488 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 643	 Node: 488 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 644	 Node: 707 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 645	 Node: 707 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 646	 Node: 707 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 647	 Node: 707 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 648	 Node: 708 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 649	 Node: 708 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 650	 Node: 708 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 651	 Node: 708 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 652	 Node: 709 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 653	 Node: 709 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 654	 Node: 709 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 655	 Node: 709 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 656	 Node: 710 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 657	 Node: 710 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 658	 Node: 710 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 659	 Node: 710 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 660	 Node: 711 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 661	 Node: 711 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 662	 Node: 711 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 663	 Node: 711 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 664	 Node: 712 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 665	 Node: 712 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 666	 Node: 712 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 667	 Node: 712 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 668	 Node: 713 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 669	 Node: 713 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 670	 Node: 713 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 671	 Node: 713 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 672	 Node: 714 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 673	 Node: 714 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 674	 Node: 714 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 675	 Node: 714 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 676	 Node: 715 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 677	 Node: 715 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 678	 Node: 715 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 679	 Node: 715 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 680	 Node: 716 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 681	 Node: 716 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 682	 Node: 716 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 683	 Node: 716 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 684	 Node: 717 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 685	 Node: 717 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 686	 Node: 717 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 687	 Node: 717 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 688	 Node: 718 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 689	 Node: 718 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 690	 Node: 718 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 691	 Node: 718 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 692	 Node: 719 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 693	 Node: 719 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 694	 Node: 719 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 695	 Node: 719 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 696	 Node: 720 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 697	 Node: 720 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 698	 Node: 720 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 699	 Node: 720 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 700	 Node: 721 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 701	 Node: 721 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 702	 Node: 721 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 703	 Node: 721 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 704	 Node: 722 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 705	 Node: 722 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 706	 Node: 722 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 707	 Node: 722 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 708	 Node: 723 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 709	 Node: 723 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 710	 Node: 723 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 711	 Node: 723 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 712	 Node: 724 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 713	 Node: 724 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 714	 Node: 724 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 715	 Node: 724 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 716	 Node: 725 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 717	 Node: 725 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 718	 Node: 725 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 719	 Node: 725 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 720	 Node: 726 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 721	 Node: 726 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 722	 Node: 726 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 723	 Node: 726 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 724	 Node: 727 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 725	 Node: 727 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 726	 Node: 727 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 727	 Node: 727 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 728	 Node: 728 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 729	 Node: 728 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 730	 Node: 728 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 731	 Node: 728 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 732	 Node: 729 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 733	 Node: 729 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 734	 Node: 729 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 735	 Node: 729 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 736	 Node: 730 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 737	 Node: 730 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 738	 Node: 730 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 739	 Node: 730 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 740	 Node: 731 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 741	 Node: 731 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 742	 Node: 731 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 743	 Node: 731 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 744	 Node: 732 DOF: 1 ref value: 0 current value: 0
+SP_Constraint: 745	 Node: 732 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 746	 Node: 732 DOF: 10 ref value: 0 current value: 0
+SP_Constraint: 747	 Node: 732 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 748	 Node: 489 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 749	 Node: 489 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 750	 Node: 502 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 751	 Node: 502 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 752	 Node: 515 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 753	 Node: 515 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 754	 Node: 528 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 755	 Node: 528 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 756	 Node: 541 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 757	 Node: 541 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 758	 Node: 544 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 759	 Node: 544 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 760	 Node: 547 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 761	 Node: 547 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 762	 Node: 550 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 763	 Node: 550 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 764	 Node: 553 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 765	 Node: 553 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 766	 Node: 556 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 767	 Node: 556 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 768	 Node: 559 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 769	 Node: 559 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 770	 Node: 562 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 771	 Node: 562 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 772	 Node: 565 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 773	 Node: 565 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 774	 Node: 568 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 775	 Node: 568 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 776	 Node: 571 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 777	 Node: 571 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 778	 Node: 574 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 779	 Node: 574 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 780	 Node: 577 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 781	 Node: 577 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 782	 Node: 580 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 783	 Node: 580 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 784	 Node: 583 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 785	 Node: 583 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 786	 Node: 586 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 787	 Node: 586 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 788	 Node: 589 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 789	 Node: 589 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 790	 Node: 592 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 791	 Node: 592 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 792	 Node: 595 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 793	 Node: 595 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 794	 Node: 598 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 795	 Node: 598 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 796	 Node: 601 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 797	 Node: 601 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 798	 Node: 604 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 799	 Node: 604 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 800	 Node: 607 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 801	 Node: 607 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 802	 Node: 610 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 803	 Node: 610 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 804	 Node: 613 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 805	 Node: 613 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 806	 Node: 616 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 807	 Node: 616 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 808	 Node: 619 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 809	 Node: 619 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 810	 Node: 622 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 811	 Node: 622 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 812	 Node: 625 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 813	 Node: 625 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 814	 Node: 628 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 815	 Node: 628 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 816	 Node: 631 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 817	 Node: 631 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 818	 Node: 634 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 819	 Node: 634 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 820	 Node: 637 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 821	 Node: 637 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 822	 Node: 640 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 823	 Node: 640 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 824	 Node: 643 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 825	 Node: 643 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 826	 Node: 646 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 827	 Node: 646 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 828	 Node: 649 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 829	 Node: 649 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 830	 Node: 652 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 831	 Node: 652 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 832	 Node: 655 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 833	 Node: 655 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 834	 Node: 668 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 835	 Node: 668 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 836	 Node: 681 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 837	 Node: 681 DOF: 12 ref value: 0 current value: 0
+SP_Constraint: 838	 Node: 694 DOF: 3 ref value: 0 current value: 0
+SP_Constraint: 839	 Node: 694 DOF: 12 ref value: 0 current value: 0
+
+Pressure_Constraints: numConstraints: 0
+
+numComponents: 0
+
+MP_Constraints: numConstraints: 82
+
+numComponents: 82
+MP_Constraint: 0
+	Node Constrained: 1 node Retained: 517
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 1
+	Node Constrained: 2 node Retained: 518
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 2
+	Node Constrained: 3 node Retained: 519
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 3
+	Node Constrained: 4 node Retained: 520
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 4
+	Node Constrained: 5 node Retained: 521
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 5
+	Node Constrained: 6 node Retained: 522
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 6
+	Node Constrained: 7 node Retained: 523
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 7
+	Node Constrained: 8 node Retained: 524
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 8
+	Node Constrained: 9 node Retained: 525
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 9
+	Node Constrained: 10 node Retained: 526
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 10
+	Node Constrained: 11 node Retained: 527
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 11
+	Node Constrained: 12 node Retained: 530
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 12
+	Node Constrained: 13 node Retained: 531
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 13
+	Node Constrained: 14 node Retained: 532
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 14
+	Node Constrained: 15 node Retained: 533
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 15
+	Node Constrained: 16 node Retained: 534
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 16
+	Node Constrained: 17 node Retained: 535
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 17
+	Node Constrained: 18 node Retained: 536
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 18
+	Node Constrained: 19 node Retained: 537
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 19
+	Node Constrained: 20 node Retained: 538
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 20
+	Node Constrained: 21 node Retained: 539
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 21
+	Node Constrained: 22 node Retained: 540
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 22
+	Node Constrained: 23 node Retained: 543
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 23
+	Node Constrained: 34 node Retained: 546
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 24
+	Node Constrained: 45 node Retained: 549
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 25
+	Node Constrained: 56 node Retained: 552
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 26
+	Node Constrained: 67 node Retained: 555
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 27
+	Node Constrained: 78 node Retained: 558
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 28
+	Node Constrained: 89 node Retained: 561
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 29
+	Node Constrained: 100 node Retained: 564
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 30
+	Node Constrained: 111 node Retained: 567
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 31
+	Node Constrained: 122 node Retained: 570
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 32
+	Node Constrained: 133 node Retained: 573
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 33
+	Node Constrained: 144 node Retained: 576
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 34
+	Node Constrained: 155 node Retained: 579
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 35
+	Node Constrained: 166 node Retained: 582
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 36
+	Node Constrained: 177 node Retained: 585
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 37
+	Node Constrained: 188 node Retained: 588
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 38
+	Node Constrained: 199 node Retained: 591
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 39
+	Node Constrained: 210 node Retained: 594
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 40
+	Node Constrained: 221 node Retained: 597
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 41
+	Node Constrained: 232 node Retained: 600
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 42
+	Node Constrained: 243 node Retained: 603
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 43
+	Node Constrained: 254 node Retained: 606
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 44
+	Node Constrained: 265 node Retained: 609
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 45
+	Node Constrained: 276 node Retained: 612
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 46
+	Node Constrained: 287 node Retained: 615
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 47
+	Node Constrained: 298 node Retained: 618
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 48
+	Node Constrained: 309 node Retained: 621
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 49
+	Node Constrained: 320 node Retained: 624
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 50
+	Node Constrained: 331 node Retained: 627
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 51
+	Node Constrained: 342 node Retained: 630
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 52
+	Node Constrained: 353 node Retained: 633
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 53
+	Node Constrained: 364 node Retained: 636
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 54
+	Node Constrained: 375 node Retained: 639
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 55
+	Node Constrained: 386 node Retained: 642
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 56
+	Node Constrained: 397 node Retained: 645
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 57
+	Node Constrained: 408 node Retained: 648
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 58
+	Node Constrained: 419 node Retained: 651
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 59
+	Node Constrained: 430 node Retained: 654
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 60
+	Node Constrained: 441 node Retained: 657
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 61
+	Node Constrained: 442 node Retained: 658
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 62
+	Node Constrained: 443 node Retained: 659
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 63
+	Node Constrained: 444 node Retained: 660
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 64
+	Node Constrained: 445 node Retained: 661
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 65
+	Node Constrained: 446 node Retained: 662
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 66
+	Node Constrained: 447 node Retained: 663
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 67
+	Node Constrained: 448 node Retained: 664
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 68
+	Node Constrained: 449 node Retained: 665
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 69
+	Node Constrained: 450 node Retained: 666
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 70
+	Node Constrained: 451 node Retained: 667
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 71
+	Node Constrained: 452 node Retained: 670
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 72
+	Node Constrained: 453 node Retained: 671
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 73
+	Node Constrained: 454 node Retained: 672
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 74
+	Node Constrained: 455 node Retained: 673
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 75
+	Node Constrained: 456 node Retained: 674
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 76
+	Node Constrained: 457 node Retained: 675
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 77
+	Node Constrained: 458 node Retained: 676
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 78
+	Node Constrained: 459 node Retained: 677
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 79
+	Node Constrained: 460 node Retained: 678
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 80
+	Node Constrained: 461 node Retained: 679
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+MP_Constraint: 81
+	Node Constrained: 462 node Retained: 680
+ constrained dof: 1 3 
+ retained dof: 1 3 
+ constraint matrix: 
+1 0 
+0 1 
+
+
+
+LOAD PATTERNS: numPatterns: 1
+
+
+numComponents: 1
+Load Pattern: 1
+  Scale Factor: 1
+  Nodal Loads: 
+
+numComponents: 0
+
+  Elemental Loads: 
+
+numComponents: 0
+
+  Single Point Constraints: 
+
+numComponents: 0
+
+PARAMETERS: numParameters: 0
+
+
+numComponents: 0
