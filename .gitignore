@@ -1,0 +1,15 @@
+# ignore all the files with the extension .out and .info
+**/*.out
+**/*.info
+**/*.msh
+**/*nodes*
+**/*elements*
+**/*fixity*
+**/*load*
+**/*force.dat   
+**/*boundary*
+**/*plot.py
+
+
+
+
