@@ -594,9 +594,9 @@ for core in range(regcores + pmlcores):
     # save the screenshot
 pl.show_axes()
 pl.show()
-pl.export_html(
-    'cores.html', backend='panel'
-)  
+# pl.export_html(
+#     'cores.html', backend='panel'
+# )  
 
 # =============================================================================
 # create loding file

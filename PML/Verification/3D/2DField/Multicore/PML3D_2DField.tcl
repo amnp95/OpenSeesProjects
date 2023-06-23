@@ -123,7 +123,7 @@ if {$DOPML == "YES"} {
     if {$pid < $regcores} {
         fixX [expr -$lx/2.] 1 0 1;
         fixX [expr  $lx/2.] 1 0 1;
-        fixZ [expr  $lz/1.] 0 0 1;
+        fixZ [expr -$lz/1.] 0 0 1;
     }
 }
 

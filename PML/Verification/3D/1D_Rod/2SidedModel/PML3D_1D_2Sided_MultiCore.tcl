@@ -113,7 +113,7 @@ if {$pid==0} {
 }
 
 
-
+barrier
 # ============================================================================
 # Sending and receiving DoflistHead and DoflistEnd to other cores
 # ============================================================================
@@ -137,7 +137,7 @@ if {$pid == 0} {
 
 
 
-
+barrier
 # ============================================================================
 # Create PML nodes and elements
 # ============================================================================
@@ -174,8 +174,8 @@ if {$pid > 0} {
         set afp             2.0                   ;# --- Coefficient m, typically m = 2
         set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
         set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-        set RD_half_width_y [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-        set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
+        set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
+        set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
         set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
         set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
         set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
@@ -236,70 +236,70 @@ if {$pid > 0} {
 
 
 
-        if {$pid == $pidPMLHead} {
+        # if {$pid == $pidPMLHead} {
             
-            # creating PMLxlist
-            set PMLxlist {}
-            for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i - $lx/2. - $nxPML*$dxPML];}
-            set count 1;
+        #     # creating PMLxlist
+        #     set PMLxlist {}
+        #     for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i - $lx/2. - $nxPML*$dxPML];}
+        #     set count 1;
 
 
             
-            # create nodes for the head side of the PML
-            set PMLDoflist {}
-            set count 1
-            set nodeTag [expr ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1) + 1];
-            foreach x $PMLxlist {
-                foreach y $PMLylist {
-                    foreach z $PMLzlist {
-                        node  $nodeTag $x $y $z;
-                        fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
-                        if {$count == $nxPML+1} {lappend PMLDoflist [expr $nodeTag];}
-                        puts "node $nodeTag $x $y $z;"
-                        incr nodeTag;
-                    } 
-                } 
-                incr count;
-            }
+        #     # create nodes for the head side of the PML
+        #     set PMLDoflist {}
+        #     set count 1
+        #     set nodeTag [expr ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1) + 1];
+        #     foreach x $PMLxlist {
+        #         foreach y $PMLylist {
+        #             foreach z $PMLzlist {
+        #                 node  $nodeTag $x $y $z;
+        #                 fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+        #                 if {$count == $nxPML+1} {lappend PMLDoflist [expr $nodeTag];}
+        #                 puts "node $nodeTag $x $y $z;"
+        #                 incr nodeTag;
+        #             } 
+        #         } 
+        #         incr count;
+        #     }
 
-            # creating elements for the head side of the PML 
-            set elementTag [expr $nx*$ny*$nz + $nxPML*$nyPML*$nzPML + 1]
-            for {set x 0 } {$x < $nxPML} {incr x} {
-                for {set y 0} {$y < $nyPML} {incr y} {
-                    for  {set z 0} {$z < $nzPML} {incr z} {
-                        set node1 [expr int($x    *($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
-                        set node2 [expr int(($x+1)*($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
-                        set node3 [expr int(($x+1)*($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
-                        set node4 [expr int(($x)  *($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
-                        set node5 [expr $node1 + 1];
-                        set node6 [expr $node2 + 1];
-                        set node7 [expr $node3 + 1];
-                        set node8 [expr $node4 + 1];
-                        eval "element PML $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $PMLMaterial";
-                        incr elementTag;
-                    }   
-                }
-            }
+        #     # creating elements for the head side of the PML 
+        #     set elementTag [expr $nx*$ny*$nz + $nxPML*$nyPML*$nzPML + 1]
+        #     for {set x 0 } {$x < $nxPML} {incr x} {
+        #         for {set y 0} {$y < $nyPML} {incr y} {
+        #             for  {set z 0} {$z < $nzPML} {incr z} {
+        #                 set node1 [expr int($x    *($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
+        #                 set node2 [expr int(($x+1)*($ny+1)*($nz+1) + $y    *($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
+        #                 set node3 [expr int(($x+1)*($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
+        #                 set node4 [expr int(($x)  *($ny+1)*($nz+1) + ($y+1)*($nz+1) + $z + 1 + ($nx+1)*($ny+1)*($nz+1) + ($nxPML+1)*($nyPML+1)*($nzPML+1))];
+        #                 set node5 [expr $node1 + 1];
+        #                 set node6 [expr $node2 + 1];
+        #                 set node7 [expr $node3 + 1];
+        #                 set node8 [expr $node4 + 1];
+        #                 eval "element PML $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $PMLMaterial";
+        #                 incr elementTag;
+        #             }   
+        #         }
+        #     }
 
-            # create nodes in the core processor
-            model BasicBuilder -ndm 3 -ndf 3
-            for {set i 0} { $i < [llength $DoflistHead] } { incr i 1 } {
-                eval "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]";
-                puts "node [lindex $DoflistHead $i] [nodeCoord [lindex $DoflistHead $i]];"
-            }
+        #     # create nodes in the core processor
+        #     model BasicBuilder -ndm 3 -ndf 3
+        #     for {set i 0} { $i < [llength $DoflistHead] } { incr i 1 } {
+        #         eval "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]";
+        #         puts "node [lindex $DoflistHead $i] [nodeCoord [lindex $DoflistHead $i]];"
+        #     }
 
-            # tie PML nodes to the main nodes
-            model BasicBuilder -ndm 3 -ndf 18
-            for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
-                equalDOF [lindex $DoflistHead $i] [lindex $PMLDoflist $i] 1;
-                puts "equalDOF [lindex $DoflistHead $i] [lindex $PMLDoflist $i] 1;"
-            }
-        }
+        #     # tie PML nodes to the main nodes
+        #     model BasicBuilder -ndm 3 -ndf 18
+        #     for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
+        #         equalDOF [lindex $DoflistHead $i] [lindex $PMLDoflist $i] 1;
+        #         puts "equalDOF [lindex $DoflistHead $i] [lindex $PMLDoflist $i] 1;"
+        #     }
+        # }
         
     }
 }
 
-
+barrier
 # ============================================================================
 # creating fixities
 # ============================================================================
@@ -314,12 +314,13 @@ if {$DOPML == "YES"} {
         fixX [expr -$lx/2.] 1 0 0;
     }
 }
-
+barrier
 # ============================================================================
 # loading 
 # ============================================================================
 set dT 0.001
 if {$pid ==0} {
+    set Loadinglist $DoflistHead 
     timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
     pattern Plain 1 1 {
         foreach node $Loadinglist {
@@ -327,7 +328,7 @@ if {$pid ==0} {
         }
     }
 }
-
+barrier
 
 # ============================================================================
 # recorders

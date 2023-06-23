@@ -34,7 +34,7 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 1.0
+set pmlthickness 2.0
 
 
 # ============================================================================
