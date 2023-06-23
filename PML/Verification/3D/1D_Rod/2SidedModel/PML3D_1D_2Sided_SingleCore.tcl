@@ -263,7 +263,7 @@ eval "recorder Node -file NodeDispCent.out  -time -node $Loadinglist    -dof 1 d
 
 
 
-print "PML3D_1DExample2.info" 
+print "PML3D_1D_2Sided_SingleCore.info" 
 
 # Analysis 
 constraints   Plain
