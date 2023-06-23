@@ -1,0 +1,4 @@
+# ignore all the files with the extension .out and .info
+*.out
+*.info
+
