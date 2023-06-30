@@ -615,8 +615,8 @@ file = open('load.tcl', 'w')
 file.write('set loadlist {}\n')
 file.write('if {$pid == %d}  {lappend loadlist %d}\n' % (nodetag1['core'].values[0], nodetag1['tag'].values[0]))
 file.write('if {$pid == %d}  {lappend loadlist %d}\n' % (nodetag2['core'].values[0], nodetag2['tag'].values[0]))
-# file.write ("set recordList {%d %d %d %d %d %d}" % (nodetag1['tag'].values[0], nodetag2['tag'].values[0], nodetag3, nodetag4, nodetag5, nodetag6))
-file.write ("set recordList {%d }" % (nodetag1['tag'].values[0]))
+file.write ("set recordList {%d %d %d %d %d %d}" % (nodetag1['tag'].values[0], nodetag2['tag'].values[0], nodetag3, nodetag4, nodetag5, nodetag6))
+# file.write ("set recordList {%d }" % (nodetag1['tag'].values[0]))
 
 file.close()
 

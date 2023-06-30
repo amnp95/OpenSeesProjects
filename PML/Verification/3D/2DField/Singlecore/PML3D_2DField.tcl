@@ -34,7 +34,7 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 1.0
+set pmlthickness 2.0
 
 
 # ============================================================================
@@ -160,7 +160,7 @@ pattern Plain 1 1 {
 # recorders
 # ============================================================================
 eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
-
+eval "recorder Node -file NodeDispx.out -time -node $recordList  -dof 1 disp"
 # ============================================================================
 # Analysis 
 # ============================================================================

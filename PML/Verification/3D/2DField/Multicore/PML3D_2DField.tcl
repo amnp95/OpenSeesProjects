@@ -33,8 +33,8 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 1.0
-set regcores     3
+set pmlthickness 2.0
+set regcores     1
 set pmlcores     1
 
 barrier
@@ -173,6 +173,8 @@ barrier
 # ============================================================================
 if {$pid < $regcores } {
     eval "recorder Node -file NodeDisp$pid.out -time -node $recordList  -dof 3 disp"
+    eval "recorder Node -file NodeDispx$pid.out -time -node $recordList  -dof 1 disp"
+
 }
 barrier
 # ============================================================================
