@@ -28,6 +28,9 @@ if {$argc <= 0} {
     exit
 }
 
+set pid [getPID]
+set np  [getNP]
+
 
 # building nodes and elements
 wipe 
@@ -63,19 +66,27 @@ for {set i 0} { $i <= $nz } { incr i} {lappend zlist [expr $dz*$i];}
 
 set nodeTag    1;
 set elementTag 1;
-
+set tol        0.0001;
+set speratorx  -24.0
 
 # creating nodes
 set count 1;
 foreach x $xlist {
     foreach y $ylist {
         foreach z $zlist {
-            node  $nodeTag $x $y $z;
-            fix $nodeTag 0 1 1
-            puts "node $nodeTag $x $y $z;"
+            if {$pid==0 && $x < [expr $speratorx + $tol]} {
+                node  $nodeTag $x $y $z;
+                fix $nodeTag 0 1 1
+                puts "node $nodeTag $x $y $z;"
+            }
+            barrier
+            if {$pid==1 && $x > [expr $speratorx - $tol]} {
+                node  $nodeTag $x $y $z;
+                fix $nodeTag 0 1 1
+                puts "node $nodeTag $x $y $z;"
+            }
             # add nodes to the loading list if x ==0. 
             # using tolerance to avoid round off error
-            set tol 0.0001;
             if {$x > -$tol && $x < $tol} {lappend DoflistCent [expr $nodeTag]};
             if {$count == 1} {lappend DoflistHead [expr $nodeTag];}
             if {$count == [expr $nx+1]} {lappend DoflistEnd [expr $nodeTag];}
@@ -85,8 +96,7 @@ foreach x $xlist {
     incr count;
 }
 
-
-
+barrier
 
 
 # create material
@@ -108,16 +118,24 @@ for {set x 0} {$x < $nx} {incr x 1} {
             set node6 [expr $node2 + 1];
             set node7 [expr $node3 + 1];
             set node8 [expr $node4 + 1];
-            puts "element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;"
-
-            element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;
+            barrier
+            if {[expr $dx*($x+1) - $lx/2.] < [expr $speratorx + $tol] && $pid==0} {
+                element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;
+                puts "element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;"
+            }
+            barrier
+            if {[expr $dx*$x - $lx/2.] > [expr $speratorx - $tol] && $pid==1} {
+                element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;
+                puts "element stdBrick $elementTag $node1 $node2 $node3 $node4 $node5 $node6 $node7 $node8 $materialTag;"
+            }
+            barrier
             incr elementTag;
         }
     }
 }
 
 
-
+barrier
 
 
 #create PML nodes and elements
@@ -162,7 +180,7 @@ if {$DOPML == "YES"} {
 
     
     # endside is the positive side of the regular domain
-    if {$Positive == "True"} {
+    if {$Positive == "True" && $pid == 1} {
         for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i + $lx/2.];}
         # create nodes for the end side of the PML
         set count 1;
@@ -206,9 +224,12 @@ if {$DOPML == "YES"} {
         }
     }
 
+    barrier
 
-    if {$Negative == "True"} {
+
+    if {$Negative == "True" && $pid == 0} {
         # create nodes for the head side of the PML
+        if {$Positive == "True"} { incr nodeTag [expr int(($nxPML+1)*($nyPML+1)*($nzPML+1))];}
         set PMLxlist {}
         for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i - $lx/2. - $nxPML*$dxPML];}
         set count 1;
@@ -255,7 +276,7 @@ if {$DOPML == "YES"} {
     
 }
 
-
+barrier
 # creating fixities
 if {$DOPML == "YES"} {
     fixX [expr $lxPML  + $lx/2.] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
@@ -265,73 +286,83 @@ if {$DOPML == "YES"} {
     fixX [expr -$lx/2.] 1 0 0;
 }
 
-
+barrier
 # loading 
 if {$DOPML == "YES"} {
     if {$Positive == "True" && $Negative == "False" } {
         set loadinglist $DoflistHead;
         puts "loading is applied on the negative side of the Regular domain"
+        set loadingcore 0
     } elseif {$Positive == "False" && $Negative == "True" } {
         set loadinglist $DoflistEnd;
         puts "loading is applied on the positive side of the Regular domain"
+        set loadingcore 1
     } elseif {$Positive == "True" && $Negative == "True" } {
         set loadinglist $DoflistCent;
         puts "loading is applied on the center of the regualr domain"
+        set loadingcore 0
     }
 } else {
     set loadinglist $DoflistCent;
     puts "loading is applied on the center of the regualr domain"
+    setloadingcore 0
 }
+
+
 
 puts "loadinglist is $loadinglist"
 set dT 0.001
 timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
 pattern Plain 1 1 {
-    foreach node $loadinglist {
-        load $node 1.0 0.0 0.0
+    if {$pid == $loadingcore} {
+        foreach node $loadinglist {
+            load $node 1.0 0.0 0.0
+        }
     }
 }
 
 
 
-
 # recorders
-eval "recorder Node -file NodeDispPositive.out   -time -node $DoflistEnd    -dof 1 disp"
-eval "recorder Node -file NodeDispNegative.out   -time -node $DoflistHead   -dof 1 disp"
-eval "recorder Node -file NodeDispCentre.out     -time -node $DoflistCent   -dof 1 disp"
+eval "recorder Node -file NodeDispPositive$pid.out   -time -node $DoflistEnd    -dof 1 disp"
+eval "recorder Node -file NodeDispNegative$pid.out   -time -node $DoflistHead   -dof 1 disp"
+eval "recorder Node -file NodeDispCentre$pid.out     -time -node $DoflistCent   -dof 1 disp"
 
 
 
-print "PML3D_1D_2Sided_SingleCore.info" 
+print "PML3D_1D_multiCoreMP$pid.info" 
 
+domainChange
 # Analysis 
 constraints      Plain
-numberer         RCM
+numberer         ParallelRCM
 system           Mumps
 test             NormDispIncr 1e-3 3 0
 algorithm        Linear -factorOnce 
 integrator       Newmark 0.5 0.25
 analysis         Transient
 
-logFile "PML3D_1D_2Sided_core1SP.info"
 # mesure the analysis time
 set start [clock seconds]
-for {set i 0} { $i < 4 } { incr i 1 } {
+for {set i 0} { $i < 1000 } { incr i 1 } {
+    if {$pid == 0} {puts "Time step: $i"}
+    analyze 1 $dT
+}
+set end [clock seconds]
+puts "Total time: [expr $end-$start] seconds"# Analysis 
+constraints   Plain
+numberer      RCM
+integrator    Newmark 0.5 0.25
+system        BandGEN
+test          NormDispIncr 1.0e-6 10 1
+algorithm     Linear -factorOnce
+analysis      Transient
+
+# mesure the analysis time
+set start [clock seconds]
+for {set i 0} { $i < 1000 } { incr i 1 } {
     puts "Time step: $i"
     analyze 1 $dT
-    if {$i==3} {
-        # get pid and np
-        set np  [getNP]
-        set pid [getPID]
-        print "PML3D_1D_core$pid.info" 
-    }
 }
 set end [clock seconds]
 puts "Total time: [expr $end-$start] seconds"
-
-
-
-
-
-
-

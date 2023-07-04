@@ -172,7 +172,6 @@ barrier
 # =======================================================================
 # Create PML nodes and elements
 # =======================================================================
-
 if {$pid > 0} {
     if {$DOPML == "YES"} {
 
@@ -204,7 +203,9 @@ if {$pid > 0} {
         set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
         puts "PMLMaterial: $PMLMaterial"
 
-
+        
+        # open file 
+        set fp [open "bounadaryml_boundary.tcl" "w"]
         # endside is the positive side of the regular domain
         if {$Positive == "True"} {
 
@@ -250,6 +251,7 @@ if {$pid > 0} {
             for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
                 eval "node [lindex $DoflistEnd $i] [nodeCoord [lindex $PMLDoflist $i]]"
                 puts "node [lindex $DoflistEnd $i] [nodeCoord [lindex $PMLDoflist $i]]"
+                puts $fp "node [lindex $PMLDoflist $i] [nodeCoord [lindex $PMLDoflist $i]]"
             }
 
             model BasicBuilder -ndm 3 -ndf 18;
@@ -258,8 +260,10 @@ if {$pid > 0} {
                 equalDOF [lindex $DoflistEnd $i] [lindex $PMLDoflist $i] 1;
                 puts "equalDOF [lindex $PMLDoflist $i] [lindex $DoflistEnd $i] 1;"
             }
-        }
 
+
+            # print the PMLDOFLIST to file
+        }
 
         if {$Negative == "True"} {
 
@@ -308,17 +312,28 @@ if {$pid > 0} {
             for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
                 eval "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]"
                 puts "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]"
+                puts $fp "node [lindex $PMLDoflist $i] [nodeCoord [lindex $PMLDoflist $i]]"
             }
 
             # tie PML nodes to the main nodes
+            model BasicBuilder -ndm 3 -ndf 18;
             for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
                 equalDOF [lindex $DoflistHead $i] [lindex $PMLDoflist $i] 1;
                 puts "equalDOF  [lindex $PMLDoflist $i] [lindex $DoflistHead $i] 1;"
             }
         }
+        # close fp
+        close $fp;
     }
 }
 barrier
+# ========================================================================
+# add pml boundary nodes to the regular nodes
+# ========================================================================
+if {$pid==0} {
+    model BasicBuilder -ndm 3 -ndf 18
+    source bounadaryml_boundary.tcl
+}
 # ========================================================================
 # creating fixities
 # ========================================================================
@@ -331,7 +346,7 @@ if {$DOPML == "YES"} {
 }
 
 # ========================================================================
-# loding
+# loading
 # ========================================================================
 set dT 0.001
 # loading 
@@ -353,8 +368,11 @@ if {$pid == 0} {
     }
 
     puts "loadinglist is $loadinglist"
-    timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
-    pattern Plain 1 1 {
+}
+
+timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
+pattern Plain 1 1 {
+    if {$pid==0} {
         foreach node $loadinglist {
             load $node 1.0 0.0 0.0
         }
@@ -363,12 +381,12 @@ if {$pid == 0} {
 
 
 
-
 # recorders
-eval "recorder Node -file NodeDispPositive.out   -time -node $DoflistEnd    -dof 1 disp"
-eval "recorder Node -file NodeDispNegative.out   -time -node $DoflistHead   -dof 1 disp"
-eval "recorder Node -file NodeDispCentre.out     -time -node $DoflistCent   -dof 1 disp"
-
+if {$pid==0} {
+    eval "recorder Node -file NodeDispPositive.out   -time -node $DoflistEnd    -dof 1 disp"
+    eval "recorder Node -file NodeDispNegative.out   -time -node $DoflistHead   -dof 1 disp"
+    eval "recorder Node -file NodeDispCentre.out     -time -node $DoflistCent   -dof 1 disp"
+}
 
 # delete the old files
 # check if the file exists
@@ -377,6 +395,7 @@ if {[file exists PML3D_1D_core$pid.info]} {
 }
 print "PML3D_1D_core$pid.info" 
 
+domainChange
 # Analysis 
 constraints      Plain
 numberer         ParallelRCM
