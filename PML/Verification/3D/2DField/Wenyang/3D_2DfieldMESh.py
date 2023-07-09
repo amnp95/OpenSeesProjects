@@ -9,36 +9,36 @@ import sys
 # remove all the pervious files
 # =============================================================================
 # %%
-os.system('rm boundary*')
+# os.system('rm boundary*')
 os.system('rm *nodes*')
 os.system('rm *elements*')
-os.system('rm *fixity*')
+# os.system('rm *fixity*')
 os.system('rm load*')
 os.system('rm *.info')
-os.system('rm *.html')
+# os.system('rm *.html')
 # %%
 # =============================================================================
 # Genreral information about the mesh
 # =============================================================================
 # getting lx ly lz dx dy dz and pmlthickness from passing arguments to the script
-# cores        = int(sys.argv[1])
-# lx           = float(sys.argv[2])
-# ly           = float(sys.argv[3])
-# lz           = float(sys.argv[4])
-# dx           = float(sys.argv[5])
-# dy           = float(sys.argv[6])
-# dz           = float(sys.argv[7])
-# pmlthickness = float(sys.argv[8])
+cores        = int(sys.argv[1])
+lx           = float(sys.argv[2])
+ly           = float(sys.argv[3])
+lz           = float(sys.argv[4])
+dx           = float(sys.argv[5])
+dy           = float(sys.argv[6])
+dz           = float(sys.argv[7])
+pmlthickness = float(sys.argv[8])
 
-# use this for testing
-lx          = 20.0
-ly          = 1.0
-lz          = 10.0
-dx          = 1.0
-dy          = 1.0
-dz          = 1.0
-pmlthickness= 2.0
-cores       = 2
+# # use this for testing
+# lx          = 20.0
+# ly          = 1.0
+# lz          = 10.0
+# dx          = 1.0
+# dy          = 1.0
+# dz          = 1.0
+# pmlthickness= 2.0
+# cores       = 2
 
 # print the recieved arguments all together
 print('cores = %d, lx = %f, ly = %f, lz = %f, dx = %f, dy = %f, dz = %f, pmlthickness = %f' % (cores, lx, ly, lz, dx, dy, dz, pmlthickness))
@@ -436,3 +436,5 @@ file.close()
 # ss= pl.add_mesh(grid,show_edges=True, cmap="rainbow",style="surface",opacity=1.0)
 # pl.show()
 
+
+# %%

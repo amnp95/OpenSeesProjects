@@ -24,7 +24,7 @@ if {$pid==0} {
 # define geometry and meshing parameters
 # ============================================================================
 wipe 
-set lx           20.0;
+set lx           10.0;
 set ly           1.0;
 set lz           10.0;
 set dy           1.0;
@@ -33,7 +33,7 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 2.0
+set pmlthickness 3.0
 set cores        $np
 
 barrier
@@ -67,11 +67,31 @@ barrier
 # bulding model
 # ============================================================================
 # create nodes and elements
+model BasicBuilder -ndm 3 -ndf 3
+
+# create PML material
+set E               2.08e8                ;# --- Young's modulus
+set nu              0.3                   ;# --- Poisson's Ratio
+set rho             2000.0                ;# --- Density
+set EleType         6                     ;# --- Element type, See line
+set PML_L           $pmlthickness         ;# --- Thickness of the PML
+set afp             2.0                   ;# --- Coefficient m, typically m = 2
+set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
+set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
+set RD_half_width_y [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
+set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
+set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
+set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
+set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+puts "PMLMaterial: $PMLMaterial"
+
+
 set materialTag 1;
-nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
+nDMaterial ElasticIsotropic 1 $E $nu $rho
+
 eval "source nodes$pid.tcl"
 eval "source elements$pid.tcl"
-eval "mpconstraint$pid.tcl"
+eval "source mpconstraint$pid.tcl"
 
 barrier
 # ============================================================================
