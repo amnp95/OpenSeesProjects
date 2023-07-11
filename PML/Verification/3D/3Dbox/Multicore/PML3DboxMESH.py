@@ -1,7 +1,7 @@
 # %%
 import numpy as np 
 import pandas as pd
-import pyvista as pv
+import viewmesh
 import os
 import sys
 # =============================================================================
@@ -10,7 +10,6 @@ import sys
 os.system('rm boundary*')
 os.system('rm *nodes*')
 os.system('rm *elements*')
-os.system('rm *fixity*')
 os.system('rm load*')
 os.system('rm *.info')
 os.system('rm *.html')
@@ -30,11 +29,11 @@ dz           = float(sys.argv[8])
 pmlthickness = float(sys.argv[9])
 
 # # use this for testing
-# regcores    = 5
+# regcores    = 2
 # pmlcores    = 5
-# lx          = 20.0
-# ly          = 1.0
-# lz          = 10.0
+# lx          = 10.0
+# ly          = 10.0
+# lz          = 5.0
 # dx          = 1.0
 # dy          = 1.0
 # dz          = 1.0
@@ -65,9 +64,10 @@ nx = len(x)-1
 ny = len(y)-1
 nz = len(z)-1
 
-pmlxlist = np.arange(xstart - pmlthickness, xend +pmlthickness + eps, dx)
+pmlxlist = np.arange(xstart - pmlthickness, xend + pmlthickness + eps, dx)
 pmlzlist = np.arange(zstart - pmlthickness, zend + eps, dz)
-pmlylist = np.arange(ystart , yend + eps, dy)
+pmlylist = np.arange(ystart - pmlthickness, yend + pmlthickness + eps, dy)
+
 
 # %%
 # =============================================================================
@@ -91,7 +91,7 @@ nodes['Domain'] = 'reg'
 for x in pmlxlist:
     for y in pmlylist:
         for z in pmlzlist:
-            if (x > xstart) and (x < xend) and (y > ystart-eps) and (y < yend+eps) and (z > zstart) and (z < zend + 0.1):
+            if (x > xstart) and (x < xend) and (y > ystart+eps) and (y < yend-eps) and (z > zstart) and (z < zend + 0.1):
                 continue
             else:
                 nodes_data = {'x':x ,
@@ -200,6 +200,11 @@ for _, row in pmlnodes.iterrows():
         # go to the next iteration
         continue
     
+    n5 = pmlnodes[np.isclose(pmlnodes['x'], x) & np.isclose(pmlnodes['y'], y) & np.isclose(pmlnodes['z'], z1)].index.values
+    if n5.shape[0] == 0:
+        # go to the next iteration
+        continue
+
     n1 = row['tag']
     n8 = n8[0] + 1
     n6 = n6[0] + 1
@@ -343,17 +348,10 @@ for core in range(regcores):
     # filter nodes which are in the core
     nodes_in_core = nodes[nodes['status'] == 1]
     
-
     # write the nodes in a file
     file = open('nodes'+str(core)+'.tcl', 'w')
     for _, node in nodes_in_core.iterrows():
         file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
-    file.close()
-
-    # adding fixity to the nodes
-    file = open('fixity'+str(core)+'.tcl', 'w')
-    for _, node in nodes_in_core.iterrows():
-        file.write('fix %d 0 1 0\n' % (node['tag']))
     file.close()
 
     # reset the status of all nodes to 0
@@ -385,13 +383,6 @@ for core in range(pmlcores):
     file = open('pmlnodes'+str(core + regcores)+'.tcl', 'w')
     for _, node in nodes_in_core.iterrows():
         file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
-    file.close()
-
-
-    # adding fixity to the nodes
-    file = open('pmlfixity'+str(core + regcores)+'.tcl', 'w')
-    for _, node in nodes_in_core.iterrows():
-        file.write('fix %d 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n' % (node['tag']))
     file.close()
 
     # reset the status of all nodes to 0
@@ -427,7 +418,6 @@ for core in range(regcores):
     file.close()
 
 
-
 # %%
 # =============================================================================
 # create pml element file
@@ -458,11 +448,23 @@ nodes['boundary'] = 0
 
 tolerance = 1e-6  # Adjust the tolerance based on your needs
 
-# set the boundary nodes to 1 if x is equal to xstart or xend  z is between zstart and zend
-nodes.loc[(np.isclose(nodes['x'], xstart, atol=tolerance) | np.isclose(nodes['x'], xend, atol=tolerance)) & (nodes['z'] >= zstart-eps) & (nodes['z'] <= zend +eps), 'boundary'] = 1
+# # set the boundary nodes to 1 if x is equal to xstart or xend  z is between zstart and zend
+nodes.loc[(np.isclose(nodes['x'], xstart, atol=tolerance) | 
+           np.isclose(nodes['x'], xend, atol=tolerance)) & 
+           (nodes['y'] >= ystart-eps) & (nodes['y'] <= yend + eps) &
+           (nodes['z'] >= zstart-eps) & (nodes['z'] <= zend +eps), 'boundary'] = 1
+
+
+# set the boundary nodes to 1 if y is equal to ystart or yend  z is between zstart and zend
+nodes.loc[(np.isclose(nodes['y'], ystart, atol=tolerance) |
+           np.isclose(nodes['y'], yend, atol=tolerance)) &
+           (nodes['z'] >= zstart-eps) & (nodes['z'] <= zend + eps) &
+           (nodes['x'] >= xstart-eps) & (nodes['x'] <= xend + eps), 'boundary'] = 1
 
 # set the boundary nodes to 1 if z is equal zstart and zend  x is between xstart and xend
-nodes.loc[(np.isclose(nodes['z'], zstart, atol=tolerance)) & (nodes['x'] >= xstart-eps) & (nodes['x'] <= xend +eps), 'boundary'] = 1
+nodes.loc[(np.isclose(nodes['z'], zstart, atol=tolerance)) &
+        (nodes['x'] >= xstart-eps) & (nodes['x'] <= xend + eps) &
+        (nodes['y'] >= ystart-eps) & (nodes['y'] <= yend + eps), 'boundary'] = 1
 
 
 # seperate the nodes on the with Domain pml and on the bondary
@@ -470,6 +472,7 @@ pmlboundarynodes = nodes[(nodes['Domain'] == 'pml') & (nodes['boundary'] == 1)]
 
 # seperate the nodes on the with Domain reg and on the bondary
 regboundarynodes = nodes[(nodes['Domain'] == 'reg') & (nodes['boundary'] == 1)]
+
 
 # checl if the size of the pmlboundarynodes dataframe is equal to the size of the regboundarynodes dataframe and raise an error if not
 if pmlboundarynodes.shape[0] != regboundarynodes.shape[0]:
@@ -521,8 +524,7 @@ for core in range(pmlcores):
         if not (np.isclose(pmlrow[1]['x'], regrow[1]['x'], atol=tolerance) and np.isclose(pmlrow[1]['y'], regrow[1]['y'], atol=tolerance) and np.isclose(pmlrow[1]['z'], regrow[1]['z'], atol=tolerance)):
             raise ValueError('The coordinates of the pml and regular boundary nodes are not equal')
         file.write("node %d %f %f %f\n" % (regrow[1]['tag'], regrow[1]['x'], regrow[1]['y'], regrow[1]['z']))
-        file.write('fix %d 0 1 0\n' % (regrow[1]['tag']))
-        file.write('equalDOF %d %d 1 3\n' % (regrow[1]['tag'], pmlrow[1]['tag']))
+        file.write('equalDOF %d %d 1 2 3\n' % (regrow[1]['tag'], pmlrow[1]['tag']))
 
     file.close()
     # set the status of the nodes to 0
@@ -532,116 +534,31 @@ for core in range(pmlcores):
 # =============================================================================
 # plot the mesh with deifferent cores
 # =============================================================================
-# set nodes status to 0
-nodes['status'] = 0
-
-
-# initialize plotter and its color cycler
-pl = pv.Plotter()
-pl.set_color_cycler("default")
-
-
-for core in range(regcores + pmlcores):
-    
-    # filter elements
-    eles = elements[elements['core'] == core]
-
-    # create cell array and point array
-    # cell should be integer and point should be float
-
-
-    # iterate over elements to node1 to node8 and set their status to 1
-    for _, ele in eles.iterrows():
-        nodes.loc[ele['node1'] - 1, 'status'] = 1
-        nodes.loc[ele['node2'] - 1, 'status'] = 1
-        nodes.loc[ele['node3'] - 1, 'status'] = 1
-        nodes.loc[ele['node4'] - 1, 'status'] = 1
-        nodes.loc[ele['node5'] - 1, 'status'] = 1
-        nodes.loc[ele['node6'] - 1, 'status'] = 1
-        nodes.loc[ele['node7'] - 1, 'status'] = 1
-        nodes.loc[ele['node8'] - 1, 'status'] = 1
-    
-    # filter nodes
-    nodes_in_core = nodes[nodes['status'] == 1]
-
-    # create map between the node tag and the integer between 0 and the number of nodes in the core
-    nodetoint = dict(zip(nodes_in_core['tag'], range(nodes_in_core.shape[0])))
-
-    # map the nodes in the cells to the integer
-    cells = eles[['node1', 'node2', 'node3', 'node4', 'node5', 'node6', 'node7', 'node8']]
-
-    # map the nodes to the integer
-    cells = cells.applymap(nodetoint.get)
-   
-    # convert the cells to numpy array
-    cells = cells.to_numpy(dtype=int)
-
-    # print(nodes_in_core)
-    # print(cells)
-
-
-    # create point array
-    points = nodes_in_core[['tag', 'x', 'y', 'z']].to_numpy(dtype=float)
-    celltypes = np.ones(cells.shape[0],dtype= int) * pv.CellType.HEXAHEDRON
-    # add cloumn of eight to cells at the begining
-    cells = np.insert(cells, 0, 8, axis=1)
-
-    cells[:,1:9] = cells[:,1:9]
-    grid = pv.UnstructuredGrid(cells[:,:9], celltypes.tolist(), points[:,1:].tolist())
-    pl.set_background('White', top="white")
-    # choose matplotlib default colors 
-    
-    ss= pl.add_mesh(grid,show_edges=True, cmap="rainbow",style="surface",opacity=1.0)
-    # save the screenshot
-pl.show_axes()
-pl.show()
-# pl.export_html(
-#     'cores.html', backend='panel'
-# )  
-
+viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="regular")
+# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="pml")
+# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
+# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view=1)
+ 
+# %%
 # =============================================================================
 # create loding file
 # =============================================================================
 # find the nodetags
-nodetag1 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'],  0.5, atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]
-nodetag2 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'], -0.5, atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]
-nodetag3 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'], -0.5, atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]['tag'].values[0]
-nodetag4 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'],  0.5, atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]['tag'].values[0]
-nodetag5 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'],  0.5, atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
-nodetag6 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'],  0.5, atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
+nodetag1 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'],  0., atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]
+nodetag2 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'],  0., atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]['tag'].values[0]
+nodetag3 = nodes[np.isclose(nodes['x'], 0, atol=tolerance) & np.isclose(nodes['y'],  ly/2., atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]['tag'].values[0]
+nodetag4 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'],  ly/2., atol=tolerance) & np.isclose(nodes['z'], 0, atol=tolerance)]['tag'].values[0]
+nodetag5 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['y'],  0., atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
+nodetag6 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'],  0., atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
+nodetag7 = nodes[np.isclose(nodes['x'], 0, atol=tolerance) & np.isclose(nodes['y'],  ly/2., atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
+nodetag8 = nodes[np.isclose(nodes['x'], lx/2., atol=tolerance) & np.isclose(nodes['y'],  ly/2., atol=tolerance) & np.isclose(nodes['z'], -lz, atol=tolerance)]['tag'].values[0]
 
 
 # write the node tag in file
 file = open('load.tcl', 'w')
 file.write('if {$pid == %d}  {load %d 0 0 -1}\n' % (nodetag1['core'].values[0], nodetag1['tag'].values[0]))
-file.write('if {$pid == %d}  {load %d 0 0 -1}\n' % (nodetag2['core'].values[0], nodetag2['tag'].values[0]))
-file.write ("set recordList {%d %d %d %d %d %d}" % (nodetag1['tag'].values[0], nodetag2['tag'].values[0], nodetag3, nodetag4, nodetag5, nodetag6))
+file.write ("set recordList {%d %d %d %d %d %d %d %d}" % (nodetag1['tag'].values[0], nodetag2, nodetag3, nodetag4, nodetag5, nodetag6, nodetag7, nodetag8))
 file.close()
 
 
-
-
-
-
-
-
-
-
-# # %%
-# # view the mesh with pyvista
-# # create cell array and point array 
-# # cell should be integer and point should be float
-# cells = elements[['tag', 'node1', 'node2', 'node3', 'node4', 'node5', 'node6', 'node7', 'node8', 'core']].to_numpy(dtype=int)
-# points = nodes[['tag', 'x', 'y', 'z']].to_numpy(dtype=float)
-
-
-# celltypes = np.ones(cells.shape[0],dtype= int) * pv.CellType.HEXAHEDRON
-# cells[:,0] = 8
-# cells[:,1:9] = cells[:,1:9] -1
-# grid = pv.UnstructuredGrid(cells[:,:9], celltypes.tolist(), points[:,1:].tolist())
-# grid.cell_data["processors"] = cells [:,-1]
-# pl = pv.Plotter()
-# pl.set_background('White', top="white")
-# ss= pl.add_mesh(grid,show_edges=True, cmap="rainbow",style="surface",opacity=1.0)
-# pl.show()
-
+# %%

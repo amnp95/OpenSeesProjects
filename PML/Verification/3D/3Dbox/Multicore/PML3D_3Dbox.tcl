@@ -25,7 +25,7 @@ if {$pid==0} {
 # ============================================================================
 wipe 
 set lx           10.0;
-set ly           1.0;
+set ly           10.0;
 set lz           10.0;
 set dy           1.0;
 set dx           1.0;
@@ -34,8 +34,8 @@ set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
 set pmlthickness 2.0
-set regcores     1
-set pmlcores     3
+set regcores     4
+set pmlcores     1
 
 barrier
 # ============================================================================
@@ -57,7 +57,7 @@ if {$pid==0} {
 
     # run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
     # passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
-    catch {eval "exec $pythonexec 3D_2DfieldMESh.py $regcores $pmlcores $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
+    catch {eval "exec $pythonexec PML3DboxMESH.py $regcores $pmlcores $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
     puts "result: $result"
 
 }
@@ -73,7 +73,6 @@ if {$pid < $regcores} {
     set materialTag 1;
     nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
     eval "source nodes$pid.tcl"
-    eval "source fixity$pid.tcl"
     eval "source elements$pid.tcl"
 }
 barrier
@@ -100,7 +99,6 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
 
     eval "source pmlnodes$pid.tcl"
-    eval "source pmlfixity$pid.tcl"
     eval "source pmlelements$pid.tcl"
 
     # tie pml nodes to the regular nodes
@@ -115,14 +113,18 @@ barrier
 # ============================================================================
 if {$DOPML == "YES"} {
     if {$pid >=$regcores} {
-        fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+        fixX [expr -$lx/2. - $pmlthickness] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+        fixX [expr  $lx/2. + $pmlthickness] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+        fixY [expr -$ly/2. - $pmlthickness] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;
+        fixY [expr  $ly/2. + $pmlthickness] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;
         fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
     }
 } else {
     if {$pid < $regcores} {
         fixX [expr -$lx/2.] 1 0 1;
         fixX [expr  $lx/2.] 1 0 1;
+        fixY [expr -$ly/2.] 0 1 1;
+        fixY [expr  $ly/2.] 0 1 1;
         fixZ [expr -$lz/1.] 0 0 1;
     }
 }
@@ -131,7 +133,7 @@ if {$DOPML == "YES"} {
 # loading 
 # ============================================================================
 set dT 0.001
-timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 1.0
+timeSeries Path 1 -dt 0.001 -filePath force.dat -factor 5.0
 pattern Plain 1 1 {
     source load.tcl
 }
@@ -140,9 +142,9 @@ pattern Plain 1 1 {
 # ============================================================================
 # recorders
 # ============================================================================
-if {$pid == 0 } {
-    eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
-}
+
+eval "recorder Node -file NodeDisp$pid.out -time -node $recordList  -dof 3 disp"
+
 # ============================================================================
 # Analysis 
 # ============================================================================
@@ -167,18 +169,18 @@ if {$DOPML == "YES"} {
     set elapsedTime [expr {$endTime - $startTime}]
     puts "Elapsed time: $elapsedTime milliseconds in $pid"
 } else {
-    if {$pid ==0 } {
-        numberer         RCM
-        system           BandGEN
-        constraints      Plain
-        test             NormDispIncr 1e-3 20 1
-        algorithm        Linear -factorOnce
-        integrator       Newmark 0.5 0.25
-        analysis         Transient
-    
-        for {set i 0} { $i < 1000 } { incr i 1 } {
-            puts "Time step: $i"
-            analyze 1 $dT
-        }
+    constraints      Plain
+    numberer         ParallelRCM
+    system           Mumps -ICNTL14 200
+    test             NormDispIncr 1e-3 3 0
+    algorithm        Linear -factorOnce 
+    # algorithm        ModifiedNewton -factoronce 
+    integrator       Newmark 0.5 0.25
+    analysis         Transient
+
+    for {set i 0} { $i < 1000 } { incr i 1 } {
+        if {$pid==0} {puts "Time step: $i"}
+        analyze 1 $dT
     }
+    
 }

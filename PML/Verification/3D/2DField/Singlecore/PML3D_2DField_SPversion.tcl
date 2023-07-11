@@ -4,20 +4,21 @@
 # Geotechnical Eng Group, A. Pakzad, P. Arduino - Jun 2023              #
 # Basic units are m, Ton(metric), s										#
 # ===================================================================== #
-set pid [getPID]
-set np  [getNP]
+# erase the boundary.tcl file if it exists
+if {[file exists boundary.tcl]} {file delete boundary.tcl}
+if {[file exists elements.tcl]} {file delete elements.tcl}
+if {[file exists nodes.tcl]} {file delete nodes.tcl}
+if {[file exists pmlelements.tcl]} {file delete pmlelements.tcl}
+if {[file exists pmlnodes.tcl]} {file delete pmlnodes.tcl}
+if {[file exists fixity.tcl.tcl]} {file delete fixity.tcl.tcl}
+if {[file exists pmlfixity.tcl]} {file delete pmlfixity.tcl}
+if {[file exists load.tcl]} {file delete load.tcl}
 
 # get DOPML from command line
 if {$argc > 0} {
     set DOPML [lindex $argv 0]
 } else {
     set DOPML "NO"
-}
-
-if {$pid==0} {
-    puts "pid: $pid"
-    puts "np: $np"
-    puts "DOPML: $DOPML"
 }
 
 # ============================================================================
@@ -34,55 +35,49 @@ set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
 set pmlthickness 2.0
-set regcores     1
-set pmlcores     3
 
-barrier
+
 # ============================================================================
 #  run the mesh generator
 # ============================================================================
-if {$pid==0} {
-    # find that if python is exisiting in the system
-    set pythonexec "python3"
-    if { [catch {exec python3 -V} python3_version] } {
-        if { [catch {exec python -V} python_version] } {
-            puts "Python is not installed in the system"
-            exit
-        } else {
-            set pythonexec "python"
-        }
+# find that if python is exisiting in the system
+set pythonexec "python3"
+if { [catch {exec python3 -V} python3_version] } {
+    if { [catch {exec python -V} python_version] } {
+        puts "Python is not installed in the system"
+        exit
+    } else {
+        set pythonexec "python"
     }
-    puts "pythonexec: $pythonexec"
-
-
-    # run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
-    # passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
-    catch {eval "exec $pythonexec 3D_2DfieldMESh.py $regcores $pmlcores $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
-    puts "result: $result"
-
 }
-# wait for the mesh generator to finish 
-barrier
+puts "pythonexec: $pythonexec"
 
+
+# run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
+# passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
+catch {eval "exec $pythonexec 3D_2DfieldMESh.py $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
+puts "result: $result"
+
+
+#run 
 # ============================================================================
 # bulding regular elements
 # ============================================================================
-if {$pid < $regcores} {
-    # create nodes and elements
-    model BasicBuilder -ndm 3 -ndf 3
-    set materialTag 1;
-    nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
-    eval "source nodes$pid.tcl"
-    eval "source fixity$pid.tcl"
-    eval "source elements$pid.tcl"
-}
-barrier
+model BasicBuilder -ndm 3 -ndf 3
+
+# create material
+set materialTag 1;
+nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
+source nodes.tcl
+source fixity.tcl
+source elements.tcl
+
+
 # ============================================================================
 # bulding PML layer
 # ============================================================================
 #create PML nodes and elements
-if {$DOPML == "YES" && $pid >= $regcores} {
-
+if {$DOPML == "YES"} {
     model BasicBuilder -ndm 3 -ndf 18;
     # create PML material
     set E               2.08e+08              ;# --- Young's modulus
@@ -98,33 +93,30 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
     set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    puts "PMLMaterial: $PMLMaterial"
+    # 2.08e+08 0.3 2000.0  6. 5.0 2.0 1.0e-8 25.0 25.0 25.0 0.0 0.0;"
 
-    eval "source pmlnodes$pid.tcl"
-    eval "source pmlfixity$pid.tcl"
-    eval "source pmlelements$pid.tcl"
+    source pmlnodes.tcl
+    source pmlfixity.tcl
+    source pmlelements.tcl
 
     # tie pml nodes to the regular nodes
     model BasicBuilder -ndm 3 -ndf 3;
-    eval "source boundary$pid.tcl"
-    
+    source boundary.tcl
 }
 
-barrier
+
 # ============================================================================
 # creating fixities
 # ============================================================================
 if {$DOPML == "YES"} {
-    if {$pid >=$regcores} {
-        fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
-    }
+    fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+    fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+    fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
 } else {
-    if {$pid < $regcores} {
-        fixX [expr -$lx/2.] 1 0 1;
-        fixX [expr  $lx/2.] 1 0 1;
-        fixZ [expr -$lz/1.] 0 0 1;
-    }
+    fixX [expr -$lx/2.] 1 0 1;
+    fixX [expr  $lx/2.] 1 0 1;
+    fixZ [expr  $lz/1.] 0 0 1;
 }
 
 # ============================================================================
@@ -140,45 +132,29 @@ pattern Plain 1 1 {
 # ============================================================================
 # recorders
 # ============================================================================
-if {$pid == 0 } {
-    eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
-}
+eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
+
 # ============================================================================
 # Analysis 
 # ============================================================================
+print "PML3D_2DField.info" 
+
 # Analysis 
-print "PML3D_1DExample2MP1_pid$pid.info" 
-domainChange
-if {$DOPML == "YES"} {
-    constraints      Plain
-    numberer         ParallelRCM
-    system           Mumps -ICNTL14 200
-    test             NormDispIncr 1e-3 3 0
-    algorithm        Linear -factorOnce 
-    # algorithm        ModifiedNewton -factoronce 
-    integrator       Newmark 0.5 0.25
-    analysis         Transient
-    set startTime [clock milliseconds]
-    for {set i 0} { $i < 1000 } { incr i 1 } {
-        if {$pid ==0 } {puts "Time step: $i";}
-        analyze 1 $dT
-    }
-    set endTime [clock milliseconds]
-    set elapsedTime [expr {$endTime - $startTime}]
-    puts "Elapsed time: $elapsedTime milliseconds in $pid"
-} else {
-    if {$pid ==0 } {
-        numberer         RCM
-        system           BandGEN
-        constraints      Plain
-        test             NormDispIncr 1e-3 20 1
-        algorithm        Linear -factorOnce
-        integrator       Newmark 0.5 0.25
-        analysis         Transient
-    
-        for {set i 0} { $i < 1000 } { incr i 1 } {
-            puts "Time step: $i"
-            analyze 1 $dT
-        }
-    }
+constraints      Plain
+numberer         RCM
+system           Mumps
+test             NormDispIncr 1e-3 3 0
+algorithm        Linear -factorOnce 
+integrator       Newmark 0.5 0.25
+analysis         Transient
+
+
+# mesure the analysis time
+set start [clock seconds]
+for {set i 0} { $i < 1 } { incr i 1 } {
+    puts "Time step: $i"
+    analyze 1 $dT    
 }
+print "output0.out"
+set end [clock seconds]
+puts "Total time: [expr $end-$start] seconds"

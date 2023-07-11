@@ -33,7 +33,7 @@ set dz           1.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 3.0
+set pmlthickness 2.0
 set cores        $np
 
 barrier
@@ -78,8 +78,8 @@ set PML_L           $pmlthickness         ;# --- Thickness of the PML
 set afp             2.0                   ;# --- Coefficient m, typically m = 2
 set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
 set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-set RD_half_width_y [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
-set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
+set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
+set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
 set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
 set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
 set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
@@ -122,7 +122,7 @@ if {$pid == 0 } {
 # Analysis 
 # ============================================================================
 # Analysis 
-print "PML3D_1DExample2MP1_pid$pid.info" 
+print "PML3D_2DfieldMP_pid$pid.info" 
 domainChange
 
 constraints      Plain
