@@ -3,7 +3,7 @@
 # on both sides (This model is for single core)                         #
 # University of Washington, Department of Civil and Environmental Eng   #
 # Geotechnical Eng Group, A. Pakzad, P. Arduino - Jun 2023              #
-# Basic units are m, Ton(metric), s										#
+# Basic units are m, kg, s										#
 # ===================================================================== #
 
 
@@ -28,7 +28,7 @@ if {$argc > 0} {
 }
 
 if {$argc <= 0} {
-    puts "Usage: OpenSees 3DtestModel.tcl DOPML(YES or NO) Positive(True or False) Negative(True or False) loadingSide(Left, Right or Center)"
+    puts "Usage: mpirun -np 2 OpenSeesMP 3DtestModel.tcl DOPML(YES or NO) Positive(True or False) Negative(True or False) loadingSide(Left, Right or Center)"
     exit
 }
 
@@ -57,7 +57,7 @@ set rho     2000.0
 set dxPML   1.0;
 set dyPML   $dy;
 set dzPML   $dz;
-set lxPML   10.0;
+set lxPML   4.0;
 set lyPML   $ly;
 set lzPML   $lz;
 set nxPML   [expr $lxPML/$dxPML ]
@@ -133,7 +133,6 @@ if  {$pid == 0} {
             }
         }
     }
-
 }
 barrier
 # =======================================================================
@@ -205,7 +204,6 @@ if {$pid > 0} {
 
         
         # open file 
-        set fp [open "bounadaryml_boundary.tcl" "w"]
         # endside is the positive side of the regular domain
         if {$Positive == "True"} {
 
@@ -250,8 +248,8 @@ if {$pid > 0} {
             model BasicBuilder -ndm 3 -ndf 3;
             for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
                 eval "node [lindex $DoflistEnd $i] [nodeCoord [lindex $PMLDoflist $i]]"
+                eval "fix [lindex $DoflistEnd $i] 0 1 1"
                 puts "node [lindex $DoflistEnd $i] [nodeCoord [lindex $PMLDoflist $i]]"
-                puts $fp "node [lindex $PMLDoflist $i] [nodeCoord [lindex $PMLDoflist $i]]"
             }
 
             model BasicBuilder -ndm 3 -ndf 18;
@@ -311,8 +309,8 @@ if {$pid > 0} {
             model BasicBuilder -ndm 3 -ndf 3;
             for {set i 0} { $i < [llength $PMLDoflist] } { incr i 1 } {
                 eval "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]"
+                eval "fix [lindex $DoflistHead $i] 0 1 1"
                 puts "node [lindex $DoflistHead $i] [nodeCoord [lindex $PMLDoflist $i]]"
-                puts $fp "node [lindex $PMLDoflist $i] [nodeCoord [lindex $PMLDoflist $i]]"
             }
 
             # tie PML nodes to the main nodes
@@ -322,18 +320,10 @@ if {$pid > 0} {
                 puts "equalDOF  [lindex $PMLDoflist $i] [lindex $DoflistHead $i] 1;"
             }
         }
-        # close fp
-        close $fp;
     }
 }
 barrier
-# ========================================================================
-# add pml boundary nodes to the regular nodes
-# ========================================================================
-if {$pid==0} {
-    model BasicBuilder -ndm 3 -ndf 18
-    source bounadaryml_boundary.tcl
-}
+
 # ========================================================================
 # creating fixities
 # ========================================================================
@@ -393,7 +383,7 @@ if {$pid==0} {
 if {[file exists PML3D_1D_core$pid.info]} {
     file delete PML3D_1D_core$pid.info
 }
-print "PML3D_1D_core$pid.info" 
+# print "PML3D_1D_core$pid.info" 
 
 domainChange
 # Analysis 

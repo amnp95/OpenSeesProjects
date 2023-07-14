@@ -24,9 +24,9 @@ if {$pid==0} {
 # define geometry and meshing parameters
 # ============================================================================
 wipe 
-set lx           10.0;
-set ly           1.0;
-set lz           10.0;
+set lx           4.0;
+set ly           4.0;
+set lz           4.0;
 set dy           1.0;
 set dx           1.0;
 set dz           1.0;
@@ -57,7 +57,7 @@ if {$pid==0} {
 
     # run the 3D_2DfieldMESH.py to generate the mesh and check if it is finished using catch
     # passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
-    catch {eval "exec $pythonexec 3D_2DfieldMESh.py $regcores $pmlcores $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
+    catch {eval "exec $pythonexec PML3DboxMESH.py $regcores $pmlcores $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
     puts "result: $result"
 
 }
@@ -67,13 +67,16 @@ barrier
 # ============================================================================
 # bulding regular elements
 # ============================================================================
+set E           0.19e8                ;# --- Young's modulus
+set nu          0.3                   ;# --- Poisson's Ratio
+set rho         2000.0                ;# --- Density
 if {$pid < $regcores} {
     # create nodes and elements
     model BasicBuilder -ndm 3 -ndf 3
     set materialTag 1;
-    nDMaterial ElasticIsotropic 1 2.08e8 0.3 2000.0
+    
+    nDMaterial ElasticIsotropic 1 $E $nu $rho;
     eval "source nodes$pid.tcl"
-    eval "source fixity$pid.tcl"
     eval "source elements$pid.tcl"
 }
 barrier
@@ -85,9 +88,9 @@ if {$DOPML == "YES" && $pid >= $regcores} {
 
     model BasicBuilder -ndm 3 -ndf 18;
     # create PML material
-    set E               2.08e+08              ;# --- Young's modulus
-    set nu              0.3                   ;# --- Poisson's Ratio
-    set rho             2000.0                ;# --- Density
+    set E               $E                    ;# --- Young's modulus
+    set nu              $nu                   ;# --- Poisson's Ratio
+    set rho             $rho                  ;# --- Density
     set EleType         6                     ;# --- Element type, See line
     set PML_L           $pmlthickness         ;# --- Thickness of the PML
     set afp             2.0                   ;# --- Coefficient m, typically m = 2
@@ -100,7 +103,6 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
 
     eval "source pmlnodes$pid.tcl"
-    eval "source pmlfixity$pid.tcl"
     eval "source pmlelements$pid.tcl"
 
     # tie pml nodes to the regular nodes
@@ -115,14 +117,18 @@ barrier
 # ============================================================================
 if {$DOPML == "YES"} {
     if {$pid >=$regcores} {
-        fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
+        fixX [expr -$lx/2. - $pmlthickness] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+        fixX [expr  $lx/2. + $pmlthickness] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+        fixY [expr -$ly/2. - $pmlthickness] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;
+        fixY [expr  $ly/2. + $pmlthickness] 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0;
         fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
     }
 } else {
     if {$pid < $regcores} {
         fixX [expr -$lx/2.] 1 0 1;
         fixX [expr  $lx/2.] 1 0 1;
+        fixY [expr -$ly/2.] 0 1 1;
+        fixY [expr  $ly/2.] 0 1 1;
         fixZ [expr -$lz/1.] 0 0 1;
     }
 }
@@ -140,9 +146,9 @@ pattern Plain 1 1 {
 # ============================================================================
 # recorders
 # ============================================================================
-if {$pid == 0 } {
-    eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
-}
+
+eval "recorder Node -file NodeDisp$pid.out -time -node $recordList  -dof 3 disp"
+
 # ============================================================================
 # Analysis 
 # ============================================================================
@@ -167,18 +173,18 @@ if {$DOPML == "YES"} {
     set elapsedTime [expr {$endTime - $startTime}]
     puts "Elapsed time: $elapsedTime milliseconds in $pid"
 } else {
-    if {$pid ==0 } {
-        numberer         RCM
-        system           BandGEN
-        constraints      Plain
-        test             NormDispIncr 1e-3 20 1
-        algorithm        Linear -factorOnce
-        integrator       Newmark 0.5 0.25
-        analysis         Transient
-    
-        for {set i 0} { $i < 1000 } { incr i 1 } {
-            puts "Time step: $i"
-            analyze 1 $dT
-        }
+    constraints      Plain
+    numberer         ParallelRCM
+    system           Mumps -ICNTL14 200
+    test             NormDispIncr 1e-3 3 0
+    algorithm        Linear -factorOnce 
+    # algorithm        ModifiedNewton -factoronce 
+    integrator       Newmark 0.5 0.25
+    analysis         Transient
+
+    for {set i 0} { $i < 1000 } { incr i 1 } {
+        if {$pid==0} {puts "Time step: $i"}
+        analyze 1 $dT
     }
+    
 }

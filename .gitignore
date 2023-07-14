@@ -5,8 +5,7 @@
 **/*nodes*
 **/*elements*
 **/*fixity*
-**/*load*
-**/*force.dat   
+**/*load*  
 **/*boundary*
 **/*plot.py
 **/*NodeDisp*
