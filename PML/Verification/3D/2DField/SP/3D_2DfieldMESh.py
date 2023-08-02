@@ -247,7 +247,7 @@ file.close()
 # iterate over the rows of pmlnodes dataframe to write in file
 file = open('pmlfixity.tcl', 'w')
 for _, row in nodes[nodes['Domain'] == 'pml'].iterrows():
-    file.write('fix %d 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n' % (row['tag']))
+    file.write('fix %d 0 1 0 0 0 0 0 0 0\n' % (row['tag']))
 file.close()
 # %%
 # =============================================================================

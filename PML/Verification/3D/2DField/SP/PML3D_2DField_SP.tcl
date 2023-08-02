@@ -78,8 +78,11 @@ source elements.tcl
 # ============================================================================
 #create PML nodes and elements
 if {$DOPML == "YES"} {
-    model BasicBuilder -ndm 3 -ndf 18;
+    model BasicBuilder -ndm 3 -ndf 9;
     # create PML material
+    set gamma           0.5                   ;# --- Coefficient gamma, newmark gamma = 0.5
+    set beta            0.25                  ;# --- Coefficient beta,  newmark beta  = 0.25
+    set eta             [expr 1.0/12.]        ;# --- Coefficient eta,   newmark eta   = 1/12 
     set E               2.08e+08              ;# --- Young's modulus
     set nu              0.3                   ;# --- Poisson's Ratio
     set rho             2000.0                ;# --- Density
@@ -92,7 +95,7 @@ if {$DOPML == "YES"} {
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
-    set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
     puts "PMLMaterial: $PMLMaterial"
     # 2.08e+08 0.3 2000.0  6. 5.0 2.0 1.0e-8 25.0 25.0 25.0 0.0 0.0;"
 
@@ -110,13 +113,13 @@ if {$DOPML == "YES"} {
 # creating fixities
 # ============================================================================
 if {$DOPML == "YES"} {
-    fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-    fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-    fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
+    fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0;
+    fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0;
+    fixZ [expr -$lz/1. - $pmlthickness] 1 0 1 0 0 0 0 0 0;
 } else {
     fixX [expr -$lx/2.] 1 0 1;
     fixX [expr  $lx/2.] 1 0 1;
-    fixZ [expr  $lz/1.] 0 0 1;
+    fixZ [expr  $lz/1.] 1 0 1;
 }
 
 # ============================================================================
@@ -138,23 +141,24 @@ eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
 # Analysis 
 # ============================================================================
 print "PML3D_2DField.info" 
+constraints   Plain
+numberer      RCM
+integrator    Newmark 0.5 0.25
+# integrator    HHT 1.0
+system        Mumps
+test          NormDispIncr 1.0e-5 20 1
+# test          EnergyIncr 1.0e-5 20 2
+# algorithm     Linear -factorOnce
+# algorithm     ModifiedNewton -FactorOnce
+algorithm     Newton
+analysis      Transient
 
-# Analysis 
-constraints      Plain
-numberer         RCM
-system           Mumps
-test             NormDispIncr 1e-3 3 0
-algorithm        Linear -factorOnce 
-integrator       Newmark 0.5 0.25
-analysis         Transient
 
-
-# mesure the analysis time
-set start [clock seconds]
+# timing the analysis
+set start_time [clock seconds]
 for {set i 0} { $i < 1000 } { incr i 1 } {
     puts "Time step: $i"
-    analyze 1 $dT    
+    analyze 1 $dT
 }
-
-set end [clock seconds]
-puts "Total time: [expr $end-$start] seconds"
+set end_time [clock seconds]
+puts "Total time: [expr $end_time - $start_time] seconds"

@@ -34,8 +34,8 @@ wipe
 model BasicBuilder -ndm 3 -ndf 3
 
 set lx      50.;
-set ly      2.0;
-set lz      2.0;
+set ly      1.0;
+set lz      1.0;
 set dy      1.0;
 set dx      1.0;
 set dz      1.0;
@@ -122,7 +122,7 @@ for {set x 0} {$x < $nx} {incr x 1} {
 
 #create PML nodes and elements
 if {$DOPML == "YES"} {
-    model BasicBuilder -ndm 3 -ndf 18;
+    model BasicBuilder -ndm 3 -ndf 9;
     
     set dxPML 1.0;
     set dyPML $dy;
@@ -145,6 +145,9 @@ if {$DOPML == "YES"} {
 
 
     # create PML material
+    set gamma           0.5                   ;# --- Coefficient gamma, newmark gamma = 0.5
+    set beta            0.25                  ;# --- Coefficient beta,  newmark beta  = 0.25
+    set eta             [expr 1.0/12.]        ;# --- Coefficient eta,   newmark eta   = 1/12 
     set E               $E                    ;# --- Young's modulus
     set nu              $nu                   ;# --- Poisson's Ratio
     set rho             $rho                  ;# --- Density
@@ -157,7 +160,7 @@ if {$DOPML == "YES"} {
     set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
-    set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
     puts "PMLMaterial: $PMLMaterial"
 
     
@@ -170,7 +173,7 @@ if {$DOPML == "YES"} {
             foreach y $PMLylist {
                 foreach z $PMLzlist {
                     node  $nodeTag $x $y $z;
-                    fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                    fix $nodeTag 0 1 1 0 0 0 0 0 0;
                     if {$count == 1} {lappend PMLDoflist [expr $nodeTag];}
                     puts "node $nodeTag $x $y $z;"
                     incr nodeTag;
@@ -217,7 +220,7 @@ if {$DOPML == "YES"} {
             foreach y $PMLylist {
                 foreach z $PMLzlist {
                     node  $nodeTag $x $y $z;
-                    fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                    fix $nodeTag 0 1 1 0 0 0 0 0 0;
                     if {$count == $nxPML+1} {lappend PMLDoflist [expr $nodeTag];}
                     puts "node $nodeTag $x $y $z;"
                     incr nodeTag;
@@ -258,8 +261,8 @@ if {$DOPML == "YES"} {
 
 # creating fixities
 if {$DOPML == "YES"} {
-    fixX [expr $lxPML  + $lx/2.] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
-    fixX [expr -$lxPML - $lx/2.] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+    fixX [expr $lxPML  + $lx/2.] 1 0 0 0 0 0 0 0 0;
+    fixX [expr -$lxPML - $lx/2.] 1 0 0 0 0 0 0 0 0;
 } else {
     fixX [expr $lx/2.]  1 0 0;
     fixX [expr -$lx/2.] 1 0 0;
@@ -296,9 +299,9 @@ pattern Plain 1 1 {
 
 
 # recorders
-eval "recorder Node -file NodeDispPositive.out   -time -node $DoflistEnd    -dof 1 disp"
-eval "recorder Node -file NodeDispNegative.out   -time -node $DoflistHead   -dof 1 disp"
-eval "recorder Node -file NodeDispCentre.out     -time -node $DoflistCent   -dof 1 disp"
+eval "recorder Node -file NodeDispPositiveEdited.out   -time -node $DoflistEnd    -dof 1 disp"
+eval "recorder Node -file NodeDispNegativeEdited.out   -time -node $DoflistHead   -dof 1 disp"
+eval "recorder Node -file NodeDispCentreEdited.out     -time -node $DoflistCent   -dof 1 disp"
 
 
 
@@ -315,9 +318,13 @@ analysis      Transient
 
 # mesure the analysis time
 set start [clock seconds]
-for {set i 0} { $i < 1000 } { incr i 1 } {
+for {set i 1} { $i <= 1000 } { incr i 1 } {
     puts "Time step: $i"
     analyze 1 $dT
+}
+for {set i 1001} { $i < 1002 } { incr i 1 } {
+    puts "Time step: $i"
+    analyze 1 0.002
 }
 set end [clock seconds]
 puts "Total time: [expr $end-$start] seconds"

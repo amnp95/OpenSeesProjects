@@ -83,8 +83,11 @@ barrier
 #create PML nodes and elements
 if {$DOPML == "YES" && $pid >= $regcores} {
 
-    model BasicBuilder -ndm 3 -ndf 18;
+    model BasicBuilder -ndm 3 -ndf 9;
     # create PML material
+    set eta             [expr 1/12.]          ;# --- newmarks parameter
+    set beta            [expr 0.25]           ;# --- newmarks parameter
+    set gamma           [expr 0.5]            ;# --- newmarks parameter
     set E               2.08e+08              ;# --- Young's modulus
     set nu              0.3                   ;# --- Poisson's Ratio
     set rho             2000.0                ;# --- Density
@@ -97,7 +100,7 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
-    set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
 
     eval "source pmlnodes$pid.tcl"
     eval "source pmlfixity$pid.tcl"
@@ -115,9 +118,9 @@ barrier
 # ============================================================================
 if {$DOPML == "YES"} {
     if {$pid >=$regcores} {
-        fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0;
-        fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0;
+        fixX [expr -$lx/2. - $pmlthickness] 1 0 1 0 0 0 0 0 0 ;
+        fixX [expr  $lx/2. + $pmlthickness] 1 0 1 0 0 0 0 0 0 ;
+        fixZ [expr -$lz/1. - $pmlthickness] 0 0 1 0 0 0 0 0 0 ;
     }
 } else {
     if {$pid < $regcores} {

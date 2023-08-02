@@ -391,7 +391,7 @@ for core in range(pmlcores):
     # adding fixity to the nodes
     file = open('pmlfixity'+str(core + regcores)+'.tcl', 'w')
     for _, node in nodes_in_core.iterrows():
-        file.write('fix %d 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0\n' % (node['tag']))
+        file.write('fix %d 0 1 0 0 0 0 0 0 0\n' % (node['tag']))
     file.close()
 
     # reset the status of all nodes to 0

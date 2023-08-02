@@ -187,6 +187,9 @@ if {$pid > 0} {
 
 
         # create PML material
+        set eta             [expr 1/12.]          ;# Newmark's parameter
+        set beta            [expr 1/4.]           ;# Newmark's parameter
+        set gamma           [expr 1/2.]           ;# Newmark's parameter
         set E               $E                    ;# --- Young's modulus
         set nu              $nu                   ;# --- Poisson's Ratio
         set rho             $rho                  ;# --- Density
@@ -199,7 +202,7 @@ if {$pid > 0} {
         set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
         set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
         set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
-        set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+        set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
         puts "PMLMaterial: $PMLMaterial"
 
         
@@ -207,7 +210,7 @@ if {$pid > 0} {
         # endside is the positive side of the regular domain
         if {$Positive == "True"} {
 
-            model BasicBuilder -ndm 3 -ndf 18; 
+            model BasicBuilder -ndm 3 -ndf 9; 
 
             for {set i 0} {$i<=$nxPML} {incr i} {lappend PMLxlist [expr $dxPML*$i + $lx/2.];}
             # create nodes for the end side of the PML
@@ -216,7 +219,7 @@ if {$pid > 0} {
                 foreach y $PMLylist {
                     foreach z $PMLzlist {
                         node  $nodeTag $x $y $z;
-                        fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                        fix $nodeTag 0 1 1 0 0 0 0 0 0;
                         if {$count == 1} {lappend PMLDoflist [expr $nodeTag];}
                         puts "node $nodeTag $x $y $z;"
                         incr nodeTag;
@@ -265,7 +268,7 @@ if {$pid > 0} {
 
         if {$Negative == "True"} {
 
-            model BasicBuilder -ndm 3 -ndf 18; 
+            model BasicBuilder -ndm 3 -ndf 9; 
 
             # create nodes for the head side of the PML
             set PMLxlist {}
@@ -276,7 +279,7 @@ if {$pid > 0} {
                 foreach y $PMLylist {
                     foreach z $PMLzlist {
                         node  $nodeTag $x $y $z;
-                        fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                        fix $nodeTag 0 1 1 0 0 0 0 0 0;
                         if {$count == $nxPML+1} {lappend PMLDoflist [expr $nodeTag];}
                         puts "node $nodeTag $x $y $z;"
                         incr nodeTag;

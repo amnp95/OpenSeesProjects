@@ -24,7 +24,7 @@ if {$argc > 0} {
 }
 
 if {$argc <= 0} {
-    puts "Usage: OpenSees 3DtestModel.tcl DOPML(YES or NO) Positive(True or False) Negative(True or False) loadingSide(Left, Right or Center)"
+    puts "Usage: mpirun -np 4 OpenSeesSP PML3D_1D_2Sided_MultiCoreSP.tcl DOPML(YES or NO) Positive(True or False) Negative(True or False) loadingSide(Left, Right or Center)"
     exit
 }
 
@@ -122,7 +122,7 @@ for {set x 0} {$x < $nx} {incr x 1} {
 
 #create PML nodes and elements
 if {$DOPML == "YES"} {
-    model BasicBuilder -ndm 3 -ndf 18;
+    model BasicBuilder -ndm 3 -ndf 9;
     
     set dxPML 1.0;
     set dyPML $dy;
@@ -138,13 +138,16 @@ if {$DOPML == "YES"} {
     set PMLylist {}
     set PMLzlist {}
     set PMLDoflist {}
-    
 
     for {set i 0} {$i<=$nyPML} {incr i} {lappend PMLylist [expr $dyPML*$i];}
     for {set i 0} {$i<=$nzPML} {incr i} {lappend PMLzlist [expr $dzPML*$i];}
 
+    puts "yes"
 
     # create PML material
+    set eta             [expr 1/12.]          ;# --- newmarks parameter
+    set beta            [expr 0.25]           ;# --- newmarks parameter
+    set gamma           [expr 0.5]            ;# --- newmarks parameter
     set E               $E                    ;# --- Young's modulus
     set nu              $nu                   ;# --- Poisson's Ratio
     set rho             $rho                  ;# --- Density
@@ -157,7 +160,7 @@ if {$DOPML == "YES"} {
     set RD_depth        [expr $lx/2.]         ;# --- Depth of the regular domain
     set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
     set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
-    set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
+    set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
     puts "PMLMaterial: $PMLMaterial"
 
     
@@ -170,7 +173,7 @@ if {$DOPML == "YES"} {
             foreach y $PMLylist {
                 foreach z $PMLzlist {
                     node  $nodeTag $x $y $z;
-                    fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                    fix $nodeTag 0 1 1 0 0 0 0 0 0;
                     if {$count == 1} {lappend PMLDoflist [expr $nodeTag];}
                     puts "node $nodeTag $x $y $z;"
                     incr nodeTag;
@@ -217,7 +220,7 @@ if {$DOPML == "YES"} {
             foreach y $PMLylist {
                 foreach z $PMLzlist {
                     node  $nodeTag $x $y $z;
-                    fix $nodeTag 0 1 1 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0;
+                    fix $nodeTag 0 1 1 0 0 0 0 0 0;
                     if {$count == $nxPML+1} {lappend PMLDoflist [expr $nodeTag];}
                     puts "node $nodeTag $x $y $z;"
                     incr nodeTag;
@@ -258,8 +261,8 @@ if {$DOPML == "YES"} {
 
 # creating fixities
 if {$DOPML == "YES"} {
-    fixX [expr $lxPML  + $lx/2.] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
-    fixX [expr -$lxPML - $lx/2.] 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0;
+    fixX [expr $lxPML  + $lx/2.] 1 0 0 0 0 0 0 0 0 ;
+    fixX [expr -$lxPML - $lx/2.] 1 0 0 0 0 0 0 0 0 ;
 } else {
     fixX [expr $lx/2.]  1 0 0;
     fixX [expr -$lx/2.] 1 0 0;
@@ -316,7 +319,7 @@ analysis         Transient
 logFile "PML3D_1D_2Sided_core1SP.info"
 # mesure the analysis time
 set start [clock seconds]
-for {set i 0} { $i < 4 } { incr i 1 } {
+for {set i 0} { $i < 1000 } { incr i 1 } {
     puts "Time step: $i"
     analyze 1 $dT
     if {$i==3} {
