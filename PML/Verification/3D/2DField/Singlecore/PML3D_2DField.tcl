@@ -103,11 +103,38 @@ if {$DOPML == "YES"} {
     source pmlfixity.tcl
     source pmlelements.tcl
 
+
+    # # delete the corner elements and nodes of the pml layer
+    # remove element 101
+    # remove element 122
+    
+    # remove sp 243 2
+    # remove sp 243 11
+    # remove sp 255 2
+    # remove sp 255 11
+
+    # remove node 243
+    # remove node 243
+    # remove node 255
+    # remove node 255
+
+
+    # remove sp 351 2
+    # remove sp 351 11
+    # remove sp 363 2
+    # remove sp 363 11
+
+    # remove node 351
+    # remove node 351
+
+
+
+
     # tie pml nodes to the regular nodes
     model BasicBuilder -ndm 3 -ndf 3;
     source boundary.tcl
 }
-
+printGID "mesh.msh"
 
 # ============================================================================
 # creating fixities
@@ -119,7 +146,11 @@ if {$DOPML == "YES"} {
 } else {
     fixX [expr -$lx/2.] 1 0 1;
     fixX [expr  $lx/2.] 1 0 1;
+<<<<<<< HEAD
     fixZ [expr  $lz/1.] 1 0 1;
+=======
+    fixZ [expr -$lz/1.] 1 0 1;
+>>>>>>> main
 }
 
 # ============================================================================
@@ -136,7 +167,7 @@ pattern Plain 1 1 {
 # recorders
 # ============================================================================
 eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 3 disp"
-
+eval "recorder Node -file NodeDispx.out -time -node $recordList  -dof 1 disp"
 # ============================================================================
 # Analysis 
 # ============================================================================
@@ -160,5 +191,12 @@ for {set i 0} { $i < 1000 } { incr i 1 } {
     puts "Time step: $i"
     analyze 1 $dT
 }
+<<<<<<< HEAD
 set end_time [clock seconds]
 puts "Total time: [expr $end_time - $start_time] seconds"
+=======
+
+
+
+
+>>>>>>> main
