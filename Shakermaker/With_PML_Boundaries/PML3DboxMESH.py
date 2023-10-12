@@ -12,6 +12,7 @@ os.system('rm *nodes*')
 os.system('rm *elements*')
 os.system('rm load*')
 os.system('rm *.info')
+os.system('rm *.out')
 # os.system('rm *.html')
 # %%
 # =============================================================================
@@ -481,7 +482,7 @@ if pmlboundarynodes.shape[0] != regboundarynodes.shape[0]:
 
 # create a map from pmlboundary nodes to regboundarynodes
 pmltoreg = dict(zip(pmlboundarynodes.index, regboundarynodes.index))
-
+regtopml = dict(zip(regboundarynodes.index, pmlboundarynodes.index))
 
 # add status column to nodes dataframe
 nodes['status'] = 0
@@ -524,7 +525,52 @@ for core in range(pmlcores):
         if not (np.isclose(pmlrow[1]['x'], regrow[1]['x'], atol=tolerance) and np.isclose(pmlrow[1]['y'], regrow[1]['y'], atol=tolerance) and np.isclose(pmlrow[1]['z'], regrow[1]['z'], atol=tolerance)):
             raise ValueError('The coordinates of the pml and regular boundary nodes are not equal')
         file.write("node %d %f %f %f\n" % (regrow[1]['tag'], regrow[1]['x'], regrow[1]['y'], regrow[1]['z']))
-        file.write('equalDOF %d %d 1 2 3\n' % (regrow[1]['tag'], pmlrow[1]['tag']))
+        file.write('equalDOF %d %d 1 2 3\n' % (pmlrow[1]['tag'], regrow[1]['tag']))
+
+    file.close()
+    # set the status of the nodes to 0
+    nodes['status'] = 0
+
+
+nodes['status'] = 0
+for core in range(regcores):
+    # filter pml elements
+    eles = elements[elements['core'] == core]
+
+    # iterate over elements to node1 to node8 and set their status to 1
+    for _, ele in eles.iterrows():
+        nodes.loc[ele['node1'] - 1, 'status'] = 1
+        nodes.loc[ele['node2'] - 1, 'status'] = 1
+        nodes.loc[ele['node3'] - 1, 'status'] = 1
+        nodes.loc[ele['node4'] - 1, 'status'] = 1
+        nodes.loc[ele['node5'] - 1, 'status'] = 1
+        nodes.loc[ele['node6'] - 1, 'status'] = 1
+        nodes.loc[ele['node7'] - 1, 'status'] = 1
+        nodes.loc[ele['node8'] - 1, 'status'] = 1
+
+    # extract the list of indexes of nodes which have 1 staus and are on the boundary
+    regboundarynodes = nodes[(nodes['boundary'] == 1) & (nodes['status'] == 1)]
+    
+    # extract the nodes with the indexes
+    # use the pmltoreg map to map the indexes of pmlboundarynodes to regboundarynodes
+    pmlboundarynodes = nodes.loc[regboundarynodes.index.map(regtopml)]
+
+
+    # check if the size of the pmlboundarynodes dataframe is equal to the size of the regboundarynodes dataframe and raise an error if not
+    if pmlboundarynodes.shape[0] != regboundarynodes.shape[0]:
+        raise ValueError('The number of pml boundary nodes is not equal to the number of regular boundary nodes')
+    
+
+    # write a file for partioning
+    file = open('boundary'+str(core)+'.tcl', 'w')
+    for _, (pmlrow, regrow) in enumerate(zip(pmlboundarynodes.iterrows(), regboundarynodes.iterrows())):
+    
+        # check the coordinates of the nodes are equal or not and raise an error if not
+        # using np.isclose because of the floating point precision
+        if not (np.isclose(pmlrow[1]['x'], regrow[1]['x'], atol=tolerance) and np.isclose(pmlrow[1]['y'], regrow[1]['y'], atol=tolerance) and np.isclose(pmlrow[1]['z'], regrow[1]['z'], atol=tolerance)):
+            raise ValueError('The coordinates of the pml and regular boundary nodes are not equal')
+        file.write("node %d %f %f %f\n" % (pmlrow[1]['tag'], regrow[1]['x'], regrow[1]['y'], regrow[1]['z']))
+        file.write('equalDOF %d %d 1 2 3\n' % (pmlrow[1]['tag'],regrow[1]['tag']))
 
     file.close()
     # set the status of the nodes to 0
@@ -558,8 +604,8 @@ nodetag1 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['
 
 # write the node tag in file
 file = open('load.tcl', 'w')
-for _,node in loadlist.iterrows():
-    file.write('if {$pid == %d}  {load %d 0 0 -1}\n' % (node['core'], node['tag']))
+# for _,node in loadlist.iterrows():
+#     file.write('if {$pid == %d}  {load %d 0 0 -1}\n' % (node['core'], node['tag']))
 
 file.write ("set recordList {%d}" % (nodetag1))
 file.close()

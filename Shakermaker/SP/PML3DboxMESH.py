@@ -12,23 +12,24 @@ os.system('rm *nodes*')
 os.system('rm *elements*')
 os.system('rm load*')
 os.system('rm *.info')
+# os.system('rm *.out')
 # os.system('rm *.html')
 # %%
 # =============================================================================
 # Genreral information about the mesh
 # =============================================================================
 # getting lx ly lz dx dy dz and pmlthickness from passing arguments to the script
-regcores     = int(sys.argv[1])
-pmlcores     = int(sys.argv[2])
-lx           = float(sys.argv[3])
-ly           = float(sys.argv[4])
-lz           = float(sys.argv[5])
-dx           = float(sys.argv[6])
-dy           = float(sys.argv[7])
-dz           = float(sys.argv[8])
-pmlthickness = float(sys.argv[9])
+lx = float(sys.argv[1])
+ly = float(sys.argv[2])
+lz = float(sys.argv[3])
+dx = float(sys.argv[4])
+dy = float(sys.argv[5])
+dz = float(sys.argv[6])
+pmlthickness = float(sys.argv[7])
 
-# # use this for testing
+
+
+# # # use this for testing
 # regcores    = 2
 # pmlcores    = 5
 # lx          = 10.0
@@ -41,7 +42,7 @@ pmlthickness = float(sys.argv[9])
 
 
 # print the recieved arguments all together
-print('regular cores = %d, pml cores = %d, lx = %f, ly = %f, lz = %f, dx = %f, dy = %f, dz = %f, pmlthickness = %f' % (regcores, pmlcores, lx, ly, lz, dx, dy, dz, pmlthickness))
+print('lx = %f, ly = %f, lz = %f, dx = %f, dy = %f, dz = %f, pmlthickness = %f' % (lx, ly, lz, dx, dy, dz, pmlthickness))
 
 
 
@@ -86,7 +87,6 @@ X = Y = Z = None
 nodes['Domain'] = 'reg'
 
 
-
 # Adding PML nodes to the nodes dataframe
 for x in pmlxlist:
     for y in pmlylist:
@@ -100,6 +100,8 @@ for x in pmlxlist:
                               'Domain': 'pml'}
                 
                 nodes = pd.concat([nodes, pd.DataFrame([nodes_data])], ignore_index=True)
+
+
 
 
 # adding tag 
@@ -240,202 +242,54 @@ elements['core'] = 0
 
 # %%
 # =============================================================================
-# sparse pml elements to different processors
-# =============================================================================
-if pmlcores ==0:
-    elements.loc[elements['Domain'] == 'pml', 'core'] = 0
-
-if pmlcores ==1:
-    elements.loc[elements['Domain'] == 'pml', 'core'] = regcores
-
-
-if pmlcores > 1:
-    # filter pml elements
-    pml_elements = elements[elements['Domain'] == 'pml']
-
-    # write a file for partioning
-    file = open('pmlmesh.txt', 'w')
-    # write the number of elements and number of weights to the file 
-    numOfWeights = 1
-    file.write('%d %d\n' % (len(pml_elements), numOfWeights))
-
-    # iterate over the rows of pml elements dataframe to write in file
-    for _, row in pml_elements.iterrows():
-        file.write('1 %d %d %d %d %d %d %d %d\n' % (row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
-    file.close()
-
-
-    # execute the partitioning command
-    os.system(f'mpmetis pmlmesh.txt {pmlcores}')
-
-    # read the partitioned file
-    cores = np.loadtxt('pmlmesh.txt.epart.'+str(pmlcores), dtype=int)
-    cores += regcores
-
-    # assign the cores to the elements which are in the pml elements dataframe
-    elements.loc[elements['Domain'] == 'pml', 'core'] = cores
-
-    # remove all the files including *.txt*
-    os.system('rm *.txt*')
-
-# delete the pml_elements dataframe
-# check if the pml_elements dataframe exists
-if 'pml_elements' in locals():
-    del pml_elements
-
-# =============================================================================
-# sparse reg elements to different processors
-# =============================================================================
-if regcores > 1:
-    # filter reg elements
-    reg_elements = elements[elements['Domain'] == 'reg']
-
-    # write a file for partioning
-    file = open('regmesh.txt', 'w')
-    # write the number of elements and number of weights to the file
-    numOfWeights = 1
-    file.write('%d %d\n' % (len(reg_elements), numOfWeights))
-
-    # iterate over the rows of reg elements dataframe to write in file
-    for _, row in reg_elements.iterrows():
-        file.write('1 %d %d %d %d %d %d %d %d\n' % (row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
-    file.close()
-
-    # execute the partitioning command
-    os.system(f'mpmetis regmesh.txt {regcores}')
-
-    # read the partitioned file
-    cores = np.loadtxt('regmesh.txt.epart.'+str(regcores), dtype=int)
-
-    # assign the cores to the elements which are in the reg elements dataframe
-    elements.loc[elements['Domain'] == 'reg', 'core'] = cores
-
-    # remove all the files including *.txt*
-    os.system('rm *.txt*')
-
-
-# delete cores
-# check if the cores dataframe exists
-if 'cores' in locals():
-    del cores
-# check if the reg_elements dataframe exists
-if 'reg_elements' in locals():
-    del reg_elements
-
-# %%
-# =============================================================================
 # create reg node file 
 # =============================================================================
 # adding status column
 nodes['status'] = 0
 
-# iterate over regcores to create a dataframe for each core
-for core in range(regcores):
-    # filter reg elements
-    eles = elements[elements['core'] == core]
-    # iterate over elements to node1 to node8 and set their status to 1
-    for _, ele in eles.iterrows():
-        nodes.loc[ele['node1'] - 1, 'status'] = 1; nodes.loc[ele['node1'] - 1, 'core'] = core
-        nodes.loc[ele['node2'] - 1, 'status'] = 1; nodes.loc[ele['node2'] - 1, 'core'] = core
-        nodes.loc[ele['node3'] - 1, 'status'] = 1; nodes.loc[ele['node3'] - 1, 'core'] = core
-        nodes.loc[ele['node4'] - 1, 'status'] = 1; nodes.loc[ele['node4'] - 1, 'core'] = core
-        nodes.loc[ele['node5'] - 1, 'status'] = 1; nodes.loc[ele['node5'] - 1, 'core'] = core
-        nodes.loc[ele['node6'] - 1, 'status'] = 1; nodes.loc[ele['node6'] - 1, 'core'] = core
-        nodes.loc[ele['node7'] - 1, 'status'] = 1; nodes.loc[ele['node7'] - 1, 'core'] = core
-        nodes.loc[ele['node8'] - 1, 'status'] = 1; nodes.loc[ele['node8'] - 1, 'core'] = core
-
-    
-    # filter nodes which are in the core
-    nodes_in_core = nodes[nodes['status'] == 1]
-    
-    # write the nodes in a file
-    file = open('nodes'+str(core)+'.tcl', 'w')
-    for _, node in nodes_in_core.iterrows():
-        file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
-    file.close()
-
-    # reset the status of all nodes to 0
-    nodes['status'] = 0
-
+#iterate over reg nodes to write regnodes file
+regnodes = nodes[nodes['Domain'] == 'reg']
+file = open('nodes.tcl', 'w')
+for _, node in regnodes.iterrows():
+    file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
+file.close()
+del regnodes
+# %%
 # =============================================================================
 # create pml node file 
 # =============================================================================
-# iterate over pmlcores to create a dataframe for each core
-for core in range(pmlcores):
-    # filter pml elements
-    eles = elements[elements['core'] == core + regcores]
-
-    # iterate over elements to node1 to node8 and set their status to 1
-    for _, ele in eles.iterrows():
-        nodes.loc[ele['node1'] - 1, 'status'] = 1
-        nodes.loc[ele['node2'] - 1, 'status'] = 1
-        nodes.loc[ele['node3'] - 1, 'status'] = 1
-        nodes.loc[ele['node4'] - 1, 'status'] = 1
-        nodes.loc[ele['node5'] - 1, 'status'] = 1
-        nodes.loc[ele['node6'] - 1, 'status'] = 1
-        nodes.loc[ele['node7'] - 1, 'status'] = 1
-        nodes.loc[ele['node8'] - 1, 'status'] = 1
-    
-    # filter nodes which are in the core
-    nodes_in_core = nodes[nodes['status'] == 1]
-
-    # write the nodes in a file
-    file = open('pmlnodes'+str(core + regcores)+'.tcl', 'w')
-    for _, node in nodes_in_core.iterrows():
-        file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
-    file.close()
-
-    # reset the status of all nodes to 0
-    nodes['status'] = 0
-
-
-
-
-# delte the status column
-del nodes['status']
-
-# delete eles and nodes_in_core
-# check if the eles dataframe exists
-if 'eles' in locals():
-    del eles, nodes_in_core
+# iterate over pml nodes to write pmlnodes file
+pmlnodes = nodes[nodes['Domain'] == 'pml']
+file = open('pmlnodes.tcl', 'w')
+for _, node in pmlnodes.iterrows():
+    file.write('node %d %f %f %f\n' % (node['tag'], node['x'], node['y'], node['z']))
+file.close()
+del pmlnodes
 
 
 # %%
 # =============================================================================
 # create element file
 # =============================================================================
-# iterate over each core to create element file
-for core in range(regcores):
-    # filter reg elements
-    eles = elements[elements['core'] == core]
-
-    # write a file for partioning
-    file = open('elements'+str(core)+'.tcl', 'w')
-
-    # iterate over the rows of reg elements dataframe to write in file
-    for _, row in eles.iterrows():
-        file.write('element stdBrick %d %d %d %d %d %d %d %d %d $materialTag\n' % (row['tag'], row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
-    file.close()
-
+# iterate over reg elements to create element file
+regelements = elements[elements['Domain'] == 'reg']
+file = open('elements.tcl', 'w')
+for _, ele in regelements.iterrows():
+    file.write('eval "element stdBrick %d %d %d %d %d %d %d %d %d $materialTag"\n' % (ele['tag'], ele['node1'], ele['node2'], ele['node3'], ele['node4'], ele['node5'], ele['node6'], ele['node7'], ele['node8']))
+file.close()
+del regelements
 
 # %%
 # =============================================================================
 # create pml element file
 # =============================================================================
-# iterate over each core to create element file
-for core in range(pmlcores):
-
-    # filter pml elements
-    eles = elements[elements['core'] == core + regcores]
-
-    # write a file for partioning
-    file = open('pmlelements'+str(core + regcores)+'.tcl', 'w')
-
-    # iterate over the rows of pml elements dataframe to write in file
-    for _, row in eles.iterrows():
-        file.write('eval "element PML %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (row['tag'],row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
-    file.close()
-
+# iterate over pml elements to create element file
+pmlelements = elements[elements['Domain'] == 'pml']
+file = open('pmlelements.tcl', 'w')
+for _, ele in pmlelements.iterrows():
+    file.write('eval "element PML %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (ele['tag'], ele['node1'], ele['node2'], ele['node3'], ele['node4'], ele['node5'], ele['node6'], ele['node7'], ele['node8']))
+file.close()
+del pmlelements
 
 # %%
 # =============================================================================
@@ -483,61 +337,28 @@ if pmlboundarynodes.shape[0] != regboundarynodes.shape[0]:
 pmltoreg = dict(zip(pmlboundarynodes.index, regboundarynodes.index))
 
 
-# add status column to nodes dataframe
-nodes['status'] = 0
 
-# iterate over each core to create boundary file
-for core in range(pmlcores):
-    # filter pml elements
-    eles = elements[elements['core'] == core + regcores]
+regboundarynodes = nodes.loc[pmlboundarynodes.index.map(pmltoreg)]
 
-    # iterate over elements to node1 to node8 and set their status to 1
-    for _, ele in eles.iterrows():
-        nodes.loc[ele['node1'] - 1, 'status'] = 1
-        nodes.loc[ele['node2'] - 1, 'status'] = 1
-        nodes.loc[ele['node3'] - 1, 'status'] = 1
-        nodes.loc[ele['node4'] - 1, 'status'] = 1
-        nodes.loc[ele['node5'] - 1, 'status'] = 1
-        nodes.loc[ele['node6'] - 1, 'status'] = 1
-        nodes.loc[ele['node7'] - 1, 'status'] = 1
-        nodes.loc[ele['node8'] - 1, 'status'] = 1
-
-    # extract the list of indexes of nodes which have 1 staus and are on the boundary
-    pmlboundarynodes = nodes[(nodes['boundary'] == 1) & (nodes['status'] == 1)]
-    
-    # extract the nodes with the indexes
-    # use the pmltoreg map to map the indexes of pmlboundarynodes to regboundarynodes
-    regboundarynodes = nodes.loc[pmlboundarynodes.index.map(pmltoreg)]
-
-
-    # check if the size of the pmlboundarynodes dataframe is equal to the size of the regboundarynodes dataframe and raise an error if not
-    if pmlboundarynodes.shape[0] != regboundarynodes.shape[0]:
-        raise ValueError('The number of pml boundary nodes is not equal to the number of regular boundary nodes')
-    
-
-    # write a file for partioning
-    file = open('boundary'+str(core + regcores)+'.tcl', 'w')
-    for _, (pmlrow, regrow) in enumerate(zip(pmlboundarynodes.iterrows(), regboundarynodes.iterrows())):
-    
+# create boundary file
+file = open('boundary.tcl', 'w')
+for _, (pmlrow, regrow) in enumerate(zip(pmlboundarynodes.iterrows(), regboundarynodes.iterrows())):
         # check the coordinates of the nodes are equal or not and raise an error if not
         # using np.isclose because of the floating point precision
         if not (np.isclose(pmlrow[1]['x'], regrow[1]['x'], atol=tolerance) and np.isclose(pmlrow[1]['y'], regrow[1]['y'], atol=tolerance) and np.isclose(pmlrow[1]['z'], regrow[1]['z'], atol=tolerance)):
             raise ValueError('The coordinates of the pml and regular boundary nodes are not equal')
-        file.write("node %d %f %f %f\n" % (regrow[1]['tag'], regrow[1]['x'], regrow[1]['y'], regrow[1]['z']))
-        file.write('equalDOF %d %d 1 2 3\n' % (regrow[1]['tag'], pmlrow[1]['tag']))
-
-    file.close()
-    # set the status of the nodes to 0
-    nodes['status'] = 0
+        # file.write('equalDOF %d %d 1 2 3\n' % (regrow[1]['tag'], pmlrow[1]['tag']))
+        file.write('equalDOF %d %d 1 2 3\n' % (pmlrow[1]['tag'], regrow[1]['tag']))
+        # file.write("rigidLink bar %d %d\n" % (regrow[1]['tag'], pmlrow[1]['tag']))
+        # file.write("rigidLink bar %d %d\n" % (pmlrow[1]['tag'], regrow[1]['tag']))
 
 # %%
 # =============================================================================
 # plot the mesh with deifferent cores
 # =============================================================================
-# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="regular")
-# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="pml")
-viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
-# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view=1)
+# viewmesh.cores(nodes.copy(), elements.copy(),  view="reg")
+# viewmesh.cores(nodes.copy(), elements.copy(),  view="pml")
+viewmesh.cores(nodes.copy(), elements.copy(),  view="all")
  
 # %%
 # =============================================================================
@@ -559,8 +380,10 @@ nodetag1 = nodes[np.isclose(nodes['x'], 0., atol=tolerance) & np.isclose(nodes['
 # write the node tag in file
 file = open('load.tcl', 'w')
 for _,node in loadlist.iterrows():
-    file.write('if {$pid == %d}  {load %d 0 0 -1}\n' % (node['core'], node['tag']))
+    file.write('load %d 0 0 -1\n' % (node['tag']))
+file.close()
 
+file = open("record.tcl", "w")
 file.write ("set recordList {%d}" % (nodetag1))
 file.close()
 
