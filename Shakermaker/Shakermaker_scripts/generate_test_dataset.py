@@ -8,6 +8,7 @@ from shakermaker.tools.plotting import ZENTPlot
 # from shakermaker.stf_extensions import Discrete
 from shakermaker.stf_extensions import SRF2
 
+
 from math import sqrt
 import numpy as np
 
@@ -24,7 +25,7 @@ tmax = 60.     # end time for simulation (must be contained in nfft window)
 crust = CrustModel(2)
 Qp=1000.                       # Q-factor for P-wave
 Qs=1000.                       # Q-factor for S-wave
-Vs = 0.200                     # S-wave speed (km/s)
+Vs = 2.000                     # S-wave speed (km/s)
 nu = 0.25                      # Poisson
 rho=2.000                      # Mass density (gr/cm**3)
 G = rho*Vs**2
@@ -99,10 +100,10 @@ else:
         _m = 1e-3
         fmax = 20.
         λ = Vs/fmax
-        dx = λ / 10
+        dx = λ / 20
         print(f"{dx=}")
-        Lx = 20*_m
-        Ly = 20*_m
+        Lx = 50*_m
+        Ly = 50*_m
         Lz = 20*_m
         nx, ny, nz = int(Lx/dx), int(Ly/dx), int(Lz/dx)
 

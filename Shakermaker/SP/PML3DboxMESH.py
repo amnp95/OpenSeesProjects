@@ -26,6 +26,7 @@ dx = float(sys.argv[4])
 dy = float(sys.argv[5])
 dz = float(sys.argv[6])
 pmlthickness = float(sys.argv[7])
+DRM = str(sys.argv[8])
 
 
 
@@ -42,7 +43,7 @@ pmlthickness = float(sys.argv[7])
 
 
 # print the recieved arguments all together
-print('lx = %f, ly = %f, lz = %f, dx = %f, dy = %f, dz = %f, pmlthickness = %f' % (lx, ly, lz, dx, dy, dz, pmlthickness))
+print('lx = %f, ly = %f, lz = %f, dx = %f, dy = %f, dz = %f, pmlthickness = %f' % (lx, ly, lz, dx, dy, dz, pmlthickness, ))
 
 
 
@@ -287,7 +288,7 @@ del regelements
 pmlelements = elements[elements['Domain'] == 'pml']
 file = open('pmlelements.tcl', 'w')
 for _, ele in pmlelements.iterrows():
-    file.write('eval "element PML %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (ele['tag'], ele['node1'], ele['node2'], ele['node3'], ele['node4'], ele['node5'], ele['node6'], ele['node7'], ele['node8']))
+    file.write('eval "element PMLVISCOUS %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (ele['tag'], ele['node1'], ele['node2'], ele['node3'], ele['node4'], ele['node5'], ele['node6'], ele['node7'], ele['node8']))
 file.close()
 del pmlelements
 
@@ -352,13 +353,7 @@ for _, (pmlrow, regrow) in enumerate(zip(pmlboundarynodes.iterrows(), regboundar
         # file.write("rigidLink bar %d %d\n" % (regrow[1]['tag'], pmlrow[1]['tag']))
         # file.write("rigidLink bar %d %d\n" % (pmlrow[1]['tag'], regrow[1]['tag']))
 
-# %%
-# =============================================================================
-# plot the mesh with deifferent cores
-# =============================================================================
-# viewmesh.cores(nodes.copy(), elements.copy(),  view="reg")
-# viewmesh.cores(nodes.copy(), elements.copy(),  view="pml")
-viewmesh.cores(nodes.copy(), elements.copy(),  view="all")
+
  
 # %%
 # =============================================================================
@@ -386,6 +381,43 @@ file.close()
 file = open("record.tcl", "w")
 file.write ("set recordList {%d}" % (nodetag1))
 file.close()
+
+
+
+# %%
+# =============================================================================
+# Create DRM node tag file
+# =============================================================================
+if DRM == "YES":
+    # read the coords
+    coords = np.loadtxt("/home/amnp95/Projects/Github/OpenSeesProjects/Shakermaker/SP/DRMLOAD/coords.csv", delimiter=",")
+    file = open("DRMLOAD/nodeTags.csv", "w")
+    file2 = open("load.tcl","w")
+    file2.write("set loadList {")
+    print(coords.shape)
+    for i in range(coords.shape[0]):
+        tags = nodes.loc[(np.isclose(nodes['x'], coords[i,0], atol=tolerance) & np.isclose(nodes['y'],  coords[i,1], atol=tolerance) & np.isclose(nodes['z'], coords[i,2], atol=tolerance))]["tag"].values[0]
+        file.write("%d\n" % (tags))
+        file2.write("%d " % (tags))
+    file2.write("}")
+    file2.close()
+    file.close()
+
+
+
+
+# %%
+# =============================================================================
+# plot the mesh with deifferent cores
+# =============================================================================
+# read the tags from the tags.txt file
+tags = np.loadtxt('tags.txt', dtype=int)
+# set the core of the elements with tag in tags list to 1
+viewmesh.view(nodes.copy(), elements.copy(), tags)
+# viewmesh.cores(nodes.copy(), elements.copy(),  view="pml")
+# viewmesh.cores(nodes.copy(), elements.copy(),  view="reg")
+viewmesh.cores(nodes.copy(), elements.copy(),  view="pml")
+# viewmesh.cores(nodes.copy(), elements.copy(),  view="all")
 
 
 # %%

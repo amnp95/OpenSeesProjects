@@ -31,17 +31,17 @@ if {$pid==0} {
 # define geometry and meshing parameters
 # ============================================================================
 wipe 
-set lx           20.0;
-set ly           20.0;
-set lz           20.0;
-set dy           2.0;
-set dx           2.0;
-set dz           2.0;
+set lx           60.0;
+set ly           60.0;
+set lz           25.0;
+set dy           5.0;
+set dx           5.0;
+set dz           5.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 2.0
-
+set pmlthickness 5.0
+set CreateDRM    "YES"
 
 
 barrier
@@ -65,7 +65,7 @@ puts "pythonexec: $pythonexec"
 
 # passing the arguments to the python script: lx ly lz dx dy dz pmlthickness
 if {$ignore == "NO"} {
-    catch {eval "exec $pythonexec PML3DboxMESH.py $lx $ly $lz $dx $dy $dz $pmlthickness"} result 
+    catch {eval "exec $pythonexec PML3DboxMESH.py $lx $ly $lz $dx $dy $dz $pmlthickness $CreateDRM"} result 
     puts "result: $result"
 }
 
@@ -76,7 +76,7 @@ barrier
 # ============================================================================
 # bulding regular elements
 # ============================================================================
-set E           0.4e9                 ;# --- Young's modulus
+set E           0.2e11                 ;# --- Young's modulus
 set nu          0.25                   ;# --- Poisson's Ratio
 set rho         2000.0                 ;# --- Density
 set Vs           [expr {sqrt($E / (2.0 * (1.0 + $nu) * $rho))}]
@@ -99,7 +99,7 @@ if {$DOPML == "YES"} {
     model BasicBuilder -ndm 3 -ndf 9;
     # create PML material
     set gamma           0.5                   ;# --- Coefficient gamma, newmark gamma = 0.5
-    set beta            0.25                  ;# --- Coefficient beta,  newmark beta  = 0.25
+    set beta            0.25                   ;# --- Coefficient beta,  newmark beta  = 0.25
     set eta             [expr 1.0/12.]        ;# --- Coefficient eta,   newmark eta   = 1/12 
     set E               $E                    ;# --- Young's modulus
     set nu              $nu                   ;# --- Poisson's Ratio
@@ -111,8 +111,8 @@ if {$DOPML == "YES"} {
     set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
     set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
-    set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
-    set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
+    set Damp_alpha      0.06220975551662957   ;# --- Rayleigh damping coefficient alpha
+    set Damp_beta       0.00157579151576134   ;# --- Rayleigh damping coefficient beta 
     set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
     # set PMLMaterial "$E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
 
@@ -175,11 +175,31 @@ if {$DOPML == "YES"} {
 
 
 
-set dT 0.001
-timeSeries Path 1 -dt 0.001 -filePath force.dat -factor -1.0
-pattern Plain 1 1 {
-    source load.tcl
+# set dT 0.0005
+# timeSeries Path 1 -dt $dT -filePath force.dat -factor -1.0
+# pattern Plain 1 1 {
+#     source load.tcl
+# }
+
+
+# ============================================================================
+# DRM LOADING
+# ============================================================================
+source load.tcl
+set dT 0.01
+foreach tag $loadList {
+    set  num1 $tag
+    set  num2 [expr $tag + 10000]
+    set  num3 [expr $tag + 20000]
+    eval "timeSeries Path $num1 -dt 0.01 -filePath DRMLOAD/nodeX$tag.dat -factor 1.0"
+    eval "timeSeries Path $num2 -dt 0.01 -filePath DRMLOAD/nodeY$tag.dat -factor 1.0"
+    eval "timeSeries Path $num3 -dt 0.01 -filePath DRMLOAD/nodeZ$tag.dat -factor 1.0" 
+
+    pattern Plain $num1 $num1 {load $tag 1.0 0.0 0.0}
+    pattern Plain $num2 $num2 {load $tag 0.0 1.0 0.0}
+    pattern Plain $num3 $num3 {load $tag 0.0 0.0 1.0}
 }
+# setTime 8.0
 
 # ============================================================================
 # recorders
@@ -204,14 +224,16 @@ if {$DOPML == "YES"} {
     constraints      Plain
     numberer         RCM
     system           Mumps
-    test             NormDispIncr 1e-5 10 2
-    algorithm        Linear -factorOnce 
-    # algorithm        ModifiedNewton -factoronce
+    # system           BandGeneral
+    test             NormDispIncr 1e-4 10 2
+    # algorithm        Linear -factorOnce 
+    algorithm        ModifiedNewton -factoronce
     integrator       Newmark 0.5 0.25
-    # integrator       HHT 1.0
+    # integrator       HHT 0.67
     analysis         Transient
+    # rayleigh 0.06220975551662957 0.00157579151576134 0.0 0.0
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 1000 } { incr i 1 } {
+    for {set i 0} { $i < 2000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }
@@ -221,13 +243,16 @@ if {$DOPML == "YES"} {
 } else {
     constraints      Plain
     numberer         RCM
-    system           Mumps
+    # system           Mumps
+    system           SparseSYM
     test             NormDispIncr 1e-4 3 2
-    algorithm        Linear -factorOnce 
+    algorithm        ModifiedNewton -factoronce
     integrator       Newmark 0.5 0.25
     analysis         Transient
+
+    # rayleigh 0.06220975551662957 0.00157579151576134 0.0 0.0
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 1200 } { incr i 1 } {
+    for {set i 0} { $i < 2000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }

@@ -1,8 +1,8 @@
 from matplotlib.pylab import *
 
-Vs = 200.
+Vs = 2000.
 nu = 0.25
-rho = 200.
+rho = 2000.
 fmax = 20
 tmax = 20.
 
