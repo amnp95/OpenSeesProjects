@@ -11,7 +11,11 @@
 **/*mpconstraint*
 **/*.h5drm
 **/*DRMLOAD*
-
+**/acc.txt
+**/coords.txt
+**/disp.txt
+**/vel.txt
+**/pmlmesh.txt*
 
 
 
