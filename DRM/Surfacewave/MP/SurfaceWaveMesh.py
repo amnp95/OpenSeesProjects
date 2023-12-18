@@ -12,6 +12,14 @@ os.system('rm *nodes*')
 os.system('rm *elements*')
 os.system('rm load*')
 os.system('rm *.info')
+os.system('rm *.npart.*')
+# os.system("Node_Accl.out")
+# os.system("Node_Disp.out")
+# os.system("Node_Vel.out")
+# os.system("Node_Accl_PML.out")
+# os.system("Node_Disp_PML.out")
+# os.system("Node_Vel_PML.out")
+
 # os.system('rm *.html')
 # %%
 # =============================================================================
@@ -524,7 +532,7 @@ for core in range(pmlcores):
         if not (np.isclose(pmlrow[1]['x'], regrow[1]['x'], atol=tolerance) and np.isclose(pmlrow[1]['y'], regrow[1]['y'], atol=tolerance) and np.isclose(pmlrow[1]['z'], regrow[1]['z'], atol=tolerance)):
             raise ValueError('The coordinates of the pml and regular boundary nodes are not equal')
         file.write("node %d %f %f %f\n" % (regrow[1]['tag'], regrow[1]['x'], regrow[1]['y'], regrow[1]['z']))
-        file.write('equalDOF %d %d 1 2 3\n' % (pmlrow[1]['tag'], regrow[1]['tag']))
+        file.write('equalDOF %d %d 1 2 3\n' % (regrow[1]['tag'],pmlrow[1]['tag']))
 
     file.close()
     # set the status of the nodes to 0
@@ -581,7 +589,7 @@ for core in range(regcores):
 # =============================================================================
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="regular")
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="pml")
-viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
+# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view=1)
  
 # %%

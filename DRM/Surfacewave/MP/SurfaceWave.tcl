@@ -32,8 +32,8 @@ if {$pid==0} {
 # define geometry and meshing parameters
 # ============================================================================
 wipe 
-set lx           185.0;
-set ly           10.0;
+set lx           190.0;
+set ly           15.0;
 set lz           42.5;
 set dy           2.5;
 set dx           2.5;
@@ -43,7 +43,7 @@ set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
 set pmlthickness 5.0
 set regcores     1
-set pmlcores     1
+set pmlcores     2
 
 
 barrier
@@ -93,6 +93,13 @@ if {$pid < $regcores} {
     nDMaterial ElasticIsotropic 1 $E $nu $rho;
     eval "source nodes$pid.tcl"
     eval "source elements$pid.tcl"
+    set pi              3.141593              ;# --- pi 
+    set damp            0.02                  ;# --- Damping ratio
+    set omega1          [expr 2*$pi*0.2]      ; # lower frequency
+    set omega2          [expr 2*$pi*20]       ; # upper frequency
+    set Damp_alpha      [expr 2*$damp*$omega1*$omega2/($omega1 + $omega2)]
+    set Damp_beta       [expr 2*$damp/($omega1 + $omega2)]
+    rayleigh $Damp_alpha $Damp_beta 0.0 0.0
 }
 # ============================================================================
 # bulding PML layer
@@ -116,7 +123,7 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
     set pi              3.141593              ;# --- pi 
-    set damp            0.05                  ;# --- Damping ratio
+    set damp            0.02                  ;# --- Damping ratio
     set omega1          [expr 2*$pi*0.2]      ; # lower frequency
     set omega2          [expr 2*$pi*20]       ; # upper frequency
     set Damp_alpha      [expr 2*$damp*$omega1*$omega2/($omega1 + $omega2)]
@@ -137,6 +144,14 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     # tie pml nodes to the regular nodes
     model BasicBuilder -ndm 3 -ndf 3;
     eval "source boundary$pid.tcl"
+
+
+    # eval "source pmlnodes1.tcl"
+    # eval "source pmlelements1.tcl"
+
+    # # tie pml nodes to the regular nodes
+    # model BasicBuilder -ndm 3 -ndf 3;
+    # eval "source boundary1.tcl"
 }
 
 barrier
@@ -259,9 +274,9 @@ if {$DOPML == "YES"} {
     puts "Elapsed time: [expr $elapsedTime/1000.] seconds in $pid"
 } else {
     constraints      Plain
-    numberer         RCM
-    # system           Mumps
-    system           SparseSYM
+    numberer         ParallelRCM
+    system           Mumps
+    # system           SparseSYM
     test             NormDispIncr 1e-4 3 2
     # algorithm        ModifiedNewton -factoronce
     algorithm        Linear -factorOnce 

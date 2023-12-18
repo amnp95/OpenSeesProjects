@@ -3,8 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import h5py
 # %%
+name = "PML_2_layer_rayleighy2percent";
 fig, ax = plt.subplots(3, 1, figsize=(10, 10),sharex=True)
-data = np.loadtxt("NodeDisp_PML.out")
+data = np.loadtxt("NodeDisp.out")
 controldispx = np.loadtxt("dispxcontrol.txt",delimiter=",")
 controldispz = np.loadtxt("dispycontrol.txt",delimiter=",")
 
@@ -23,6 +24,8 @@ ax[1].grid(True, which="both", ls="--")
 ax[2].grid(True, which="both", ls="--")
 ax[0].legend(["P1","P2","P3","analytical P1","analytical P2","analytical P3"], loc="upper right")
 ax[2].legend(["P1","P2","P3","analytical P1","analytical P2","analytical P3"], loc="upper right")
+fig.savefig(f"figs/{name}_Displacment_p1_p3.png")
+
 
 
 # %%
@@ -42,10 +45,13 @@ ax[1].grid(True, which="both", ls="--")
 ax[2].grid(True, which="both", ls="--")
 ax[0].legend(["P4","P5","P6","analytical P4","analytical P5","analytical P6"], loc="upper right")
 ax[2].legend(["P4","P5","P6","analytical P4","analytical P5","analytical P6"], loc="upper right")
+fig.savefig(f"figs/{name}_Displacment_p4_p6.png")
+
+
 
 # %%
 fig, ax = plt.subplots(3, 1, figsize=(10, 10),sharex=True)
-data = np.loadtxt("NodeAccl_PML.out")
+data = np.loadtxt("NodeAccl.out")
 controldispx = np.loadtxt("accxcontrol.txt",delimiter=",")
 controldispz = np.loadtxt("accycontrol.txt",delimiter=",")
 
@@ -64,6 +70,11 @@ ax[1].grid(True, which="both", ls="--")
 ax[2].grid(True, which="both", ls="--")
 ax[0].legend(["P1","P2","P3","analytical P1","analytical P2","analytical P3"], loc="upper right")
 ax[2].legend(["P1","P2","P3","analytical P1","analytical P2","analytical P3"], loc="upper right")
+fig.savefig(f"figs/{name}_Acceleration_p1_p3.png")
+
+
+
+
 # %%
 fig, ax = plt.subplots(3, 1, figsize=(10, 10),sharex=True)
 ax[0].plot(data[:, 0], data[:, [10,13,16]])
@@ -81,19 +92,6 @@ ax[1].grid(True, which="both", ls="--")
 ax[2].grid(True, which="both", ls="--")
 ax[0].legend(["P4","P5","P6","analytical P4","analytical P5","analytical P6"], loc="upper right")
 ax[2].legend(["P4","P5","P6","analytical P4","analytical P5","analytical P6"], loc="upper right")
+fig.savefig(f"figs/{name}_Acceleration_p4_p6.png")
 
-# # %%
-# f = h5py.File("SurfaceWave.h5drm", "r")
-# acc = np.array(f["DRM_Data"]["acceleration"])
-# tend = np.array(f["DRM_Metadata"]["tend"]).item()
-# tstart = np.array(f["DRM_Metadata"]["tstart"]).item()
-# dt = np.array(f["DRM_Metadata"]["dt"]).item()
-# time = np.arange(tstart, tend+1.e-12, dt)
-# plt.plot(time,acc[0,:])
-# # plt.plot(time,acc[1,:])
-# # plt.plot(time,acc[2,:])
-# data = np.loadtxt("NodeAccl.out")
-# plt.plot(data[:, 0], data[:, ])
-# # plt.xlim([0, 0.1])
-# # plt.ylim([-2, 2])
 # %%
