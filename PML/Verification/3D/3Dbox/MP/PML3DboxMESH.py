@@ -433,7 +433,7 @@ for core in range(pmlcores):
 
     # iterate over the rows of pml elements dataframe to write in file
     for _, row in eles.iterrows():
-        file.write('eval "element PML %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (row['tag'],row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
+        file.write('eval "element $PML %d %d %d %d %d %d %d %d %d $PMLMaterial"\n' % (row['tag'],row['node1'], row['node2'], row['node3'], row['node4'], row['node5'], row['node6'], row['node7'], row['node8']))
     file.close()
 
 
@@ -536,7 +536,7 @@ for core in range(pmlcores):
 # =============================================================================
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="regular")
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="pml")
-viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
+# viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view="all")
 # viewmesh.cores(nodes.copy(), elements.copy(), regcores, pmlcores, view=1)
  
 # %%

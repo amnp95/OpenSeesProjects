@@ -33,9 +33,9 @@ set dz           5.0;
 set nx           [expr $lx/$dx ]
 set ny           [expr $ly/$dy ]
 set nz           [expr $lz/$dz ]
-set pmlthickness 20.0
+set pmlthickness 10.0
 set regcores     1
-set pmlcores     3
+set pmlcores     4
 
 barrier
 # ============================================================================
@@ -87,6 +87,7 @@ barrier
 if {$DOPML == "YES" && $pid >= $regcores} {
 
     model BasicBuilder -ndm 3 -ndf 9;
+    set PML             "PMLVISCOUS"
     # create PML material
     set gamma           0.5                   ;# --- Coefficient gamma, newmark gamma = 0.5
     set beta            0.25                  ;# --- Coefficient beta,  newmark beta  = 0.25
@@ -97,12 +98,16 @@ if {$DOPML == "YES" && $pid >= $regcores} {
     set EleType         6                     ;# --- Element type, See line
     set PML_L           $pmlthickness         ;# --- Thickness of the PML
     set afp             2.0                   ;# --- Coefficient m, typically m = 2
-    set PML_Rcoef       1.0e-8                ;# --- Coefficient R, typically R = 1e-8
+    set PML_Rcoef       1.0e-3                ;# --- Coefficient R, typically R = 1e-8
     set RD_half_width_x [expr $lx/2.]         ;# --- Halfwidth of the regular domain in
     set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
-    set Damp_alpha      0.0                   ;# --- Rayleigh damping coefficient alpha
-    set Damp_beta       0.0                   ;# --- Rayleigh damping coefficient beta 
+    set pi              3.141593              ;# --- pi 
+    set damp            0.02                  ;# --- Damping ratio
+    set omega1          [expr 2*$pi*0.2]      ; # lower frequency
+    set omega2          [expr 2*$pi*20]       ; # upper frequency
+    set Damp_alpha      [expr 2*$damp*$omega1*$omega2/($omega1 + $omega2)]
+    set Damp_beta       [expr 2*$damp/($omega1 + $omega2)]
     set PMLMaterial "$eta $beta $gamma $E $nu $rho $EleType $PML_L $afp $PML_Rcoef $RD_half_width_x $RD_half_width_y $RD_depth $Damp_alpha $Damp_beta"
 
     eval "source pmlnodes$pid.tcl"
@@ -128,13 +133,36 @@ if {$DOPML == "YES"} {
     }
 } else {
     if {$pid < $regcores} {
-        fixX [expr -$lx/2.] 1 0 1;
-        fixX [expr  $lx/2.] 1 0 1;
-        fixY [expr -$ly/2.] 0 1 1;
-        fixY [expr  $ly/2.] 0 1 1;
-        fixZ [expr -$lz/1.] 0 0 1;
+        fixX [expr -$lx/2.] 1 1 1;
+        fixX [expr  $lx/2.] 1 1 1;
+        fixY [expr -$ly/2.] 1 1 1;
+        fixY [expr  $ly/2.] 1 1 1;
+        fixZ [expr -$lz/1.] 1 1 1;
     }
 }
+
+# ============================================================================
+# eigen value analysis
+# ============================================================================
+
+# set lambda [eigen  5];
+# set omega {}
+# set f {}
+# set T {}
+# set pi 3.141593
+
+# foreach lam $lambda {
+# 	lappend omega [expr sqrt($lam)]
+# 	lappend f [expr sqrt($lam)/(2*$pi)]
+# 	lappend T [expr (2*$pi)/sqrt($lam)]
+# }
+
+# foreach ff $f {
+# 	puts "Frequncy:  $ff"
+# }
+
+# exit
+
 
 # ============================================================================
 # loading 
@@ -146,17 +174,32 @@ pattern Plain 1 1 {
 }
 
 
+
+
+
+
 # ============================================================================
 # recorders
 # ============================================================================
+if {$pid < $regcores} {
+    if {$DOPML == "YES"} {
 
-eval "recorder Node -file NodeDisp$pid.out -time -node $recordList  -dof 3 disp"
+        eval "recorder Node -file NodeDisp_PML.out -time -node $recordList  -dof 1 2 3 disp"
+        eval "recorder Node -file NodeVel_PML.out  -time -node $recordList  -dof 1 2 3 vel"
+        eval "recorder Node -file NodeAcc_PML.out  -time -node $recordList  -dof 1 2 3 accel"
+    } else {
+        eval "recorder Node -file NodeDisp.out -time -node $recordList  -dof 1 2 3 disp"
+        eval "recorder Node -file NodeVel.out  -time -node $recordList  -dof 1 2 3 vel"
+        eval "recorder Node -file NodeAcc.out  -time -node $recordList  -dof 1 2 3 accel"
+    }
+}
+
 
 # ============================================================================
 # Analysis 
 # ============================================================================
 # Analysis 
-print "PML3D_1DExample2MP1_pid$pid.info" 
+# print "PML3D_1DExample2MP1_pid$pid.info" 
 domainChange
 if {$DOPML == "YES"} {
     constraints      Plain
@@ -171,7 +214,7 @@ if {$DOPML == "YES"} {
     # integrator       HHT 1.0
     analysis         Transient
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 1000 } { incr i 1 } {
+    for {set i 0} { $i < 5000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }
@@ -188,7 +231,7 @@ if {$DOPML == "YES"} {
     integrator       Newmark 0.5 0.25
     analysis         Transient
 
-    for {set i 0} { $i < 1000 } { incr i 1 } {
+    for {set i 0} { $i < 5000 } { incr i 1 } {
         if {$pid==0} {puts "Time step: $i"}
         analyze 1 $dT
     }
