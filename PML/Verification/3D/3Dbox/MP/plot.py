@@ -14,6 +14,6 @@ plt.ylabel('Z Displacement (m)')
 plt.xlim(right=5.1)
 plt.grid(linestyle='--')
 plt.legend()
-plt.savefig('figs/centerNodeDisplacment.png')
+plt.savefig('figs/centerNodedisplacment.png')
 plt.show()
 # %%
