@@ -60,7 +60,7 @@ cd ..\..\..
 
 cd Partitioner
 @REM cp Partition_Linux.c Partition.c
-copy Partition_Linux.c Partition.c
+copy Partition_windows.c Partition.c
 mkdir build
 cd build
 cmake .. -DGKLIB_PATH=%GKLIBRARY% -DMETIS_PATH=%METISLIBRARY%
