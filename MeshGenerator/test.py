@@ -6,16 +6,23 @@ import os
 import pyvista as pv
 
 #// load the library
-metis_partition_lib = ctypes.CDLL('./lib/Partitioner.dll')
+# find that the system is ubuntu or windows
+if os.name == 'nt':
+    metis_partition_lib = ctypes.CDLL('./lib/Partitioner.dll')
+if os.name == 'posix':
+    metis_partition_lib = ctypes.CDLL('./lib/libPartitioner.so')
+
+
+
 # Define function argument and return types
 metis_partition_lib.Partition.argtypes = [ctypes.c_int, ctypes.c_int, ctypes.POINTER(ctypes.c_int32), ctypes.c_int, ctypes.POINTER(ctypes.c_int32)]
 metis_partition_lib.Partition.restype = ctypes.c_int
 
 # %%
 # Create a simple mesh
-x = np.arange(-10, 10+0.01, 1.0)
-y = np.arange(-10, 10+0.01, 1.0)
-z = np.arange(-10, 10+0.01, 1.0)
+x = np.arange(-20, 20+0.01, 1.0)
+y = np.arange(-20, 20+0.01, 1.0)
+z = np.arange(-20, 20+0.01, 1.0)
 
 x, y, z = np.meshgrid(x, y, z)
 

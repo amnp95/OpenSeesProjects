@@ -16,6 +16,11 @@
 **/disp.txt
 **/vel.txt
 **/pmlmesh.txt*
-
-
+build
+*.so
+*.dll
+.vscode
+lib
+METISLIBRARY
+GKLIBRARY
 
