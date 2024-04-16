@@ -23,4 +23,12 @@ build
 lib
 METISLIBRARY
 GKLIBRARY
+DRM/Rickerwavelet/*.txt
+PML_DRM_Pile/EmbeddedInterfaceElement/MP/movie/Pics/*.svg*
+PML_DRM_Pile/EmbeddedInterfaceElement/MP/OpenSeesmesh/*
+PML_DRM_Pile/Pilewithfoundaton/OpenSeesmesh/*
+PML_DRM_Pile/Pilewithfoundaton/movie/Pics/*
+**/*.dat
 
+# **/PML_DRM_Pile/
+# PML_DRM_Pile/Pilewithfoundaton/movie/Pics/0000.svg
