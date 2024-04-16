@@ -6,7 +6,7 @@ import math
 import numpy as np
 import pyvista as pv
 from scipy.interpolate import griddata
-from Partition import partition
+# from Partition import partition
 import matplotlib.pyplot as plt
 from scipy.interpolate import RegularGridInterpolator
 import time
