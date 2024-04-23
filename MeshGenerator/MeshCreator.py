@@ -1,9 +1,13 @@
 #%%
+import os 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 import pyvista as pv
 from Partition import partition
 import matplotlib.pyplot as plt
 import time
+
+# chenge the directory to the current file
 
 
 
@@ -16,9 +20,9 @@ info = {
 
 time1 = time.time()
 # create a strucrured grid 
-xwidth  = 10
-ywidth  = 10
-zwidth  = 140
+xwidth  = 20
+ywidth  = 20
+zwidth  = 50
 eps     = 1e-6
 
 Xmeshsize, Ymeshsize, Zmeshsize = (1, 1, 1)
@@ -55,6 +59,11 @@ indices = reg.find_cells_within_bounds([xmin + Xmeshsize + eps,
                               zmin + Zmeshsize + eps,
                               zmax + Zmeshsize + eps])
 
+# now create complemntary indices for DRM
+DRMindices = np.ones(reg.n_cells,dtype=bool)
+DRMindices[indices] = False
+DRMindices = np.where(DRMindices)[0]
+
 
 
 reg.cell_data['Domain'] = np.ones(reg.n_cells,dtype=np.int8)*info["DRMDomain"]
@@ -63,19 +72,21 @@ PML.cell_data['Domain'] = np.ones(PML.n_cells,dtype=np.int8)*info["PMLDomain"]
 reg.cell_data['partitioned'] = np.zeros(reg.n_cells,dtype=np.int32)
 
 
-
 # partitioning regular mesh
 regular = reg.extract_cells(indices,progress_bar=True)
-DRM = reg.extract_cells(indices, invert=True,progress_bar=True)
+
+
+DRM = reg.extract_cells(DRMindices,progress_bar=True)
 
 reg_num_cores = 4
 DRM_num_cores = 2
 PML_num_cores = 3
 
 
-partition(regular,4)
-partition(DRM,2)
-partition(PML,3)
+
+partition(regular,reg_num_cores)
+partition(DRM,DRM_num_cores)
+partition(PML,PML_num_cores)
 
 reg.cell_data['partitioned'][regular["vtkOriginalCellIds"]] = regular.cell_data['partitioned']
 reg.cell_data['partitioned'][DRM["vtkOriginalCellIds"]] = DRM.cell_data['partitioned'] + reg_num_cores
@@ -107,6 +118,11 @@ pl.add_mesh(mesh, scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplo
 pl.show()
 
 
+# download a topograpy data from a base map area of 10*10 km 
+# https://portal.opentopography.org/raster?opentopoID=OTDS.082020.32611.1
+
+
+num_layers = 3
 
 
 
@@ -114,11 +130,67 @@ pl.show()
 
 
 
-# %%
+
+# # %%
 DRM.plot(scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplotlib_defaultcolors)
+# # %%
+# PML.plot(scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplotlib_defaultcolors)
+# # %%
+# regular.plot(scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplotlib_defaultcolors)
+
 # %%
-PML.plot(scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplotlib_defaultcolors)
+# now writung the mesh to a file
+# create the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # %%
-regular.plot(scalars="partitioned", show_edges=True,opacity=1.0,cmap=matplotlib_defaultcolors)
+
+Dir = "OpenSeesMesh"
+if not os.path.exists(Dir):
+    os.makedirs(Dir)
+
+
+min_core = mesh.cell_data['partitioned'].min()
+max_core = mesh.cell_data['partitioned'].max()
+
+# write the  mesh nodes
+for core  in range(min_core,max_core+1):
+    tmp  = mesh.extract_cells(np.where(mesh.cell_data['partitioned']==core)[0])
+    f  = open(Dir + "/Nodes_" + str(core) + ".tcl", "w")
+
+    for i in range(tmp.n_points):
+        f.write(f"node  {tmp['vtkOriginalPointIds'][i]} {tmp.points[i][0]} {tmp.points[i][1]} {tmp.points[i][2]}\n")
+    f.close()
+
+
+# writing the mesh elements
+f  = open(Dir + "/Elements.tcl", "w")
+for eletag in range(mesh.n_cells):
+    f.write(f"element {eletag}  {' '.join(str(x) for x in mesh.get_cell(eletag).point_ids)}\n")
+f.close()
+
+
+
+
+
+
+
+
+
+
+
 
 # %%
