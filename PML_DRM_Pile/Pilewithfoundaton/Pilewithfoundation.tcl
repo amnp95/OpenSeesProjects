@@ -378,12 +378,12 @@ if {$pid>=$regcores && $pid < [expr $regcores + $drmcores] } {
 set deltaT [expr 2*$dT]
 if {$pid < $regcores} {
     if {$DOPML=="YES" } {
-        eval "recorder Node -file results/NodeDispPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
-        eval "recorder Node -file results/NodeAcclPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
-        eval "recorder Node -file results/NodeVeloPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 vel"
-        eval "recorder Element -file results/ElementStressPML1$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
-        eval "recorder Element -file results/InterfacepointsPML1$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
-        eval "recorder Node -file results/BeamDispPML1$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
+        eval "recorder Node -file results/NodeDispPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
+        eval "recorder Node -file results/NodeAcclPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
+        eval "recorder Node -file results/NodeVeloPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 vel"
+        eval "recorder Element -file results/ElementStressPML$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
+        eval "recorder Element -file results/InterfacepointsPML$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
+        eval "recorder Node -file results/BeamDispPML$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
     } else {
         eval "recorder Node -file results/NodeDisp$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
         eval "recorder Node -file results/NodeAccl$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
