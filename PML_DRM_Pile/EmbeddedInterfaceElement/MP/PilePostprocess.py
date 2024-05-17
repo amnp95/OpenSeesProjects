@@ -7,7 +7,7 @@ import os
 if os.path.dirname(__file__) != '':
     os.chdir(os.path.dirname(__file__))
 
-case = ""
+case = "PML"
 
 pileforce = np.loadtxt(f"./results/BeamForce{case}0.out") 
 
@@ -134,18 +134,19 @@ mass = pv.PolyData(mass.reshape(1,-1))
 massdisp = beamdisp[:,[-3,-2,-1]]
 massoriginalcoord = mass.points
 #%%
-# pl = pv.Plotter()
-# pl.add_mesh(beam, color = 'grey', line_width = 5)   
-# pl.add_mesh(interface,show_edges=True, color = 'blue', line_width = 5, show_vertices=True, vertex_color='red',use_transparency=True,opacity=0.5, render_points_as_spheres = True)
-# pl.add_mesh(mass, color = 'blue', point_size = 50, render_points_as_spheres = True)
-# # isometric view
-# # pl.camera_position = [(0, -1, 1), (0, 0, 0), (0, 0, 1)]
-# pl.show()
+pl = pv.Plotter()
+pl.add_mesh(beam, color = 'black', line_width = 5)
+pl.add_mesh(interface, show_edges=True, line_width = 1, show_vertices=True, vertex_color='red',use_transparency=True,opacity=0.5, render_points_as_spheres = True)
+pl.add_mesh(mass, color = 'blue', point_size = 50, render_points_as_spheres = True)
+pl.camera_position = [(10.382977869678236, 10.881033743089947, 6.407282603898192),
+                      (0.0, 0.0, -1.5),
+                      (-0.30520760684173853, -0.35182912615338785, 0.8849093641249831)]
+pl.show()
 # %%
 dispfactor = 50
 pl = pv.Plotter(notebook=False, off_screen=True)
 pl.add_mesh(beam, color = 'black', line_width = 5)
-pl.add_mesh(interface, show_edges=True, line_width = 5, show_vertices=True, vertex_color='red',use_transparency=True,opacity=0.5, render_points_as_spheres = True)
+pl.add_mesh(interface, show_edges=True, line_width = 1, show_vertices=True, vertex_color='red',use_transparency=True,opacity=0.5, render_points_as_spheres = True)
 pl.add_mesh(mass, color = 'blue', point_size = 50, render_points_as_spheres = True)
 pl.camera_position = [(10.382977869678236, 10.881033743089947, 6.407282603898192),
                       (0.0, 0.0, -1.5),
