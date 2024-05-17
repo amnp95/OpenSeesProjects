@@ -4,6 +4,7 @@ import numpy as np
 import ctypes 
 import os 
 import sys
+# pv.start_xvfb()
 # =============================================================================
 # information
 # =============================================================================
@@ -31,7 +32,7 @@ OutputDir                        = sys.argv[19]
 # ywidth                          = 6
 # zwidth                          = 8
 # eps                             = 1e-6
-# Xmeshsize, Ymeshsize, Zmeshsize = (1., 1, 1.)
+# Xmeshsize, Ymeshsize, Zmeshsize = (0.5, 0.5, 0.5)
 # PMLThickness                    = np.array([Xmeshsize, Ymeshsize, Zmeshsize])            ; # thickness of the each PML layer
 # numPMLLayers                    = 2                                 ; # number of PML layers
 # PMLTotalThickness               = PMLThickness * numPMLLayers       ; # total thickness of the PML layers
@@ -40,13 +41,13 @@ OutputDir                        = sys.argv[19]
 # DRMTotalThickness               = DRMThickness * numDrmLayers       ; # total thickness of the DRM layers
 # padLayers                       = numPMLLayers + numDrmLayers       ; # number of layers to pad the meshgrid
 # padThickness                    = PMLTotalThickness + DRMThickness  ; # thickness of the padding layers
-# reg_num_cores                   = 1
+# reg_num_cores                   = 3
 # DRM_num_cores                   = 1
-# PML_num_cores                   = 3
+# PML_num_cores                   = 4
 # Dir                             = "OpenSeesMesh"
 # OutputDir                       = "results"
 
-# # print the input information
+# print the input information
 # print(f"xwidth: {xwidth}")
 # print(f"ywidth: {ywidth}")
 # print(f"zwidth: {zwidth}")
@@ -80,9 +81,9 @@ info = {
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 if os.name == 'nt':
-    metis_partition_lib = ctypes.CDLL('ll ../../../MeshGenerator/lib//Partitioner.dll')
+    metis_partition_lib = ctypes.CDLL('ll ../../MeshGenerator/lib//Partitioner.dll')
 if os.name == 'posix':
-    metis_partition_lib = ctypes.CDLL('../../../MeshGenerator/lib/libPartitioner.so')
+    metis_partition_lib = ctypes.CDLL('../../MeshGenerator/lib/libPartitioner.so')
 
 # Define function argument and return types
 metis_partition_lib.Partition.argtypes = [ctypes.c_int, ctypes.c_int, ctypes.POINTER(ctypes.c_int32), ctypes.c_int, ctypes.POINTER(ctypes.c_int32)]
@@ -108,6 +109,10 @@ x = np.arange(-xwidth/2., xwidth/2.+eps, Xmeshsize)
 y = np.arange(-ywidth/2., ywidth/2.+eps, Ymeshsize)
 z = np.arange(-zwidth, 0+eps, Zmeshsize)
 
+
+
+# %% 
+
 # padding x and y for PML and DRM layers
 x  = np.pad(x, (numDrmLayers,numDrmLayers), "linear_ramp", end_values=(x.min()-DRMTotalThickness[0], x.max()+DRMTotalThickness[0]))
 y  = np.pad(y, (numDrmLayers,numDrmLayers), "linear_ramp", end_values=(y.min()-DRMTotalThickness[1], y.max()+DRMTotalThickness[1]))
@@ -123,16 +128,29 @@ x, y, z = np.meshgrid(x, y, z, indexing='ij')
 
 mesh = pv.StructuredGrid(x, y, z)
 
+x = np.arange(-1.5, 1.5+eps, Xmeshsize)
+y = np.arange(-1.5, 1.5+eps, Ymeshsize)
+z = np.arange(0, 3+eps, Zmeshsize)
+mesh.cell_data["matTag"] = np.ones(mesh.n_cells,dtype=np.uint8)
+
+x, y, z = np.meshgrid(x, y, z, indexing='ij')
+found = pv.StructuredGrid(x, y, z)
+found.cell_data["matTag"] = np.ones(found.n_cells,dtype=np.uint8)*2
+
+mesh =mesh.merge(found,merge_points=True,tolerance=1e-6,progress_bar = True)
+# mesh.plot(scalars="matTag",show_edges=True,show_grid=True,show_axes=True,show_bounds=True)
+
 # %%
 # =============================================================================
 # sperate PML layer 
 # =============================================================================
-xmin = x.min() + PMLTotalThickness[0]
-xmax = x.max() - PMLTotalThickness[0]
-ymin = y.min() + PMLTotalThickness[1]
-ymax = y.max() - PMLTotalThickness[1]
-zmin = z.min() + PMLTotalThickness[2]
-zmax = z.max() + PMLTotalThickness[2]
+bounds = mesh.bounds
+xmin = bounds[0] + PMLTotalThickness[0]
+xmax = bounds[1] - PMLTotalThickness[0]
+ymin = bounds[2] + PMLTotalThickness[1]
+ymax = bounds[3] - PMLTotalThickness[1]
+zmin = bounds[4] + PMLTotalThickness[2]
+zmax = bounds[5] + PMLTotalThickness[2]
 cube = pv.Cube(bounds=[xmin,xmax,ymin,ymax,zmin,zmax])
 PML = mesh.clip_box(cube,invert=True,crinkle=True,progress_bar = True)
 reg = mesh.clip_box(cube,invert=False,crinkle=True,progress_bar = True)
@@ -172,6 +190,7 @@ if PML_num_cores > 1:
 reg.cell_data['partitioned'][regular["vtkOriginalCellIds"]] = regular.cell_data['partitioned']
 reg.cell_data['partitioned'][DRM["vtkOriginalCellIds"]] = DRM.cell_data['partitioned'] + reg_num_cores
 PML.cell_data['partitioned'] = PML.cell_data['partitioned'] + reg_num_cores + DRM_num_cores
+PML.cell_data["matTag"] = np.ones(PML.n_cells,dtype=np.uint8)
 # %%
 # merging PML and regular mesh to create a single mesh
 mesh = reg.merge(PML,merge_points=False,tolerance=1e-6,progress_bar = True)
@@ -189,7 +208,7 @@ mesh.point_data["boundary"][PML.n_points + regindicies] = PMLindicies
 
 indices = np.where(mesh.point_data["boundary"]>0)[0]
 # %%
-mesh["matTag"] = np.ones(mesh.n_cells,dtype=np.uint8)
+
 #  =============================================================================
 # write the mesh
 # =============================================================================
@@ -252,7 +271,8 @@ print(f"Number of cores: {max_core-min_core+1}")
 # mesh.plot(scalars="partitioned",show_edges=True,show_grid=True,show_axes=True,show_bounds=True)
 pl = pv.Plotter()
 pl.add_mesh(mesh,scalars="partitioned",show_edges=True)
-pl.export_html("mesh.html")
+# pl.export_html(os.path.join(OutputDir,"mesh.html"))
+pl.show()
 pl.close()
 
 # 
