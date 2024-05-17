@@ -42,9 +42,9 @@ set nz            [expr $lz/$dz ]
 set pmlthicknessx $dx
 set pmlthicknessy $dy
 set pmlthicknessz $dz
-set numpmllayers  2
+set numpmllayers  3
 set regcores      1
-set pmlcores      4
+set pmlcores      6
 set drmcores      1
 set meshdir       "OpenSeesmesh"
 set outputdir     "results"
@@ -252,7 +252,7 @@ if {$DOPML == "YES" && $pid >= [expr $regcores + $drmcores] } {
     set RD_half_width_y [expr $ly/2.]         ;# --- Halfwidth of the regular domain in
     set RD_depth        [expr $lz/1.]         ;# --- Depth of the regular domain
     set pi              3.141593              ;# --- pi 
-    set damp            0.02                  ;# --- Damping ratio
+    set damp            0.00                  ;# --- Damping ratio
     set omega1          [expr 2*$pi*0.2]      ; # lower frequency
     set omega2          [expr 2*$pi*20]       ; # upper frequency
     set Damp_alpha      [expr 2*$damp*$omega1*$omega2/($omega1 + $omega2)]
@@ -378,12 +378,12 @@ if {$pid>=$regcores && $pid < [expr $regcores + $drmcores] } {
 set deltaT [expr 2*$dT]
 if {$pid < $regcores} {
     if {$DOPML=="YES" } {
-        eval "recorder Node -file results/NodeDispPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
-        eval "recorder Node -file results/NodeAcclPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
-        eval "recorder Node -file results/NodeVeloPML$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 vel"
-        eval "recorder Element -file results/ElementStressPML$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
-        eval "recorder Element -file results/InterfacepointsPML$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
-        eval "recorder Node -file results/BeamDispPML$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
+        eval "recorder Node -file results/NodeDispPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
+        eval "recorder Node -file results/NodeAcclPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
+        eval "recorder Node -file results/NodeVeloPML1$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 vel"
+        eval "recorder Element -file results/ElementStressPML1$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
+        eval "recorder Element -file results/InterfacepointsPML1$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
+        eval "recorder Node -file results/BeamDispPML1$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
     } else {
         eval "recorder Node -file results/NodeDisp$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
         eval "recorder Node -file results/NodeAccl$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
@@ -410,14 +410,14 @@ if {$DOPML == "YES"} {
     system           Mumps
     # system           BandGeneral
     test             NormDispIncr 1e-4 10 2
-    # algorithm        Linear -factorOnce 
-    algorithm        ModifiedNewton -factoronce
+    algorithm        Linear -factorOnce 
+    # algorithm        ModifiedNewton -factoronce
     integrator       Newmark 0.5 0.25
     # integrator       HHT 0.67
     analysis         Transient
     # rayleigh 0.06220975551662957 0.00157579151576134 0.0 0.0
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 20000 } { incr i 1 } {
+    for {set i 0} { $i < 8000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }

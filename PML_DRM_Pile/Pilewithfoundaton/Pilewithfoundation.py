@@ -4,7 +4,7 @@ import numpy as np
 import ctypes 
 import os 
 import sys
-pv.start_xvfb()
+# pv.start_xvfb()
 # =============================================================================
 # information
 # =============================================================================
@@ -67,6 +67,7 @@ print(f"DRM_num_cores: {DRM_num_cores}")
 print(f"PML_num_cores: {PML_num_cores}")
 print(f"Dir: {Dir}")
 print(f"OutputDir: {OutputDir}")
+
 # create a dictionary for meshing information
 info = {
     "RegularDomain": 1,
@@ -270,9 +271,9 @@ print(f"Number of cores: {max_core-min_core+1}")
 # %%
 # mesh.plot(scalars="partitioned",show_edges=True,show_grid=True,show_axes=True,show_bounds=True)
 pl = pv.Plotter()
-pl.add_mesh(mesh,scalars="matTag",show_edges=True)
-pl.export_html(os.path.join(OutputDir,"mesh.html"))
-# pl.show()
+pl.add_mesh(mesh,scalars="Domain",show_edges=True)
+# pl.export_html(os.path.join(OutputDir,"mesh.html"))
+pl.show()
 pl.close()
 
 # 

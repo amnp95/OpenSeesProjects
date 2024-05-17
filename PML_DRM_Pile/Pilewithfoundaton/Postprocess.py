@@ -2,7 +2,6 @@
 import numpy as np
 import pyvista as pv
 import matplotlib.pyplot as plt 
-import pandas as pd
 import os
 # change the path to the directory where the file is located
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -39,65 +38,24 @@ beamcells[:,1:] = beamcells[:,1:] - 1
 celltypes  = np.ones(beamcells.shape[0],dtype= int) * pv.CellType.LINE
 beam = pv.UnstructuredGrid(beamcells.tolist(),celltypes.tolist(),beamnodes.tolist())
 
-
-# # ==================================================================
-# # view the mesh
-# # ==================================================================
-# pl = pv.Plotter()
-# pl.add_mesh(mesh,scalars="Domain", show_edges=True, color="white", opacity=1.0)
-# pl.add_mesh(interface, color="red", line_width=5)
-# pl.add_mesh(beam, color="blue", line_width=5)
-# # pl.save_graphic("results/mesh.png")
-# pl.show()
-# exit()
+# %%
+data1 = np.loadtxt("results/NodeAcclPML0.out")
+data2 = np.loadtxt("results/NodeAcclPML10.out")
+i = grid.find_closest_point([0,0,0])
+plt.plot(data1[:,0],(data1[:,1::3])[:,i])
+plt.plot(data2[:,0],(data2[:,1::3])[:,i])
+plt.legend(["PML=5layers","PML=4layers"])
 
 # %%
-# ==================================================================
-# loading Accelerations
-# ==================================================================
-# griddisp   = np.loadtxt("results/NodeAccl0.out")
-# time       = griddisp[:,0]
-# griddisp   = griddisp[:,1:]
-# griddispx  = griddisp[:,0::3]
-# index      = grid.find_closest_point([0,0,0])
-# index2     = grid.find_closest_point([1,0,0])
-# index3     = grid.find_closest_point([7.,0,0])
-# plt.plot(time, griddispx[:,index])
-# plt.plot(time, griddispx[:,index2])
-# plt.plot(time, griddispx[:,index3])
-# plt.show()
-#%%
-# griddispn  = np.loadtxt("results/NodeAcclPML0.out")
-# time      = griddispn[:,0]
-# griddispn = griddispn[:,1:]
-# griddispx = griddispn[:,0::3]
-# plt.plot(time, griddispx[:,index])
-# plt.plot(time, griddispx[:,index2])
-# plt.plot(time, griddispx[:,index3])
-# # beamdispx = beamdisp[:,0::3]
-# # plt.plot(time, beamdispx[:,-1])
-# # plt.xlim(right=1.0)
-# plt.show()
-# %%
-# # %%
+data1 = np.loadtxt("results/BeamDispPML0.out")
+data2 = np.loadtxt("results/BeamDispPML10.out")
+
+i = beam.find_closest_point([0,0,2])
+plt.plot(data1[:,0],(data1[:,1::3])[:,i])
+plt.plot(data2[:,0],(data2[:,1::3])[:,i])
 
 
-# %%
-griddispn  = np.loadtxt("results/BeamDisp0.out")
-index = beam.find_closest_point([0,0,2])
-time = griddispn[:,0]
-griddispn = griddispn[:,1:]
-griddispx = griddispn[:,0::3]
-plt.plot(time, griddispx[:,index],label="Fixed Boundaries")
-griddisp   = np.loadtxt("results/BeamDispPML0.out")
-time = griddisp[:,0]
-griddisp = griddisp[:,1:]
-griddispx = griddisp[:,0::3]
-plt.plot(time, griddispx[:,index],label="PML")
-plt.legend(loc="upper right")
-plt.xlabel("Time [s]")
-plt.ylabel("Displacement [m]")
-plt.show()
+
 
 
 # %%
