@@ -44,7 +44,7 @@ set pmlthicknessy $dy
 set pmlthicknessz $dz
 set numpmllayers  2
 set regcores      1
-set pmlcores      4
+set pmlcores      6
 set drmcores      1
 set meshdir       "OpenSeesmesh"
 set outputdir     "results"
@@ -141,6 +141,7 @@ if {$pid <$regcores} {
     # creating pile nodes
     model BasicBuilder -ndm 3 -ndf 6
     set beamNodes {}
+    set beamElems {}
     # creating nodes
     for {set i 1} {$i <= $nNodePile} {incr i} {
         set zCoord [expr $eleSize*(-$nNodePile + $i)+$L1]
@@ -178,10 +179,11 @@ if {$pid <$regcores} {
         set node2  [expr $i + 1000001]
         set eleTag [expr $i + 1000000]
         element dispBeamColumn $eleTag $node1 $node2 $numIntgrPts $secTag $transfTag 
+        lappend beamElems $eleTag
     }
 
     # create a lumped mass at the top of the pile
-    set lumpedMass 50000.0; # lumped mass at the top of the pile kg
+    set lumpedMass 25000.0; # lumped mass at the top of the pile kg
     mass [expr $nNodePile + 1000000] $lumpedMass 0.0 0.0 0.0 0.0 0.0
 
     # natural frequency of the pile
@@ -366,7 +368,7 @@ if {$pid>=$regcores && $pid < [expr $regcores + $drmcores] } {
     # x00, x01, x02: x, y, z location of the top-center node of the DRM Box after transformation
     # pattern H5DRM $patternTag "/path/to/H5DRM/dataset" $factor $crd_scale $distance_tolerance $do_coordinate_transformation $T00 $T01 $T02 $T10 $T11 $T12 $T20 $T21 $T22 $x00 $x01 $x02
     # pattern H5DRM 2 "/home/amnp95/Projects/OpenSeesProjects/PML_DRM_Pile/EmbeddedInterfaceElement/MP/rickterDRM.h5drm" 1.0 1.0 0.001 0
-    pattern H5DRM 2 "/home/amnp95/Desktop/tmp/OpenSeesProjects/DRM/Rickerwavelet/rickterDRM0_5.h5drm" 1.0 1.0 0.001 0
+    pattern H5DRM 2 "./rickterDRM0_5.h5drm" 1.0 1.0 0.001 0
     # pattern H5DRM 2 "SurfaceWave.h5drm" 1.0 1.0 0.001
 }
 
@@ -383,6 +385,7 @@ if {$pid < $regcores} {
         eval "recorder Element -file results/ElementStressPML$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
         eval "recorder Element -file results/InterfacepointsPML$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
         eval "recorder Node -file results/BeamDispPML$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
+        eval "recorder Element -file results/BeamForcePML$pid.out        -time -dT $deltaT -ele $beamElems  force"
     } else {
         eval "recorder Node -file results/NodeDisp$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 disp"
         eval "recorder Node -file results/NodeAccl$pid.out -time -dT $deltaT -node $recordList  -dof 1 2 3 accel"
@@ -390,6 +393,7 @@ if {$pid < $regcores} {
         eval "recorder Element -file results/ElementStress$pid.out   -time -dT $deltaT -ele $elerecordList  stress"
         eval "recorder Element -file results/Interfacepoints$pid.out -time -dT $deltaT -ele $interfaceElems  displacement"
         eval "recorder Node -file results/BeamDisp$pid.out           -time -dT $deltaT -node $beamNodes  -dof 1 2 3 disp"
+        eval "recorder Element -file results/BeamForce$pid.out        -time -dT $deltaT -ele $beamElems  force"
     }
     # print recordlist and elerecordlist to a file
     set f [open "results/ouputTags$pid.out" "w+"]
@@ -416,7 +420,7 @@ if {$DOPML == "YES"} {
     analysis         Transient
     # rayleigh 0.06220975551662957 0.00157579151576134 0.0 0.0
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 6000 } { incr i 1 } {
+    for {set i 0} { $i < 4000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }
@@ -438,7 +442,7 @@ if {$DOPML == "YES"} {
 
     # rayleigh 0.06220975551662957 0.00157579151576134 0.0 0.0
     set startTime [clock milliseconds]
-    for {set i 0} { $i < 6000 } { incr i 1 } {
+    for {set i 0} { $i < 4000 } { incr i 1 } {
         if {$pid ==0 } {puts "Time step: $i";}
         analyze 1 $dT
     }
