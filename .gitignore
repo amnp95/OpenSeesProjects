@@ -29,6 +29,10 @@ PML_DRM_Pile/EmbeddedInterfaceElement/MP/OpenSeesmesh/*
 PML_DRM_Pile/Pilewithfoundaton/OpenSeesmesh/*
 PML_DRM_Pile/Pilewithfoundaton/movie/Pics/*
 **/*.dat
-
+**/Pics*
+**/OpenSeesmesh/*.tcl
+**/PML_DRM_Pile/ShakerMaker
+**/Structure/OpenSeesmesh
+**/Structure/Results
 # **/PML_DRM_Pile/
 # PML_DRM_Pile/Pilewithfoundaton/movie/Pics/0000.svg
